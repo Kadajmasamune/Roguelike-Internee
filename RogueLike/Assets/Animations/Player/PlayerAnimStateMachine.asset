@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e67e82527047f459807bbd87925991, type: 3}
+  m_Name: PlayerAnimStateMachine
+  m_EditorClassIdentifier: 
+  states:
+  - {fileID: 11400000, guid: b31714649baf44943809d9cfe5ea4ceb, type: 2}
+  - {fileID: 11400000, guid: 5b556be798afbe64ab9374ba9945ce70, type: 2}
+  - {fileID: 11400000, guid: de1e343b64bdd93408f7d0ec8ae191e0, type: 2}
+  - {fileID: 11400000, guid: 16a7c0df545e8ce4185f64093e68459c, type: 2}
+  - {fileID: 11400000, guid: 967eb7c0d59b9b744b0da56c44d197c6, type: 2}
+  - {fileID: 11400000, guid: e1d3e3051c282b243b791632f6d25970, type: 2}
+  - {fileID: 11400000, guid: b739f9080dedbf744bec9509bf4c4786, type: 2}
+  - {fileID: 11400000, guid: b55667c50ac79df44bfd7d6fdbc582c0, type: 2}
