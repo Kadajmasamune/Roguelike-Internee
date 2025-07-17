@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: bafbdf72981e68b478f969c0ac34b375
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2114454430212998655
+    second: Walk_Backpedal_Body_112_0
+  - first:
+      213: -1856816491612487935
+    second: Walk_Backpedal_Body_112_1
+  - first:
+      213: -5927069284944165513
+    second: Walk_Backpedal_Body_112_2
+  - first:
+      213: -3265126703521095000
+    second: Walk_Backpedal_Body_112_3
+  - first:
+      213: 7101159544813399462
+    second: Walk_Backpedal_Body_112_4
+  - first:
+      213: 2390330446000132555
+    second: Walk_Backpedal_Body_112_5
+  - first:
+      213: 5738737313349124386
+    second: Walk_Backpedal_Body_112_6
+  - first:
+      213: 8039842253198359267
+    second: Walk_Backpedal_Body_112_7
+  - first:
+      213: -1036344130723531489
+    second: Walk_Backpedal_Body_112_8
+  - first:
+      213: -969267804767872726
+    second: Walk_Backpedal_Body_112_9
+  - first:
+      213: -4762968368175769907
+    second: Walk_Backpedal_Body_112_10
+  - first:
+      213: -2425999699038393620
+    second: Walk_Backpedal_Body_112_11
+  - first:
+      213: 6031304026767710800
+    second: Walk_Backpedal_Body_112_12
+  - first:
+      213: -8931211227473474381
+    second: Walk_Backpedal_Body_112_13
+  - first:
+      213: 1686266411529404829
+    second: Walk_Backpedal_Body_112_14
+  - first:
+      213: -2440419613361133929
+    second: Walk_Backpedal_Body_112_15
+  - first:
+      213: 1949832286951116862
+    second: Walk_Backpedal_Body_112_16
+  - first:
+      213: -7607250189246667620
+    second: Walk_Backpedal_Body_112_17
+  - first:
+      213: -290872222986238576
+    second: Walk_Backpedal_Body_112_18
+  - first:
+      213: 8767107372268867421
+    second: Walk_Backpedal_Body_112_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_0
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1032
+        width: 109
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5c896f91d085d10800000000000000
+      internalID: 2114454430212998655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_1
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1031
+        width: 105
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10fb95c1d334b36e0800000000000000
+      internalID: -1856816491612487935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_2
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1031
+        width: 102
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77546c763e1debda0800000000000000
+      internalID: -5927069284944165513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_3
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1031
+        width: 102
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2abf10090ffa2d0800000000000000
+      internalID: -3265126703521095000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_4
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 1030
+        width: 102
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad2af18bf26c8260800000000000000
+      internalID: 7101159544813399462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_5
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 711
+        width: 102
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc193a940e82c2120800000000000000
+      internalID: 2390330446000132555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_6
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 711
+        width: 101
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221447d6e2714af40800000000000000
+      internalID: 5738737313349124386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_7
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 711
+        width: 100
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ea7010bee1439f60800000000000000
+      internalID: 8039842253198359267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_8
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 710
+        width: 100
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15b92ff08a2e91f0800000000000000
+      internalID: -1036344130723531489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_9
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 710
+        width: 102
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29969421187c82f0800000000000000
+      internalID: -969267804767872726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_10
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 390
+        width: 110
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc61672218986edb0800000000000000
+      internalID: -4762968368175769907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_11
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 390
+        width: 113
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceaac91902e155ed0800000000000000
+      internalID: -2425999699038393620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_12
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 389
+        width: 114
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a5fdf9e0f73b350800000000000000
+      internalID: 6031304026767710800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_13
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 389
+        width: 115
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc867c45b6fd0480800000000000000
+      internalID: -8931211227473474381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_14
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 389
+        width: 115
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9102e7fd52d66710800000000000000
+      internalID: 1686266411529404829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_15
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 70
+        width: 115
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796a6b2aa43e12ed0800000000000000
+      internalID: -2440419613361133929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_16
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 70
+        width: 114
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e301f4362223f0b10800000000000000
+      internalID: 1949832286951116862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_17
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 70
+        width: 109
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94ed60024e9d6690800000000000000
+      internalID: -7607250189246667620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_18
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 71
+        width: 110
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09580e9114d96fbf0800000000000000
+      internalID: -290872222986238576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Backpedal_Body_112_19
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 72
+        width: 109
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f4bc774b50ba970800000000000000
+      internalID: 8767107372268867421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

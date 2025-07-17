@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: 776b26572e90c1e4f9783f042ba8f078
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 320803762224261320
+    second: Walk_Injured_Body_247_0
+  - first:
+      213: -3717349434368997313
+    second: Walk_Injured_Body_247_1
+  - first:
+      213: -169417440890956759
+    second: Walk_Injured_Body_247_2
+  - first:
+      213: 7827291031702013632
+    second: Walk_Injured_Body_247_3
+  - first:
+      213: -1317240681660961193
+    second: Walk_Injured_Body_247_4
+  - first:
+      213: 6585425366583755683
+    second: Walk_Injured_Body_247_5
+  - first:
+      213: 8771040121250231553
+    second: Walk_Injured_Body_247_6
+  - first:
+      213: -2230925766218560461
+    second: Walk_Injured_Body_247_7
+  - first:
+      213: -7687868667717927832
+    second: Walk_Injured_Body_247_8
+  - first:
+      213: -1365858647873730517
+    second: Walk_Injured_Body_247_9
+  - first:
+      213: 4799690746637977076
+    second: Walk_Injured_Body_247_10
+  - first:
+      213: 9171596985701433489
+    second: Walk_Injured_Body_247_11
+  - first:
+      213: -6106637694671343967
+    second: Walk_Injured_Body_247_12
+  - first:
+      213: 6204609877759468026
+    second: Walk_Injured_Body_247_13
+  - first:
+      213: 8994280327168500486
+    second: Walk_Injured_Body_247_14
+  - first:
+      213: -8389113185852452013
+    second: Walk_Injured_Body_247_15
+  - first:
+      213: 8343170433365911941
+    second: Walk_Injured_Body_247_16
+  - first:
+      213: -2463944011065628003
+    second: Walk_Injured_Body_247_17
+  - first:
+      213: -2110577308036060911
+    second: Walk_Injured_Body_247_18
+  - first:
+      213: 5899889704546207127
+    second: Walk_Injured_Body_247_19
+  - first:
+      213: -1951025223652900429
+    second: Walk_Injured_Body_247_20
+  - first:
+      213: 8706340394206848495
+    second: Walk_Injured_Body_247_21
+  - first:
+      213: 8290603756873562469
+    second: Walk_Injured_Body_247_22
+  - first:
+      213: 681901825070170775
+    second: Walk_Injured_Body_247_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1026
+        width: 121
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c86cf17259b37400800000000000000
+      internalID: 320803762224261320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_1
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1026
+        width: 124
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38cf628262596cc0800000000000000
+      internalID: -3717349434368997313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_2
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1027
+        width: 129
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92450f03cbb16adf0800000000000000
+      internalID: -169417440890956759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_3
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 1028
+        width: 134
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6033af8bf10ac60800000000000000
+      internalID: 7827291031702013632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_4
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1030
+        width: 143
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ea7ed349838bde0800000000000000
+      internalID: -1317240681660961193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_5
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1029
+        width: 149
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a34216da71246b50800000000000000
+      internalID: 6585425366583755683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 709
+        width: 150
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105b1d1f48ef8b970800000000000000
+      internalID: 8771040121250231553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_7
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 710
+        width: 146
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33cc648e5d82a01e0800000000000000
+      internalID: -2230925766218560461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_8
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 713
+        width: 137
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c31d4cd243f4590800000000000000
+      internalID: -7687868667717927832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_9
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 716
+        width: 131
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b284710ebce7b0de0800000000000000
+      internalID: -1365858647873730517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_10
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 715
+        width: 125
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f50611ed4deb9240800000000000000
+      internalID: 4799690746637977076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_11
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 712
+        width: 131
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19007c38dde084f70800000000000000
+      internalID: 9171596985701433489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_12
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 390
+        width: 141
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aeaa1dfe5dd04ba0800000000000000
+      internalID: -6106637694671343967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_13
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 389
+        width: 141
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1abb57fc33b1650800000000000000
+      internalID: 6204609877759468026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_14
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 387
+        width: 139
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603a927cd4a12dc70800000000000000
+      internalID: 8994280327168500486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_15
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 385
+        width: 133
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35318b04102e39b80800000000000000
+      internalID: -8389113185852452013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_16
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 384
+        width: 133
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589215d1e45e8c370800000000000000
+      internalID: 8343170433365911941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_17
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 388
+        width: 134
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a6bf9f9ff4ecdd0800000000000000
+      internalID: -2463944011065628003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_18
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 73
+        width: 130
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119a283ee19b5b2e0800000000000000
+      internalID: -2110577308036060911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_19
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 76
+        width: 121
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79506756d6e90e150800000000000000
+      internalID: 5899889704546207127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_20
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 75
+        width: 120
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1875465e09ce4e0800000000000000
+      internalID: -1951025223652900429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_21
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 72
+        width: 116
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5655ad57223d870800000000000000
+      internalID: 8706340394206848495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_22
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 68
+        width: 116
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569b7fdf0342e0370800000000000000
+      internalID: 8290603756873562469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Injured_Body_247_23
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 66
+        width: 119
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7928ff6d81a967900800000000000000
+      internalID: 681901825070170775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

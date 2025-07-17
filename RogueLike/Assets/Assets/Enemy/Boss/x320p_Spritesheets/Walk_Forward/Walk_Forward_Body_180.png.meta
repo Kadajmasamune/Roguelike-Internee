@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: 6b58cf3801f69fc40828a3f108717996
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4199088191002809201
+    second: Walk_Forward_Body_180_0
+  - first:
+      213: 6618322259857737261
+    second: Walk_Forward_Body_180_1
+  - first:
+      213: 286150461258224644
+    second: Walk_Forward_Body_180_2
+  - first:
+      213: -922990598746712844
+    second: Walk_Forward_Body_180_3
+  - first:
+      213: 4276553286416272381
+    second: Walk_Forward_Body_180_4
+  - first:
+      213: -3704984825229337120
+    second: Walk_Forward_Body_180_5
+  - first:
+      213: 3524610015553455520
+    second: Walk_Forward_Body_180_6
+  - first:
+      213: -4630475961698613068
+    second: Walk_Forward_Body_180_7
+  - first:
+      213: 4474808566289843949
+    second: Walk_Forward_Body_180_8
+  - first:
+      213: -4590304656454354755
+    second: Walk_Forward_Body_180_9
+  - first:
+      213: 7895584514310767475
+    second: Walk_Forward_Body_180_10
+  - first:
+      213: -2036051051006123703
+    second: Walk_Forward_Body_180_11
+  - first:
+      213: -8702136639991878658
+    second: Walk_Forward_Body_180_12
+  - first:
+      213: -6707331045367622991
+    second: Walk_Forward_Body_180_13
+  - first:
+      213: -8744841829776711608
+    second: Walk_Forward_Body_180_14
+  - first:
+      213: 3726644839084071475
+    second: Walk_Forward_Body_180_15
+  - first:
+      213: -3592916131575398240
+    second: Walk_Forward_Body_180_16
+  - first:
+      213: 6077921337339775153
+    second: Walk_Forward_Body_180_17
+  - first:
+      213: 1967903142418531603
+    second: Walk_Forward_Body_180_18
+  - first:
+      213: 238704672730820833
+    second: Walk_Forward_Body_180_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_0
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1018
+        width: 106
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c6dbab987d9b5c0800000000000000
+      internalID: -4199088191002809201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_1
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1019
+        width: 106
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2681eba70109db50800000000000000
+      internalID: 6618322259857737261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_2
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1020
+        width: 105
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4045c93145c98f300800000000000000
+      internalID: 286150461258224644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_3
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 1020
+        width: 104
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f45daec0f0e033f0800000000000000
+      internalID: -922990598746712844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_4
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1020
+        width: 104
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb0fdb4e8e595b30800000000000000
+      internalID: 4276553286416272381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 700
+        width: 104
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed1ef96eef359cc0800000000000000
+      internalID: -3704984825229337120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 700
+        width: 104
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a509dc822ee9e030800000000000000
+      internalID: 3524610015553455520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_7
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 699
+        width: 104
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b808f965ae3dbfb0800000000000000
+      internalID: -4630475961698613068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_8
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 699
+        width: 105
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6c497bea6b91e30800000000000000
+      internalID: 4474808566289843949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_9
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 699
+        width: 105
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db877354c36fb40c0800000000000000
+      internalID: -4590304656454354755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_10
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 378
+        width: 106
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373819d7840c29d60800000000000000
+      internalID: 7895584514310767475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_11
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 378
+        width: 107
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94128384b5e7eb3e0800000000000000
+      internalID: -2036051051006123703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_12
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 378
+        width: 108
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb6f52f4dccb3780800000000000000
+      internalID: -8702136639991878658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_13
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 377
+        width: 108
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2d9e183f5cae2a0800000000000000
+      internalID: -6707331045367622991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_14
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 376
+        width: 107
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 840ae2f10b414a680800000000000000
+      internalID: -8744841829776711608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_15
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 56
+        width: 108
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a16ad8cb3b7b330800000000000000
+      internalID: 3726644839084071475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_16
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 56
+        width: 108
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a08dad70d5632ec0800000000000000
+      internalID: -3592916131575398240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_17
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 56
+        width: 108
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b887ec014d195450800000000000000
+      internalID: 6077921337339775153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_18
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 57
+        width: 106
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3154b3c4b756f4b10800000000000000
+      internalID: 1967903142418531603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_Forward_Body_180_19
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 58
+        width: 106
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0b85892ac005300800000000000000
+      internalID: 238704672730820833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

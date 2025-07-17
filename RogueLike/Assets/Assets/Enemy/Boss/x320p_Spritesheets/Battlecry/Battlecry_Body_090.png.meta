@@ -1,0 +1,867 @@
+fileFormatVersion: 2
+guid: cb630b2fd64ba2f49bdc278c8f4404d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9118961571098613737
+    second: Battlecry_Body_090_0
+  - first:
+      213: 5671037860724064896
+    second: Battlecry_Body_090_1
+  - first:
+      213: -9113915989395814071
+    second: Battlecry_Body_090_2
+  - first:
+      213: 4730705327435721423
+    second: Battlecry_Body_090_3
+  - first:
+      213: 7465421027552664725
+    second: Battlecry_Body_090_4
+  - first:
+      213: 8734361460876484318
+    second: Battlecry_Body_090_5
+  - first:
+      213: -2441290427247383156
+    second: Battlecry_Body_090_6
+  - first:
+      213: -1550075931776180714
+    second: Battlecry_Body_090_7
+  - first:
+      213: -3767520409074826665
+    second: Battlecry_Body_090_8
+  - first:
+      213: -496101084761054795
+    second: Battlecry_Body_090_9
+  - first:
+      213: 6959982282774446250
+    second: Battlecry_Body_090_10
+  - first:
+      213: 2012339741100587084
+    second: Battlecry_Body_090_11
+  - first:
+      213: 4892874247445970295
+    second: Battlecry_Body_090_12
+  - first:
+      213: -7095257258389900280
+    second: Battlecry_Body_090_13
+  - first:
+      213: 6581531547209643926
+    second: Battlecry_Body_090_14
+  - first:
+      213: 3688426941726996786
+    second: Battlecry_Body_090_15
+  - first:
+      213: 3508286443801129679
+    second: Battlecry_Body_090_16
+  - first:
+      213: -2250908407349112943
+    second: Battlecry_Body_090_17
+  - first:
+      213: -4870607524207764130
+    second: Battlecry_Body_090_18
+  - first:
+      213: 5815978535536565739
+    second: Battlecry_Body_090_19
+  - first:
+      213: 7069870186389981924
+    second: Battlecry_Body_090_20
+  - first:
+      213: 3269769697806687057
+    second: Battlecry_Body_090_21
+  - first:
+      213: -7813462500831165841
+    second: Battlecry_Body_090_22
+  - first:
+      213: 7865268023179042461
+    second: Battlecry_Body_090_23
+  - first:
+      213: 207881733788293811
+    second: Battlecry_Body_090_24
+  - first:
+      213: -3790383665803571834
+    second: Battlecry_Body_090_25
+  - first:
+      213: -5688645281546039685
+    second: Battlecry_Body_090_26
+  - first:
+      213: 4255067481965249811
+    second: Battlecry_Body_090_27
+  - first:
+      213: 6786229397631586432
+    second: Battlecry_Body_090_28
+  - first:
+      213: 4490563981975001165
+    second: Battlecry_Body_090_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Battlecry_Body_090_0
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1354
+        width: 113
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718aa32f3c0f27180800000000000000
+      internalID: -9118961571098613737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_1
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1353
+        width: 100
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082cf3c43e293be40800000000000000
+      internalID: 5671037860724064896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_2
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1358
+        width: 109
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9494f4bf1bdd48180800000000000000
+      internalID: -9113915989395814071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_3
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 1356
+        width: 87
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcaaad25e67d6a140800000000000000
+      internalID: 4730705327435721423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_4
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1354
+        width: 140
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c120efed08a9760800000000000000
+      internalID: 7465421027552664725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_5
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1307
+        width: 89
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede9767d87fa63970800000000000000
+      internalID: 8734361460876484318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 988
+        width: 103
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8dab5a7a4bce1ed0800000000000000
+      internalID: -2441290427247383156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_7
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 991
+        width: 107
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61e199717260d7ae0800000000000000
+      internalID: -1550075931776180714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_8
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 991
+        width: 98
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7528f0d262417bbc0800000000000000
+      internalID: -3767520409074826665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_9
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 992
+        width: 89
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1a12e11be7d19f0800000000000000
+      internalID: -496101084761054795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_10
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 994
+        width: 86
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa088c7b203d69060800000000000000
+      internalID: 6959982282774446250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_11
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 996
+        width: 87
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48b3bb25544deb10800000000000000
+      internalID: 2012339741100587084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_12
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 677
+        width: 88
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d7ca9543bf6e340800000000000000
+      internalID: 4892874247445970295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_13
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 678
+        width: 89
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80478a3ad15988d90800000000000000
+      internalID: -7095257258389900280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_14
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 678
+        width: 89
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 697357d521c465b50800000000000000
+      internalID: 6581531547209643926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_15
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 678
+        width: 88
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2393e99e2ccef2330800000000000000
+      internalID: 3688426941726996786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_16
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 678
+        width: 89
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2b515deefefa030800000000000000
+      internalID: 3508286443801129679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_17
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 684
+        width: 91
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f0406baba23c0e0800000000000000
+      internalID: -2250908407349112943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_18
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 379
+        width: 89
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5d50472340286cb0800000000000000
+      internalID: -4870607524207764130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_19
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 105
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed14f7e9a186b050800000000000000
+      internalID: 5815978535536565739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_20
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 387
+        width: 112
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea46eb0a793d1260800000000000000
+      internalID: 7069870186389981924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_21
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 390
+        width: 112
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b9a17573e806d20800000000000000
+      internalID: 3269769697806687057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_22
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 389
+        width: 111
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f628f14c041019390800000000000000
+      internalID: -7813462500831165841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_23
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 389
+        width: 111
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e53d8589b072d60800000000000000
+      internalID: 7865268023179042461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_24
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 70
+        width: 112
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ba5eb1e55b82e200800000000000000
+      internalID: 207881733788293811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_25
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 70
+        width: 111
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68dc555632ad56bc0800000000000000
+      internalID: -3790383665803571834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_26
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 71
+        width: 111
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e0f34914fdd01b0800000000000000
+      internalID: -5688645281546039685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_27
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 72
+        width: 113
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 315cadd94590d0b30800000000000000
+      internalID: 4255067481965249811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_28
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 73
+        width: 114
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 080d422aea78d2e50800000000000000
+      internalID: 6786229397631586432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Battlecry_Body_090_29
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 73
+        width: 114
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4898ca4620b15e30800000000000000
+      internalID: 4490563981975001165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

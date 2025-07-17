@@ -1,36 +1,30 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
-using Unity.Collections;
-using Unity.VisualScripting;
-using UnityEditor.MemoryProfiler;
 using UnityEngine;
-using UnityEngine.InputSystem.Composites;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 
 //FIXXXXX
 //Fix Out of Rooms Bug
 public class ProceduralGeneration : MonoBehaviour
 {
     [SerializeField] Tilemap TileMap;
-
+    [SerializeField] Tilemap WallTileMap;
 
     [SerializeField] Tile GroundTile;
     [SerializeField] Tile Wall;
+    [SerializeField] Tile wallSide; 
     [SerializeField] Tile Pillar;
-
     [SerializeField] Grid MapGrid;
-
-    [SerializeField] int TileSpacing = 2;
-
     [SerializeField] GameObject Player;
 
+
+    [SerializeField] int TileSpacing = 2;
 
     public float NoiseScale = 0.1f;
 
     private int Width;
     private int Height;
+    private float BoundsSize = 2.2f;
 
     [SerializeField] int RoomWidth;
     [SerializeField] int RoomHeight;
@@ -189,6 +183,8 @@ public class ProceduralGeneration : MonoBehaviour
         };
 
         TileMap.ClearAllTiles();
+        WallTileMap.ClearAllTiles();
+
 
         for (int x = 0; x < Width; x++)
         {
@@ -202,26 +198,13 @@ public class ProceduralGeneration : MonoBehaviour
                     TileMap.SetTile(tilePos, GroundTile);
                 }
 
-                // Wall logic only if SOLID and adjacent to EMPTY
-                else if (Map[x, y] == SOLID)
+                else if (Map[x, y] == WALL)
                 {
                     bool isEdge = false;
-
-                    // Check 4 cardinal directions only
-                    int[,] dirs = new int[,]
-                    {
-                        { 0, 1 },
-                        { 0, -1 },
-                        { 1, 0 },
-                        { -1, 0 }
-                    };
-
                     for (int d = 0; d < 4; d++)
                     {
-                        int nx = x + dirs[d, 0];
-                        int ny = y + dirs[d, 1];
-
-                        // Bounds check
+                        int nx = x + (d == 0 ? 1 : d == 1 ? -1 : 0);
+                        int ny = y + (d == 2 ? 1 : d == 3 ? -1 : 0);
                         if (nx >= 0 && nx < Width && ny >= 0 && ny < Height)
                         {
                             if (Map[nx, ny] == EMPTY)
@@ -234,9 +217,17 @@ public class ProceduralGeneration : MonoBehaviour
 
                     if (isEdge)
                     {
-                        TileMap.SetTile(tilePos, Wall);
+                        Vector3 worldPos = TileMap.CellToWorld(tilePos) + TileMap.layoutGrid.cellSize / 2f;
+                        GameObject colliderObj = new GameObject($"WallCollider_{x}_{y}");
+                        colliderObj.transform.position = worldPos;
+
+                        colliderObj.transform.parent = this.transform;
+                        var boxCollider = colliderObj.AddComponent<BoxCollider2D>();
+                        boxCollider.size = TileMap.layoutGrid.cellSize * BoundsSize;
                     }
                 }
+
+
             }
         }
 
@@ -625,6 +616,8 @@ public class ProceduralGeneration : MonoBehaviour
     {
 
     }
+
+
 
     List<Tile> GetTiles(string Path)
     {

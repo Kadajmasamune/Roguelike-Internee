@@ -1,0 +1,1117 @@
+fileFormatVersion: 2
+guid: ce1e8d6c4afdaa14d8ad1f68245bdfb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7901109146094121177
+    second: Attack_05_Body_157_0
+  - first:
+      213: 8876026013115760178
+    second: Attack_05_Body_157_1
+  - first:
+      213: 6282857242672294739
+    second: Attack_05_Body_157_2
+  - first:
+      213: 5977620736213035083
+    second: Attack_05_Body_157_3
+  - first:
+      213: -4357635617057399238
+    second: Attack_05_Body_157_4
+  - first:
+      213: -4228871938419450731
+    second: Attack_05_Body_157_5
+  - first:
+      213: 4163265314514256533
+    second: Attack_05_Body_157_6
+  - first:
+      213: -5257074721857732437
+    second: Attack_05_Body_157_7
+  - first:
+      213: 6677848633930006629
+    second: Attack_05_Body_157_8
+  - first:
+      213: 4865161369942554220
+    second: Attack_05_Body_157_9
+  - first:
+      213: -1061652860643683122
+    second: Attack_05_Body_157_10
+  - first:
+      213: -7600881631729859557
+    second: Attack_05_Body_157_11
+  - first:
+      213: -1185325263457966268
+    second: Attack_05_Body_157_12
+  - first:
+      213: -6684730431794441986
+    second: Attack_05_Body_157_13
+  - first:
+      213: -8411250691921968370
+    second: Attack_05_Body_157_14
+  - first:
+      213: 2787713144234141825
+    second: Attack_05_Body_157_15
+  - first:
+      213: 8885612442326158412
+    second: Attack_05_Body_157_16
+  - first:
+      213: 6810139363124720637
+    second: Attack_05_Body_157_17
+  - first:
+      213: 8419103349259424115
+    second: Attack_05_Body_157_18
+  - first:
+      213: 4401956378684363649
+    second: Attack_05_Body_157_19
+  - first:
+      213: -4811346561186266236
+    second: Attack_05_Body_157_20
+  - first:
+      213: 101640338065368648
+    second: Attack_05_Body_157_21
+  - first:
+      213: 6998249016766621651
+    second: Attack_05_Body_157_22
+  - first:
+      213: -5599198492398423925
+    second: Attack_05_Body_157_23
+  - first:
+      213: 8586953648317114599
+    second: Attack_05_Body_157_24
+  - first:
+      213: 1495088127953477938
+    second: Attack_05_Body_157_25
+  - first:
+      213: -7450680600991021864
+    second: Attack_05_Body_157_26
+  - first:
+      213: 5300021677813327214
+    second: Attack_05_Body_157_27
+  - first:
+      213: -3414087364230568770
+    second: Attack_05_Body_157_28
+  - first:
+      213: 3349059548213347370
+    second: Attack_05_Body_157_29
+  - first:
+      213: 4958693849225751023
+    second: Attack_05_Body_157_30
+  - first:
+      213: -7560734506167101702
+    second: Attack_05_Body_157_31
+  - first:
+      213: 5714673091543150278
+    second: Attack_05_Body_157_32
+  - first:
+      213: 1997931490063424401
+    second: Attack_05_Body_157_33
+  - first:
+      213: 6150677995001852084
+    second: Attack_05_Body_157_34
+  - first:
+      213: 1145806969067661679
+    second: Attack_05_Body_157_35
+  - first:
+      213: 5646164496074544494
+    second: Attack_05_Body_157_36
+  - first:
+      213: -2333194499000033342
+    second: Attack_05_Body_157_37
+  - first:
+      213: 6207669159743182014
+    second: Attack_05_Body_157_38
+  - first:
+      213: -5424141178313830393
+    second: Attack_05_Body_157_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_05_Body_157_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1334
+        width: 129
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f487fe71f995290800000000000000
+      internalID: -7901109146094121177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_1
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1333
+        width: 125
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e34e8b1aafd2b70800000000000000
+      internalID: 8876026013115760178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_2
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1332
+        width: 122
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35be8fbcf51313750800000000000000
+      internalID: 6282857242672294739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_3
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 1337
+        width: 119
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48acf78366c4f250800000000000000
+      internalID: 5977620736213035083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_4
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 1352
+        width: 118
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e14b87e719683c0800000000000000
+      internalID: -4357635617057399238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_5
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 1349
+        width: 120
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c14e5a0670055c0800000000000000
+      internalID: -4228871938419450731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_6
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 1349
+        width: 149
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 592c351eeb3e6c930800000000000000
+      internalID: 4163265314514256533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_7
+      rect:
+        serializedVersion: 2
+        x: 2350
+        y: 1363
+        width: 148
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba00cf5c46e1b07b0800000000000000
+      internalID: -5257074721857732437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_8
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1057
+        width: 142
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560c939a3fb7cac50800000000000000
+      internalID: 6677848633930006629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_9
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1055
+        width: 131
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66f06e3d76848340800000000000000
+      internalID: 4865161369942554220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_10
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1053
+        width: 114
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec45e8e19504441f0800000000000000
+      internalID: -1061652860643683122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_11
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 1059
+        width: 107
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1443f85d6e348690800000000000000
+      internalID: -7600881631729859557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_12
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1056
+        width: 124
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447aa48f3f0ec8fe0800000000000000
+      internalID: -1185325263457966268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_13
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1038
+        width: 143
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef016a9e6111b33a0800000000000000
+      internalID: -6684730431794441986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_14
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 1030
+        width: 158
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e038b377f0c354b80800000000000000
+      internalID: -8411250691921968370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_15
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 1004
+        width: 119
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18863c1b552ffa620800000000000000
+      internalID: 2787713144234141825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_16
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 690
+        width: 151
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4c44a43079005b70800000000000000
+      internalID: 8885612442326158412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_17
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 721
+        width: 160
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df334f94ba9728e50800000000000000
+      internalID: 6810139363124720637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_18
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 728
+        width: 128
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 371d8ebc3e9a6d470800000000000000
+      internalID: 8419103349259424115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_19
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 731
+        width: 139
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1831f3cf004e61d30800000000000000
+      internalID: 4401956378684363649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_20
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 733
+        width: 127
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48302315bc9aa3db0800000000000000
+      internalID: -4811346561186266236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_21
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 732
+        width: 124
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 846ac355959196100800000000000000
+      internalID: 101640338065368648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_22
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 730
+        width: 111
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7e9160766ce1160800000000000000
+      internalID: 6998249016766621651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_23
+      rect:
+        serializedVersion: 2
+        x: 2374
+        y: 717
+        width: 98
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8070b113a6ab42b0800000000000000
+      internalID: -5599198492398423925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_24
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 374
+        width: 151
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8afa6f8dcfa2770800000000000000
+      internalID: 8586953648317114599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_25
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 381
+        width: 239
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23122962bbe9fb410800000000000000
+      internalID: 1495088127953477938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_26
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 399
+        width: 230
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d44903087dd99890800000000000000
+      internalID: -7450680600991021864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_27
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 400
+        width: 156
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65eeef92a57d8940800000000000000
+      internalID: 5300021677813327214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_28
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 399
+        width: 123
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb423ee71a9be90d0800000000000000
+      internalID: -3414087364230568770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_29
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 364
+        width: 141
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2403ee3aef3a7e20800000000000000
+      internalID: 3349059548213347370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_30
+      rect:
+        serializedVersion: 2
+        x: 1975
+        y: 367
+        width: 163
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9e30998c1d0d440800000000000000
+      internalID: 4958693849225751023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_31
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 385
+        width: 151
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af61fde6600e21790800000000000000
+      internalID: -7560734506167101702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_32
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 67
+        width: 160
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cea9ec26e89e4f40800000000000000
+      internalID: 5714673091543150278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_33
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 59
+        width: 151
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b1cceca141abb10800000000000000
+      internalID: 1997931490063424401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_34
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 52
+        width: 138
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0b5eb7c099b5550800000000000000
+      internalID: 6150677995001852084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_35
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 47
+        width: 143
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69e17c1e59b6ef00800000000000000
+      internalID: 1145806969067661679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_36
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 45
+        width: 148
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6512fbc1b43b5e40800000000000000
+      internalID: 5646164496074544494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_37
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 46
+        width: 144
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf153707f3de9fd0800000000000000
+      internalID: -2333194499000033342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_38
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 51
+        width: 140
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4d3ad0632162650800000000000000
+      internalID: 6207669159743182014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_05_Body_157_39
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 54
+        width: 139
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700190f265499b4b0800000000000000
+      internalID: -5424141178313830393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
