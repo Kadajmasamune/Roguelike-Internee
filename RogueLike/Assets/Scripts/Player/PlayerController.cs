@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     public bool IsLockedOn { get; private set; }
     public bool IsCasting { get; private set; }
     public bool IsHeavyAttacking { get; private set; }
+    public bool IsRunningBackwards { get; private set; }
 
     [Header("Animation")]
     [SerializeField] AnimatorController PlayerAnimatorController;
@@ -94,7 +95,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
             Input.GetAxisRaw("Vertical")
         ).normalized;
 
-        if (!IsRolling && Input.GetKeyDown(KeyCode.V) && movementInput != Vector2.zero)
+        if (!IsRolling && Input.GetKeyDown(KeyCode.Space) && movementInput != Vector2.zero)
         {
             IsRolling = true;
             rollTimer = rollDuration;
@@ -103,7 +104,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         else if (!IsRolling && !IsAttacking && !IsHeavyAttacking && Input.GetMouseButtonDown(1) && movementInput != Vector2.zero)
         {
             IsHeavyAttacking = true;
-            IsRunning = true; 
+            IsRunning = true;
             HeavyAttackTimer = KickAttackClip.length;
             lockedKickDirection = PlayerMovementData.GetDirectionFromInput(movementInput.x, movementInput.y);
         }
@@ -141,11 +142,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         else if (IsCasting)
         {
             CastingTimer -= Time.fixedDeltaTime;
-
-            if (CastingTimer <= 0f)
-            {
-                IsCasting = false;
-            }
+            if (CastingTimer <= 0f) IsCasting = false;
 
             Debug.Log("Casting Magic!");
             CurrentVelocity = Vector2.zero;
@@ -153,54 +150,46 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         else if (IsRunning && IsHeavyAttacking)
         {
             HeavyAttackTimer -= Time.fixedDeltaTime;
-            if (HeavyAttackTimer <= 0f)
-            {
-                IsHeavyAttacking = false;
-            }
+            if (HeavyAttackTimer <= 0f) IsHeavyAttacking = false;
 
             Vector2 newPosition = playerRb.position + movementInput * RunAttackSpeed * Time.fixedDeltaTime;
             playerRb.MovePosition(newPosition);
-            CurrentDirection = lockedKickDirection; // Fixed direction for attack
+            CurrentDirection = lockedKickDirection;
             CurrentVelocity = movementInput * RunAttackSpeed;
-
-
         }
         else if (IsRunning && IsAttacking)
         {
             RunAttackTimer -= Time.fixedDeltaTime;
-            if (RunAttackTimer <= 0f)
-            {
-                IsAttacking = false;
-            }
+            if (RunAttackTimer <= 0f) IsAttacking = false;
 
             Vector2 newPosition = playerRb.position + movementInput * RunAttackSpeed * Time.fixedDeltaTime;
             playerRb.MovePosition(newPosition);
-            CurrentDirection = lockedAttackDirection; // Fixed direction for attack
+            CurrentDirection = lockedAttackDirection;
             CurrentVelocity = movementInput * RunAttackSpeed;
-
         }
-
-        // if (IsLockedOn)
-        // {
-        //     Debug.Log("Locking In on Enemy");
-        //     IsLockedOn = true;
-        // }
-
-
         else if (movementInput != Vector2.zero)
         {
             Vector2 moveDir = movementInput;
-
             Vector2 newPosition = playerRb.position + moveDir * moveSpeed * Time.fixedDeltaTime;
             playerRb.MovePosition(newPosition);
-            CurrentDirection = PlayerMovementData.GetDirectionFromInput(movementInput.x, movementInput.y);
+
+            if (!IsLockedOn)
+            {
+                // Free mode: face movement direction
+                CurrentDirection = PlayerMovementData.GetDirectionFromInput(moveDir.x, moveDir.y);
+                IsRunningBackwards = false;
+            }
+            else
+            {
+                // Locked-on: maintain direction, but check if running backwards
+                Vector2 facingVec = PlayerMovementData.DirectionToVector(CurrentDirection);
+                float backwardDot = Vector2.Dot(moveDir.normalized, -facingVec);
+                IsRunningBackwards = backwardDot > 0.7f; // Threshold for backpedal
+            }
+
             CurrentVelocity = moveDir * moveSpeed;
             IsRunning = true;
         }
-        else
-        {
-            CurrentVelocity = Vector2.zero;
-            IsRunning = false;
-        }
+
     }
 }

@@ -10,6 +10,6 @@ public class RunBackWardsState : AnimState
     {
         if (flags.IsRolling || flags.IsAttacking) return false;
 
-        return entity.CurrentDirection == providedDirection;
+        return entity.CurrentDirection == providedDirection && flags.IsRunningBackwards;
     }
 }
