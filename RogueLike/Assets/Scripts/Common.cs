@@ -36,7 +36,6 @@ namespace Common
         bool IsLockedOn { get; }
         bool IsCasting { get; }
         bool IsHeavyAttacking { get; }
-        bool IsRunningBackwards { get; }
     }
 
 
