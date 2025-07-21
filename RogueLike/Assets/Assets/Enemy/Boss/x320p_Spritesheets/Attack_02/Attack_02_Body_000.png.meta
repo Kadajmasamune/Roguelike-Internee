@@ -165,6 +165,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -709,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Attack_02_Body_000_0: 6196937325587732832
+      Attack_02_Body_000_1: -8198683979501518542
+      Attack_02_Body_000_10: -6126938069640907214
+      Attack_02_Body_000_11: 2503555475550269923
+      Attack_02_Body_000_12: -8220637839931766764
+      Attack_02_Body_000_13: -7061119294706942800
+      Attack_02_Body_000_14: 3858577109856434234
+      Attack_02_Body_000_15: 2881380580702132510
+      Attack_02_Body_000_16: 2387159588428979641
+      Attack_02_Body_000_17: 2189042260095083561
+      Attack_02_Body_000_18: -2439296347486053520
+      Attack_02_Body_000_19: 9107473640294094656
+      Attack_02_Body_000_2: -1661947205586045145
+      Attack_02_Body_000_20: -4225227344916433475
+      Attack_02_Body_000_21: 8936930296529064604
+      Attack_02_Body_000_22: 3530305081857329242
+      Attack_02_Body_000_23: 140476561253063281
+      Attack_02_Body_000_3: 3220591696329663294
+      Attack_02_Body_000_4: -4574684426524131796
+      Attack_02_Body_000_5: -6920992111274594446
+      Attack_02_Body_000_6: -1139771660595447492
+      Attack_02_Body_000_7: 2850852865574063942
+      Attack_02_Body_000_8: 3711097153665585876
+      Attack_02_Body_000_9: 8234679475943903704
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -186,6 +186,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -884,7 +897,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jump_Run_Body_022_0: 1293064335493138711
+      Jump_Run_Body_022_1: -3688932816374246404
+      Jump_Run_Body_022_10: 6635923177256131155
+      Jump_Run_Body_022_11: -7836145934336370755
+      Jump_Run_Body_022_12: 6476248370378572134
+      Jump_Run_Body_022_13: 936304326180543485
+      Jump_Run_Body_022_14: -1432030885904681746
+      Jump_Run_Body_022_15: 1323463223390720440
+      Jump_Run_Body_022_16: -5673182938802969297
+      Jump_Run_Body_022_17: -3865817779018607084
+      Jump_Run_Body_022_18: 5761622920687853018
+      Jump_Run_Body_022_19: 5200981767395290112
+      Jump_Run_Body_022_2: -1445803623425785000
+      Jump_Run_Body_022_20: -7923981053084634474
+      Jump_Run_Body_022_21: 8566387741099855631
+      Jump_Run_Body_022_22: -8209348807677803026
+      Jump_Run_Body_022_23: -3986458309454833002
+      Jump_Run_Body_022_24: -6382064318870005224
+      Jump_Run_Body_022_25: -7260054031807364314
+      Jump_Run_Body_022_26: -5765847786406429175
+      Jump_Run_Body_022_27: 4438441784110223240
+      Jump_Run_Body_022_28: 8875316205830039017
+      Jump_Run_Body_022_29: 1189272434704509404
+      Jump_Run_Body_022_3: 1108739805642499367
+      Jump_Run_Body_022_30: 1926175581663594243
+      Jump_Run_Body_022_4: -317924467913913278
+      Jump_Run_Body_022_5: -5665147606893442873
+      Jump_Run_Body_022_6: -4913607150456023192
+      Jump_Run_Body_022_7: -7928168920797544380
+      Jump_Run_Body_022_8: -6325358240928722538
+      Jump_Run_Body_022_9: 7676646917713846625
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -183,6 +183,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -859,7 +872,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Attack_07_Body_157_0: -8393824688853192544
+      Attack_07_Body_157_1: 4491317836096929135
+      Attack_07_Body_157_10: -86919286004197686
+      Attack_07_Body_157_11: 8086557692073458900
+      Attack_07_Body_157_12: 6147214043332174876
+      Attack_07_Body_157_13: 2166339640177431628
+      Attack_07_Body_157_14: -5805481080438516059
+      Attack_07_Body_157_15: -514284606889457251
+      Attack_07_Body_157_16: 6466786472250950978
+      Attack_07_Body_157_17: -7159719143004772760
+      Attack_07_Body_157_18: 7150612554742353786
+      Attack_07_Body_157_19: 4665098344102962874
+      Attack_07_Body_157_2: -517180864426160419
+      Attack_07_Body_157_20: -8160504393061123542
+      Attack_07_Body_157_21: -5807845019656380350
+      Attack_07_Body_157_22: 2020773798593543195
+      Attack_07_Body_157_23: 4148131586440872574
+      Attack_07_Body_157_24: 7398624352927910829
+      Attack_07_Body_157_25: -1416337534388664445
+      Attack_07_Body_157_26: 5663682797499877446
+      Attack_07_Body_157_27: 3391912395231559885
+      Attack_07_Body_157_28: 8542192500788406994
+      Attack_07_Body_157_29: 4511368219027108526
+      Attack_07_Body_157_3: 6176378995682278212
+      Attack_07_Body_157_4: 3076505472398414770
+      Attack_07_Body_157_5: 2947007537052998350
+      Attack_07_Body_157_6: -7303061962006766264
+      Attack_07_Body_157_7: 4413579300753526450
+      Attack_07_Body_157_8: -4663724215852687265
+      Attack_07_Body_157_9: -6743203861992497335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

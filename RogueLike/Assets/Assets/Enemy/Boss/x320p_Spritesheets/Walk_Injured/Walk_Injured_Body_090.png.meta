@@ -165,6 +165,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -709,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walk_Injured_Body_090_0: -8317387741725428302
+      Walk_Injured_Body_090_1: -3245374135748867686
+      Walk_Injured_Body_090_10: 1530041313354454064
+      Walk_Injured_Body_090_11: -1126417508440491114
+      Walk_Injured_Body_090_12: 7302016056503455206
+      Walk_Injured_Body_090_13: 217603219391237930
+      Walk_Injured_Body_090_14: 8175466430785133637
+      Walk_Injured_Body_090_15: -6163527021622031646
+      Walk_Injured_Body_090_16: -6596791062996457463
+      Walk_Injured_Body_090_17: 1459486008360340166
+      Walk_Injured_Body_090_18: 1475604007827566308
+      Walk_Injured_Body_090_19: 7817474642376773543
+      Walk_Injured_Body_090_2: 4664883253000058768
+      Walk_Injured_Body_090_20: 3441595499684713702
+      Walk_Injured_Body_090_21: 3945479289004368856
+      Walk_Injured_Body_090_22: 252439030456820874
+      Walk_Injured_Body_090_23: 7049212314109145784
+      Walk_Injured_Body_090_3: -4612564451389167584
+      Walk_Injured_Body_090_4: -8938920035591534336
+      Walk_Injured_Body_090_5: 5692684826216719330
+      Walk_Injured_Body_090_6: 4727346799482135413
+      Walk_Injured_Body_090_7: 596167492450792628
+      Walk_Injured_Body_090_8: 2894159875337758567
+      Walk_Injured_Body_090_9: 2659852122666700907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

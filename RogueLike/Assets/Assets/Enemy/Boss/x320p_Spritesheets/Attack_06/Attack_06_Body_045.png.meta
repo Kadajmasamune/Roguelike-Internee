@@ -213,6 +213,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1109,7 +1122,47 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Attack_06_Body_045_0: 3327319909778592860
+      Attack_06_Body_045_1: 2039011363647914127
+      Attack_06_Body_045_10: -5250731545553430618
+      Attack_06_Body_045_11: 1019257458684882747
+      Attack_06_Body_045_12: 5431961117471269976
+      Attack_06_Body_045_13: -7233074964174901417
+      Attack_06_Body_045_14: 2503809964665023073
+      Attack_06_Body_045_15: 3822817605912510212
+      Attack_06_Body_045_16: -2919851292236683270
+      Attack_06_Body_045_17: -4998760828337471508
+      Attack_06_Body_045_18: 3961540385564197521
+      Attack_06_Body_045_19: -8827492841875816626
+      Attack_06_Body_045_2: 2779541701567969063
+      Attack_06_Body_045_20: -4960349578785893782
+      Attack_06_Body_045_21: 1690541445753412191
+      Attack_06_Body_045_22: -2893307775860411687
+      Attack_06_Body_045_23: 5045394935267910325
+      Attack_06_Body_045_24: -9147224592931468894
+      Attack_06_Body_045_25: -7631995306014948407
+      Attack_06_Body_045_26: -8110496041314907769
+      Attack_06_Body_045_27: 6106086784462563616
+      Attack_06_Body_045_28: -4554260555280379168
+      Attack_06_Body_045_29: -7065771199487456540
+      Attack_06_Body_045_3: 7284804778569472491
+      Attack_06_Body_045_30: -1276032528804099804
+      Attack_06_Body_045_31: 4165331308215399449
+      Attack_06_Body_045_32: 6624511744122192795
+      Attack_06_Body_045_33: 4731223322591950253
+      Attack_06_Body_045_34: -4841598015665485822
+      Attack_06_Body_045_35: -370787839535716989
+      Attack_06_Body_045_36: 7972387926276739446
+      Attack_06_Body_045_37: 3803560822129308039
+      Attack_06_Body_045_38: 6551279481787919074
+      Attack_06_Body_045_39: -5453577656942679998
+      Attack_06_Body_045_4: 3830283764014355051
+      Attack_06_Body_045_5: -2023438653105313147
+      Attack_06_Body_045_6: 1035521363850599235
+      Attack_06_Body_045_7: -682444135086083849
+      Attack_06_Body_045_8: -5318641290581093055
+      Attack_06_Body_045_9: -669143893390925208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

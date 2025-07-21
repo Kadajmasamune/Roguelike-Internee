@@ -165,6 +165,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -709,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jump_Run_Body_247_0: -8452886338442680490
+      Jump_Run_Body_247_1: 6565120322460889460
+      Jump_Run_Body_247_10: -7316189807023382609
+      Jump_Run_Body_247_11: 9025205295113681204
+      Jump_Run_Body_247_12: -4616298807056233598
+      Jump_Run_Body_247_13: -5346051053579760108
+      Jump_Run_Body_247_14: 2938131957224020244
+      Jump_Run_Body_247_15: 125053375238953170
+      Jump_Run_Body_247_16: 6160510247825915303
+      Jump_Run_Body_247_17: 7399980503029408646
+      Jump_Run_Body_247_18: 1364000863698105701
+      Jump_Run_Body_247_19: -7758860983487361506
+      Jump_Run_Body_247_2: -1918116673551917866
+      Jump_Run_Body_247_20: 7086206175620756900
+      Jump_Run_Body_247_21: 9197684454709735920
+      Jump_Run_Body_247_22: -2796929847428140519
+      Jump_Run_Body_247_23: 2924222413094312280
+      Jump_Run_Body_247_3: -3327790283349007124
+      Jump_Run_Body_247_4: 3845521387657625614
+      Jump_Run_Body_247_5: 1527718260113082592
+      Jump_Run_Body_247_6: 5914458640076495921
+      Jump_Run_Body_247_7: 2256226836198544486
+      Jump_Run_Body_247_8: -134775488314187266
+      Jump_Run_Body_247_9: 2325591571952243299
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

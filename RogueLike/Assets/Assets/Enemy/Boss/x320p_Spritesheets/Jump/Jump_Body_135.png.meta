@@ -183,6 +183,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -859,7 +872,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jump_Body_135_0: 1111959558326947565
+      Jump_Body_135_1: -20599121829403383
+      Jump_Body_135_10: -6553455070226702601
+      Jump_Body_135_11: 8857879895593005761
+      Jump_Body_135_12: 585872141058721494
+      Jump_Body_135_13: -1346674918682962927
+      Jump_Body_135_14: 2604706886249629529
+      Jump_Body_135_15: 4175924991979060492
+      Jump_Body_135_16: 8481095233770587162
+      Jump_Body_135_17: 5720180526760833954
+      Jump_Body_135_18: 1112941032985934256
+      Jump_Body_135_19: 2833554609464224095
+      Jump_Body_135_2: 1621154838195211832
+      Jump_Body_135_20: -1316379650398113541
+      Jump_Body_135_21: 6633655208123851143
+      Jump_Body_135_22: 504404042844391094
+      Jump_Body_135_23: -6100625896302979409
+      Jump_Body_135_24: -424064560414716702
+      Jump_Body_135_25: -5689616997373507925
+      Jump_Body_135_26: -3231541714777547638
+      Jump_Body_135_27: 8074853779533056749
+      Jump_Body_135_28: 3258130784125437614
+      Jump_Body_135_29: 3909473021513166777
+      Jump_Body_135_3: 5681785728063675456
+      Jump_Body_135_4: 1217714368642243344
+      Jump_Body_135_5: -5888795298730912619
+      Jump_Body_135_6: -4297685076626211452
+      Jump_Body_135_7: -6420918291788293409
+      Jump_Body_135_8: 7503376432089308711
+      Jump_Body_135_9: -500818476236662412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

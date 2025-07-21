@@ -173,8 +173,8 @@ MonoBehaviour:
   Player: {fileID: 604664135}
   TileSpacing: 4
   NoiseScale: 1
-  RoomWidth: 2048
-  RoomHeight: 2048
+  RoomWidth: 4096
+  RoomHeight: 4096
   CellSize: 16
   RoomID: 0
   fill: 0.3

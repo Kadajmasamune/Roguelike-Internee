@@ -153,6 +153,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -609,7 +622,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walk_Backpedal_Body_337_0: -493355700331853670
+      Walk_Backpedal_Body_337_1: -6639894953461960912
+      Walk_Backpedal_Body_337_10: -4827348074829083964
+      Walk_Backpedal_Body_337_11: 4263857185806575801
+      Walk_Backpedal_Body_337_12: -1833531492655120017
+      Walk_Backpedal_Body_337_13: -6328251495205415769
+      Walk_Backpedal_Body_337_14: -5099798433604883629
+      Walk_Backpedal_Body_337_15: -2282545315295264307
+      Walk_Backpedal_Body_337_16: -5681767729960629727
+      Walk_Backpedal_Body_337_17: -1173008305203971582
+      Walk_Backpedal_Body_337_18: -3910456451139271255
+      Walk_Backpedal_Body_337_19: 1524466400589694074
+      Walk_Backpedal_Body_337_2: -6790845320002225876
+      Walk_Backpedal_Body_337_3: 4924623581125695346
+      Walk_Backpedal_Body_337_4: 6543561085870686798
+      Walk_Backpedal_Body_337_5: -1264621006453311569
+      Walk_Backpedal_Body_337_6: 2053872250363532630
+      Walk_Backpedal_Body_337_7: -1883578027140247941
+      Walk_Backpedal_Body_337_8: 6246424084550623530
+      Walk_Backpedal_Body_337_9: 9067001504430513104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

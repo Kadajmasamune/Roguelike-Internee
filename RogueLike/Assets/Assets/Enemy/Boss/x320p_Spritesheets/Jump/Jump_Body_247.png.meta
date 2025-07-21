@@ -183,6 +183,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -859,7 +872,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Jump_Body_247_0: 7066457556271982377
+      Jump_Body_247_1: 1250781232799039043
+      Jump_Body_247_10: -5329088949696885520
+      Jump_Body_247_11: -3121505019940808933
+      Jump_Body_247_12: -5324047423146717972
+      Jump_Body_247_13: 8206202567003103684
+      Jump_Body_247_14: 1111059409302339640
+      Jump_Body_247_15: 5286881025293356225
+      Jump_Body_247_16: -7124778740929763500
+      Jump_Body_247_17: 7197744287209181275
+      Jump_Body_247_18: 48434254371643245
+      Jump_Body_247_19: 3130943591968360879
+      Jump_Body_247_2: -7895128643173816637
+      Jump_Body_247_20: 2371339701006580016
+      Jump_Body_247_21: 8934433454532618156
+      Jump_Body_247_22: 5388020886190235191
+      Jump_Body_247_23: 5215201160197226495
+      Jump_Body_247_24: 1164369234416277033
+      Jump_Body_247_25: 104032571838221714
+      Jump_Body_247_26: 6617166774890880687
+      Jump_Body_247_27: 7919044076974370188
+      Jump_Body_247_28: -8923575814302648589
+      Jump_Body_247_29: 7434441652514427523
+      Jump_Body_247_3: -8916957619151167314
+      Jump_Body_247_4: 2782913203352230085
+      Jump_Body_247_5: 4152707760932357465
+      Jump_Body_247_6: 8081495557555974789
+      Jump_Body_247_7: -386127670689704200
+      Jump_Body_247_8: 6285198318970399367
+      Jump_Body_247_9: -8797871353837084752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

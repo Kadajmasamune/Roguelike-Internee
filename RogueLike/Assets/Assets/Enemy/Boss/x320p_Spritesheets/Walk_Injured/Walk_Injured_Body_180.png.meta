@@ -165,6 +165,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -709,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walk_Injured_Body_180_0: 6420780414862113206
+      Walk_Injured_Body_180_1: 5029857923049711461
+      Walk_Injured_Body_180_10: -1133378867476444976
+      Walk_Injured_Body_180_11: 6511119752548065666
+      Walk_Injured_Body_180_12: -7408841648856943462
+      Walk_Injured_Body_180_13: 3921781022828120322
+      Walk_Injured_Body_180_14: -5403853837924689462
+      Walk_Injured_Body_180_15: -7594465129317243931
+      Walk_Injured_Body_180_16: -5433972857441435838
+      Walk_Injured_Body_180_17: -8740205002360260255
+      Walk_Injured_Body_180_18: 5265416631742905025
+      Walk_Injured_Body_180_19: -4695948244665518929
+      Walk_Injured_Body_180_2: -4037709903761182030
+      Walk_Injured_Body_180_20: 5534740593852302540
+      Walk_Injured_Body_180_21: -6250444121213280180
+      Walk_Injured_Body_180_22: -4505992627046409937
+      Walk_Injured_Body_180_23: -5725737847709233068
+      Walk_Injured_Body_180_3: -5669350033729458146
+      Walk_Injured_Body_180_4: -9076048991112224558
+      Walk_Injured_Body_180_5: -1983487874878588473
+      Walk_Injured_Body_180_6: -2091221496275769528
+      Walk_Injured_Body_180_7: -6124499036057496022
+      Walk_Injured_Body_180_8: 5226508588875056990
+      Walk_Injured_Body_180_9: 5256207410563748339
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

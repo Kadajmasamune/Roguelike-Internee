@@ -183,6 +183,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -859,7 +872,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Death_Body_112_0: 3887606359786023498
+      Death_Body_112_1: 1408199363401927519
+      Death_Body_112_10: 5891872301541685684
+      Death_Body_112_11: 5128417380770319428
+      Death_Body_112_12: -5776333239583748434
+      Death_Body_112_13: -6733436766228571000
+      Death_Body_112_14: -7560393571817603861
+      Death_Body_112_15: 9195364592363209040
+      Death_Body_112_16: 1569160575209871527
+      Death_Body_112_17: 141456579077824043
+      Death_Body_112_18: -6024319668334051190
+      Death_Body_112_19: -548867537434232848
+      Death_Body_112_2: -942417341788752190
+      Death_Body_112_20: 265678885315447166
+      Death_Body_112_21: 6476341470834106925
+      Death_Body_112_22: -4684362530779623143
+      Death_Body_112_23: -2792765495514655173
+      Death_Body_112_24: -2109825955213446550
+      Death_Body_112_25: 8224489499912664479
+      Death_Body_112_26: -538934693813899677
+      Death_Body_112_27: 4087301282479439540
+      Death_Body_112_28: 1289611388777083774
+      Death_Body_112_29: -4133982211888078816
+      Death_Body_112_3: -3942704898864426928
+      Death_Body_112_4: 163191656077263884
+      Death_Body_112_5: 7388493321665371383
+      Death_Body_112_6: 478788334259874376
+      Death_Body_112_7: -1932768904597158865
+      Death_Body_112_8: 1435785370843266405
+      Death_Body_112_9: 3433820048706055150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

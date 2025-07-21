@@ -183,6 +183,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -859,7 +872,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Battlecry_Body_315_0: 8790530275878194691
+      Battlecry_Body_315_1: 6696304116973730477
+      Battlecry_Body_315_10: 2444322589941805876
+      Battlecry_Body_315_11: -8868648019088270100
+      Battlecry_Body_315_12: -2174163801654508940
+      Battlecry_Body_315_13: 8398569250751639945
+      Battlecry_Body_315_14: 7537802447579926540
+      Battlecry_Body_315_15: 5452378004034254506
+      Battlecry_Body_315_16: 7346401379163531063
+      Battlecry_Body_315_17: 7489575609977795540
+      Battlecry_Body_315_18: 3841168801867641656
+      Battlecry_Body_315_19: -6486137381363280199
+      Battlecry_Body_315_2: -8639695964347865807
+      Battlecry_Body_315_20: 1721003786182594864
+      Battlecry_Body_315_21: 4171009917393103230
+      Battlecry_Body_315_22: -55471193591183311
+      Battlecry_Body_315_23: 7416763707360796969
+      Battlecry_Body_315_24: 6129155942428769255
+      Battlecry_Body_315_25: 6230149632471509976
+      Battlecry_Body_315_26: -5000477157468738079
+      Battlecry_Body_315_27: -3640525595983124878
+      Battlecry_Body_315_28: -111339826202083686
+      Battlecry_Body_315_29: -474505498810409016
+      Battlecry_Body_315_3: 1010188567337909431
+      Battlecry_Body_315_4: -8501771561335983197
+      Battlecry_Body_315_5: -3205213627793768336
+      Battlecry_Body_315_6: -3053638382327601729
+      Battlecry_Body_315_7: 2855820634701331607
+      Battlecry_Body_315_8: -1157359690058760219
+      Battlecry_Body_315_9: 7154623147928532710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

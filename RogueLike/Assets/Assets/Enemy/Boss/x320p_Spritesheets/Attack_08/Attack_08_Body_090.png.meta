@@ -189,6 +189,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -909,7 +922,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Attack_08_Body_090_0: -4905909174400914227
+      Attack_08_Body_090_1: 5701417859380397701
+      Attack_08_Body_090_10: 7509261988276969312
+      Attack_08_Body_090_11: -5239519430969831061
+      Attack_08_Body_090_12: 7014786413167950828
+      Attack_08_Body_090_13: -8001441132144726762
+      Attack_08_Body_090_14: 614168101503154787
+      Attack_08_Body_090_15: 2816525846928603466
+      Attack_08_Body_090_16: -9090894014343840842
+      Attack_08_Body_090_17: 7011253719409240642
+      Attack_08_Body_090_18: -6071018707885456073
+      Attack_08_Body_090_19: -275844891542021573
+      Attack_08_Body_090_2: -2163147202710571802
+      Attack_08_Body_090_20: 8274107972412418775
+      Attack_08_Body_090_21: -4722271277077906888
+      Attack_08_Body_090_22: -8748853279738438373
+      Attack_08_Body_090_23: -2372622163595223814
+      Attack_08_Body_090_24: -1084365049703361088
+      Attack_08_Body_090_25: -5991258869058816517
+      Attack_08_Body_090_26: -672549599207285272
+      Attack_08_Body_090_27: 8613927964613023471
+      Attack_08_Body_090_28: -4261311723551049959
+      Attack_08_Body_090_29: -3821404443789153129
+      Attack_08_Body_090_3: 2948556445903460912
+      Attack_08_Body_090_30: 2382627432357594129
+      Attack_08_Body_090_31: 5476470002482222692
+      Attack_08_Body_090_4: 1632958315948736209
+      Attack_08_Body_090_5: -8257300417814778079
+      Attack_08_Body_090_6: -7894969635967880342
+      Attack_08_Body_090_7: -7620420904490369616
+      Attack_08_Body_090_8: 1747482438887672532
+      Attack_08_Body_090_9: -4464231285463673110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

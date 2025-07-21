@@ -153,6 +153,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -609,7 +622,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Run_Body_135_0: -5504912471383501625
+      Run_Body_135_1: 3758672236566360596
+      Run_Body_135_10: 7146368941053848885
+      Run_Body_135_11: -7587023452505334182
+      Run_Body_135_12: 545552274503337231
+      Run_Body_135_13: 5308308821546512220
+      Run_Body_135_14: 2419192060805680937
+      Run_Body_135_15: 1404277896447005949
+      Run_Body_135_16: 7722932816761732754
+      Run_Body_135_17: -4119337814515814456
+      Run_Body_135_18: 7356897583201304041
+      Run_Body_135_19: -8450999934784451875
+      Run_Body_135_2: -5401983481855323712
+      Run_Body_135_3: 5906149310788829153
+      Run_Body_135_4: 568159085434478854
+      Run_Body_135_5: 5314402089073653561
+      Run_Body_135_6: -4505320645642040596
+      Run_Body_135_7: 8936004953671236477
+      Run_Body_135_8: 8196834102539283742
+      Run_Body_135_9: -4277545682723088519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

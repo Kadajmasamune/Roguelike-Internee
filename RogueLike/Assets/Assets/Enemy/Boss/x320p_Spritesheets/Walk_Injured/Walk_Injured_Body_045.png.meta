@@ -165,6 +165,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -709,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walk_Injured_Body_045_0: 798571702931262386
+      Walk_Injured_Body_045_1: -7956531282550246861
+      Walk_Injured_Body_045_10: -5576522973573159496
+      Walk_Injured_Body_045_11: -3581314923694266623
+      Walk_Injured_Body_045_12: -4228915710952151148
+      Walk_Injured_Body_045_13: -8465291217208313632
+      Walk_Injured_Body_045_14: 7127108019548442164
+      Walk_Injured_Body_045_15: -1823218601736893783
+      Walk_Injured_Body_045_16: 4679885242896142164
+      Walk_Injured_Body_045_17: 7396774865663061294
+      Walk_Injured_Body_045_18: 4772096566623150532
+      Walk_Injured_Body_045_19: 2513829291030657057
+      Walk_Injured_Body_045_2: -6069165315615111023
+      Walk_Injured_Body_045_20: 5425598405725587859
+      Walk_Injured_Body_045_21: -2383441138747528071
+      Walk_Injured_Body_045_22: 6678534771311449060
+      Walk_Injured_Body_045_23: 3441988399250338388
+      Walk_Injured_Body_045_3: -8937974312521510127
+      Walk_Injured_Body_045_4: -3072696324980624663
+      Walk_Injured_Body_045_5: -1961023941808823235
+      Walk_Injured_Body_045_6: -5254996732177280779
+      Walk_Injured_Body_045_7: 4905506264703384984
+      Walk_Injured_Body_045_8: 7575837945550050061
+      Walk_Injured_Body_045_9: -6818732191005585190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
