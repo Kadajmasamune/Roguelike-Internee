@@ -607,13 +607,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  RollSpeed: 0
-  RunAttackSpeed: 0
-  RollingClip: {fileID: 7400000, guid: b6010eb4b781c904d908c6d1093114ff, type: 2}
-  RunAttackingClip: {fileID: 7400000, guid: feccdd2aeb0b2594dbe0988606566046, type: 2}
-  KickAttackClip: {fileID: 7400000, guid: 53895e940beef5d4d8e457c21e7a39dc, type: 2}
+  rollSpeedBoost: 2
+  attackSpeedBoost: 1.5
+  rollingClip: {fileID: 7400000, guid: 5a52db5afb7a37749a8d80f107617fc4, type: 2}
+  runAttackClip: {fileID: 7400000, guid: ea63f20d3798345499ef0c7541725f24, type: 2}
+  heavyAttackClip: {fileID: 7400000, guid: 53895e940beef5d4d8e457c21e7a39dc, type: 2}
   castingClip: {fileID: 7400000, guid: 15feeeb71657413429bdfe7e89423e20, type: 2}
-  PlayerAnimatorController: {fileID: 9100000, guid: 5a9371a806cc3224f98992eceaecd601, type: 2}
+  playerAnimatorController: {fileID: 9100000, guid: 5a9371a806cc3224f98992eceaecd601, type: 2}
 --- !u!70 &604664144
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

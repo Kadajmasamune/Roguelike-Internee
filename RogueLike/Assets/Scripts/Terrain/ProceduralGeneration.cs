@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -12,7 +13,7 @@ public class ProceduralGeneration : MonoBehaviour
 
     [SerializeField] Tile GroundTile;
     [SerializeField] Tile Wall;
-    [SerializeField] Tile wallSide; 
+    [SerializeField] Tile wallSide;
     [SerializeField] Tile Pillar;
     [SerializeField] Grid MapGrid;
     [SerializeField] GameObject Player;
@@ -24,7 +25,6 @@ public class ProceduralGeneration : MonoBehaviour
 
     private int Width;
     private int Height;
-    private float BoundsSize = 2.2f;
 
     [SerializeField] int RoomWidth;
     [SerializeField] int RoomHeight;
@@ -176,15 +176,13 @@ public class ProceduralGeneration : MonoBehaviour
 
     void DrawMapWithRoomEdges(int[,] Map)
     {
-        // Define colors for room edges
         Color[] colors = new Color[]
         {
-            Color.red, Color.green, Color.blue, new Color(1f, 0.5f, 0f), Color.cyan, Color.yellow
+        Color.red, Color.green, Color.blue, new Color(1f, 0.5f, 0f), Color.cyan, Color.yellow
         };
 
         TileMap.ClearAllTiles();
         WallTileMap.ClearAllTiles();
-
 
         for (int x = 0; x < Width; x++)
         {
@@ -192,19 +190,21 @@ public class ProceduralGeneration : MonoBehaviour
             {
                 Vector3Int tilePos = new Vector3Int(x * TileSpacing, y * TileSpacing, 0);
 
-                // Floor first
                 if (Map[x, y] == EMPTY)
                 {
                     TileMap.SetTile(tilePos, GroundTile);
                 }
-
                 else if (Map[x, y] == WALL)
                 {
+
                     bool isEdge = false;
+
+                    // Check adjacent tiles for edge detection
                     for (int d = 0; d < 4; d++)
                     {
                         int nx = x + (d == 0 ? 1 : d == 1 ? -1 : 0);
                         int ny = y + (d == 2 ? 1 : d == 3 ? -1 : 0);
+
                         if (nx >= 0 && nx < Width && ny >= 0 && ny < Height)
                         {
                             if (Map[nx, ny] == EMPTY)
@@ -217,25 +217,18 @@ public class ProceduralGeneration : MonoBehaviour
 
                     if (isEdge)
                     {
-                        Vector3 worldPos = TileMap.CellToWorld(tilePos) + TileMap.layoutGrid.cellSize / 2f;
-                        GameObject colliderObj = new GameObject($"WallCollider_{x}_{y}");
-                        colliderObj.transform.position = worldPos;
-
-                        colliderObj.transform.parent = this.transform;
-                        var boxCollider = colliderObj.AddComponent<BoxCollider2D>();
-                        boxCollider.size = TileMap.layoutGrid.cellSize * BoundsSize;
+                        //Add
                     }
                 }
-
-
             }
         }
 
-        // Optional: Draw colored room edges
+        // Draw room edges in different colors
         for (int s = 0; s < Rooms.Count; s++)
         {
             var room = Rooms[s];
             Color edgeColor = colors[s % colors.Length];
+
             foreach (var pos in room.Edges)
             {
                 Vector3Int tilePos = new Vector3Int(pos[0] * TileSpacing, pos[1] * TileSpacing, 0);

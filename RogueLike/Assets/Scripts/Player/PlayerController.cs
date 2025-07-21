@@ -2,55 +2,52 @@ using UnityEngine;
 using Common;
 using System.Collections.Generic;
 using UnityEditor.Animations;
-using Unity.VisualScripting;
 using System;
 
 public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHasBooleans
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float RollSpeed;
-    [SerializeField] private float RunAttackSpeed;
+    [SerializeField] private float rollSpeedBoost = 2f;
+    [SerializeField] private float attackSpeedBoost = 1.5f;
 
-    private EntityMovement PlayerMovementData = new EntityMovement();
+    [Header("Animation Clips")]
+    [SerializeField] private AnimationClip rollingClip;
+    [SerializeField] private AnimationClip runAttackClip;
+    [SerializeField] private AnimationClip heavyAttackClip;
+    [SerializeField] private AnimationClip castingClip;
 
+    [Header("Animation")]
+    [SerializeField] private AnimatorController playerAnimatorController;
 
-    [Header("Roll")]
-    [SerializeField] AnimationClip RollingClip;
-    float rollDuration;
-    float rollTimer = 0f;
+    private Rigidbody2D rb;
+    private Vector2 movementInput;
+    private Vector2 rollDirection;
 
+    private AnimHashGenerator animHashGenerator = new AnimHashGenerator();
+    public Dictionary<string, int> AnimationClipHashes { get; private set; } = new Dictionary<string, int>();
 
+    private EntityMovement movementData = new EntityMovement();
 
-    [Header("Attacks")]
-    [SerializeField] AnimationClip RunAttackingClip;
-    [SerializeField] AnimationClip KickAttackClip;
-
-    float RunAttackDuration;
-    float RunAttackTimer = 0f;
-
-    float Attack1Duration;
-    float Attack2Duration;
-    float AttackTimer;
-
-    float HeavyAttackDuration;
-    float HeavyAttackTimer;
-
-
-
-    [Header("Cast")]
-    [SerializeField] AnimationClip castingClip;
-    float CastingRange;
-    float CastingDuration;
-    float CastingTimer;
-    GameObject Target;
-
+    public Direction CurrentDirection { get; private set; }
+    public Vector2 CurrentVelocity { get; private set; }
 
     private Direction lockedAttackDirection;
-    private Direction lockedKickDirection;
+    private Direction lockedHeavyAttackDirection;
 
+    private float rollDuration;
+    private float rollTimer;
 
-    [Header("Booleans")]
+    private float runAttackDuration;
+    private float runAttackTimer;
+
+    private float heavyAttackDuration;
+    private float heavyAttackTimer;
+
+    private float castingDuration;
+    private float castingTimer;
+
+    [Header("State Booleans")]
     public bool IsRolling { get; private set; }
     public bool IsRunning { get; private set; }
     public bool IsAttacking { get; private set; }
@@ -58,149 +55,158 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     public bool IsCasting { get; private set; }
     public bool IsHeavyAttacking { get; private set; }
 
-    [Header("Animation")]
-    [SerializeField] AnimatorController PlayerAnimatorController;
-
-    private Rigidbody2D playerRb;
-    private Vector2 movementInput;
-    private Vector2 rollDirection;
-
-    private AnimHashGenerator animHashGenerator = new AnimHashGenerator();
-    public Dictionary<string, int> AnimationClipHashes { get; set; } = new Dictionary<string, int>();
-
-    public Direction CurrentDirection { get; private set; }
-    public Vector2 CurrentVelocity { get; private set; }
-
     private void Awake()
     {
-        playerRb = GetComponent<Rigidbody2D>();
-        RollSpeed = moveSpeed + 2f;
-        RunAttackSpeed = moveSpeed + 1.5f;
+        rb = GetComponent<Rigidbody2D>();
 
-        rollDuration = RollingClip.length;
-        RunAttackDuration = RunAttackingClip.length;
-        CastingDuration = castingClip.length;
-        HeavyAttackDuration = KickAttackClip.length;
+        rollDuration = rollingClip.length;
+        runAttackDuration = runAttackClip.length;
+        heavyAttackDuration = heavyAttackClip.length;
+        castingDuration = castingClip.length;
 
-
-
-        animHashGenerator.GenerateAnimHash(AnimationClipHashes, PlayerAnimatorController);
+        animHashGenerator.GenerateAnimHash(AnimationClipHashes, playerAnimatorController);
     }
 
     private void Update()
     {
-        movementInput = new Vector2(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")
-        ).normalized;
-
-        if (!IsRolling && Input.GetKeyDown(KeyCode.V) && movementInput != Vector2.zero)
-        {
-            IsRolling = true;
-            rollTimer = rollDuration;
-            rollDirection = movementInput;
-        }
-        else if (!IsRolling && !IsAttacking && !IsHeavyAttacking && Input.GetMouseButtonDown(1) && movementInput != Vector2.zero)
-        {
-            IsHeavyAttacking = true;
-            IsRunning = true; 
-            HeavyAttackTimer = KickAttackClip.length;
-            lockedKickDirection = PlayerMovementData.GetDirectionFromInput(movementInput.x, movementInput.y);
-        }
-
-        else if (!IsRolling && !IsAttacking && Input.GetMouseButtonDown(0) && movementInput != Vector2.zero)
-        {
-            IsRunning = true;
-            IsAttacking = true;
-            RunAttackTimer = RunAttackDuration;
-            lockedAttackDirection = PlayerMovementData.GetDirectionFromInput(movementInput.x, movementInput.y);
-        }
-
-        else if (!IsRolling && !IsAttacking && !IsCasting && Input.GetKeyDown(KeyCode.Q) && movementInput != Vector2.zero)
-        {
-            IsCasting = true;
-            CastingTimer = CastingDuration;
-        }
-
+        HandleInput();
         IsLockedOn = Input.GetKey(KeyCode.LeftShift);
+    }
 
+    private void HandleInput()
+    {
+        movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+
+        if (Input.GetKeyDown(KeyCode.Space) && movementInput != Vector2.zero && !IsRolling)
+        {
+            StartRoll();
+        }
+        else if (Input.GetMouseButtonDown(1) && movementInput != Vector2.zero && !IsRolling && !IsAttacking && !IsHeavyAttacking)
+        {
+            StartHeavyAttack();
+        }
+        else if (Input.GetMouseButtonDown(0) && movementInput != Vector2.zero && !IsRolling && !IsAttacking)
+        {
+            StartRunAttack();
+        }
+        else if (Input.GetKeyDown(KeyCode.Q) && movementInput != Vector2.zero && !IsRolling && !IsAttacking && !IsCasting)
+        {
+            StartCasting();
+        }
     }
 
     private void FixedUpdate()
     {
         if (IsRolling)
         {
-            rollTimer -= Time.fixedDeltaTime;
-            if (rollTimer <= 0f) IsRolling = false;
-
-            Vector2 newPosition = playerRb.position + rollDirection * RollSpeed * Time.fixedDeltaTime;
-            playerRb.MovePosition(newPosition);
-            CurrentDirection = PlayerMovementData.GetDirectionFromInput(rollDirection.x, rollDirection.y);
-            CurrentVelocity = rollDirection * RollSpeed;
+            UpdateRoll();
         }
         else if (IsCasting)
         {
-            CastingTimer -= Time.fixedDeltaTime;
-
-            if (CastingTimer <= 0f)
-            {
-                IsCasting = false;
-            }
-
-            Debug.Log("Casting Magic!");
-            CurrentVelocity = Vector2.zero;
+            UpdateCasting();
         }
-        else if (IsRunning && IsHeavyAttacking)
+        else if (IsHeavyAttacking)
         {
-            HeavyAttackTimer -= Time.fixedDeltaTime;
-            if (HeavyAttackTimer <= 0f)
-            {
-                IsHeavyAttacking = false;
-            }
-
-            Vector2 newPosition = playerRb.position + movementInput * RunAttackSpeed * Time.fixedDeltaTime;
-            playerRb.MovePosition(newPosition);
-            CurrentDirection = lockedKickDirection; // Fixed direction for attack
-            CurrentVelocity = movementInput * RunAttackSpeed;
-
-
+            UpdateHeavyAttack();
         }
-        else if (IsRunning && IsAttacking)
+        else if (IsAttacking)
         {
-            RunAttackTimer -= Time.fixedDeltaTime;
-            if (RunAttackTimer <= 0f)
-            {
-                IsAttacking = false;
-            }
-
-            Vector2 newPosition = playerRb.position + movementInput * RunAttackSpeed * Time.fixedDeltaTime;
-            playerRb.MovePosition(newPosition);
-            CurrentDirection = lockedAttackDirection; // Fixed direction for attack
-            CurrentVelocity = movementInput * RunAttackSpeed;
-
-        }
-
-        // if (IsLockedOn)
-        // {
-        //     Debug.Log("Locking In on Enemy");
-        //     IsLockedOn = true;
-        // }
-
-
-        else if (movementInput != Vector2.zero)
-        {
-            Vector2 moveDir = movementInput;
-
-            Vector2 newPosition = playerRb.position + moveDir * moveSpeed * Time.fixedDeltaTime;
-            playerRb.MovePosition(newPosition);
-            CurrentDirection = PlayerMovementData.GetDirectionFromInput(movementInput.x, movementInput.y);
-            CurrentVelocity = moveDir * moveSpeed;
-            IsRunning = true;
+            UpdateRunAttack();
         }
         else
         {
-            CurrentVelocity = Vector2.zero;
-            IsRunning = false;
+            UpdateMovement();
         }
+    }
+
+    private void StartRoll()
+    {
+        IsRolling = true;
+        rollTimer = rollDuration;
+        rollDirection = movementInput;
+    }
+
+    private void UpdateRoll()
+    {
+        rollTimer -= Time.fixedDeltaTime;
+        if (rollTimer <= 0f) IsRolling = false;
+
+        MoveCharacter(rollDirection, moveSpeed + rollSpeedBoost);
+        CurrentDirection = movementData.GetDirectionFromInput(rollDirection.x, rollDirection.y);
+    }
+
+    private void StartHeavyAttack()
+    {
+        IsHeavyAttacking = true;
+        IsRunning = true;
+        heavyAttackTimer = heavyAttackDuration;
+        lockedHeavyAttackDirection = movementData.GetDirectionFromInput(movementInput.x, movementInput.y);
+    }
+
+    private void UpdateHeavyAttack()
+    {
+        heavyAttackTimer -= Time.fixedDeltaTime;
+        if (heavyAttackTimer <= 0f) IsHeavyAttacking = false;
+
+        MoveCharacter(movementInput, moveSpeed + attackSpeedBoost);
+        CurrentDirection = lockedHeavyAttackDirection;
+    }
+
+    private void StartRunAttack()
+    {
+        IsAttacking = true;
+        IsRunning = true;
+        runAttackTimer = runAttackDuration;
+        lockedAttackDirection = movementData.GetDirectionFromInput(movementInput.x, movementInput.y);
+    }
+
+    private void UpdateRunAttack()
+    {
+        runAttackTimer -= Time.fixedDeltaTime;
+        if (runAttackTimer <= 0f) IsAttacking = false;
+
+        MoveCharacter(movementInput, moveSpeed + attackSpeedBoost);
+        CurrentDirection = lockedAttackDirection;
+    }
+
+    private void StartCasting()
+    {
+        IsCasting = true;
+        castingTimer = castingDuration;
+    }
+
+    private void UpdateCasting()
+    {
+        castingTimer -= Time.fixedDeltaTime;
+        if (castingTimer <= 0f) IsCasting = false;
+
+        Debug.Log("Casting Magic!");
+        CurrentVelocity = Vector2.zero;
+    }
+
+    private void UpdateMovement()
+    {
+        if (movementInput == Vector2.zero)
+        {
+            IsRunning = false;
+            CurrentVelocity = Vector2.zero;
+            return;
+        }
+
+        MoveCharacter(movementInput, moveSpeed);
+
+        if (!IsLockedOn)
+        {
+            CurrentDirection = movementData.GetDirectionFromInput(movementInput.x, movementInput.y);
+        }
+
+        IsRunning = true;
+    }
+
+    private void MoveCharacter(Vector2 direction, float speed)
+    {
+        Vector2 newPosition = rb.position + direction * speed * Time.fixedDeltaTime;
+        rb.MovePosition(newPosition);
+        CurrentVelocity = direction * speed;
     }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RunBackTopRight
   m_EditorClassIdentifier: 
   AnimationName: RunBackTopRight
-  Priority: 120
+  Priority: 199
   providedDirection: 5
