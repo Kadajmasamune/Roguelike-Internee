@@ -3,6 +3,13 @@ using Common;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using System;
+using UnityEditor;
+using System.Collections;
+using UnityEngine.UI;
+using System.Reflection;
+using UnityEngine.InputSystem;
+using Unity.Mathematics;
+using UnityEngine.SocialPlatforms;
 
 public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHasBooleans
 {
@@ -44,8 +51,15 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private float heavyAttackDuration;
     private float heavyAttackTimer;
 
+    [Header("Magic")]
+    [SerializeField] GameObject DarkBolt;
+    [SerializeField] GameObject Bolt;
+    [SerializeField] Canvas MagicPanel;
+    [SerializeField] Button DarkBoltBtn;
+    [SerializeField] Button BoltBtn;
     private float castingDuration;
     private float castingTimer;
+    private bool waitingForSpellSelection = false;
 
     [Header("State Booleans")]
     public bool IsRolling { get; private set; }
@@ -63,6 +77,14 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         runAttackDuration = runAttackClip.length;
         heavyAttackDuration = heavyAttackClip.length;
         castingDuration = castingClip.length;
+
+        if (MagicPanel.isActiveAndEnabled)
+        {
+            MagicPanel.gameObject.SetActive(false);
+        }
+
+        DarkBoltBtn.onClick.AddListener(OnDarkBoltCast);
+        BoltBtn.onClick.AddListener(OnBoltCast);
 
         animHashGenerator.GenerateAnimHash(AnimationClipHashes, playerAnimatorController);
     }
@@ -89,7 +111,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         {
             StartRunAttack();
         }
-        else if (Input.GetKeyDown(KeyCode.Q) && movementInput != Vector2.zero && !IsRolling && !IsAttacking && !IsCasting)
+        else if (Input.GetKeyDown(KeyCode.Q) && !IsRolling && !IsAttacking && !IsCasting)
         {
             StartCasting();
         }
@@ -173,15 +195,65 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     {
         IsCasting = true;
         castingTimer = castingDuration;
+        waitingForSpellSelection = false;
     }
 
     private void UpdateCasting()
     {
-        castingTimer -= Time.fixedDeltaTime;
-        if (castingTimer <= 0f) IsCasting = false;
+        if (!waitingForSpellSelection)
+        {
+            castingTimer -= Time.fixedDeltaTime;
 
-        Debug.Log("Casting Magic!");
-        CurrentVelocity = Vector2.zero;
+            if (castingTimer <= 0f)
+            {
+                waitingForSpellSelection = true;
+                Time.timeScale = 0.0f;
+                MagicPanel.gameObject.SetActive(true);
+                return;
+            }
+
+            CurrentVelocity = Vector2.zero;
+        }
+        else
+        {
+            CurrentVelocity = Vector2.zero;
+        }
+    }
+
+    private void OnBoltCast()
+    {
+        StartCoroutine(WaitForClickAndCast(Bolt));
+    }
+
+    private void OnDarkBoltCast()
+    {
+        StartCoroutine(WaitForClickAndCast(DarkBolt));
+    }
+
+    private IEnumerator WaitForClickAndCast(GameObject spellPrefab)
+    {
+        Debug.Log("Waiting for target click...");
+
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+
+        Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        clickPos.z = 0f;
+
+        if (spellPrefab != null)
+        {
+            GameObject spell = Instantiate(spellPrefab, clickPos, quaternion.identity);
+            Destroy(spell, 1f); 
+        }
+
+        EndCasting();
+    }
+
+    private void EndCasting()
+    {
+        MagicPanel.gameObject.SetActive(false);
+        Time.timeScale = 1.0f;
+        IsCasting = false;
+        waitingForSpellSelection = false;
     }
 
     private void UpdateMovement()
@@ -210,3 +282,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         CurrentVelocity = direction * speed;
     }
 }
+
+
+

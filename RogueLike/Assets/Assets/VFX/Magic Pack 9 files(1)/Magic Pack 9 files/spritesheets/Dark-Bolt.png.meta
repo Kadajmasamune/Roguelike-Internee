@@ -1,0 +1,479 @@
+fileFormatVersion: 2
+guid: 1f8ef81c979e0fe42a32ae3c837b5f54
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3974926862336466272
+    second: Dark-Bolt_0
+  - first:
+      213: -5181313450589531419
+    second: Dark-Bolt_1
+  - first:
+      213: 8513311878870502062
+    second: Dark-Bolt_2
+  - first:
+      213: 798722408679570523
+    second: Dark-Bolt_3
+  - first:
+      213: 7871717321779738445
+    second: Dark-Bolt_4
+  - first:
+      213: -2466738382338785531
+    second: Dark-Bolt_5
+  - first:
+      213: -4723880283828136379
+    second: Dark-Bolt_6
+  - first:
+      213: -6901878459062162759
+    second: Dark-Bolt_7
+  - first:
+      213: 1006960281686617648
+    second: Dark-Bolt_8
+  - first:
+      213: -6429024738146729694
+    second: Dark-Bolt_9
+  - first:
+      213: -7869588985498586957
+    second: Dark-Bolt_10
+  - first:
+      213: 5676708809476724939
+    second: Dark-Bolt_11
+  - first:
+      213: -2079106820282604432
+    second: Dark-Bolt_12
+  - first:
+      213: -8347002183978403667
+    second: Dark-Bolt_13
+  - first:
+      213: 4067721893458986235
+    second: Dark-Bolt_14
+  - first:
+      213: -120069322326905221
+    second: Dark-Bolt_15
+  - first:
+      213: -4743069265124350105
+    second: Dark-Bolt_16
+  - first:
+      213: 7681963865968530851
+    second: Dark-Bolt_17
+  - first:
+      213: -8875249109385308549
+    second: Dark-Bolt_18
+  - first:
+      213: -5200486139239997321
+    second: Dark-Bolt_19
+  - first:
+      213: 5475360718041651902
+    second: Dark-Bolt_20
+  - first:
+      213: 1432984832109140653
+    second: Dark-Bolt_21
+  - first:
+      213: -3297421343782077494
+    second: Dark-Bolt_22
+  - first:
+      213: -8197817110572872858
+    second: Dark-Bolt_23
+  - first:
+      213: -1797989249111365775
+    second: Dark-Bolt_24
+  - first:
+      213: 8704082735852026865
+    second: Dark-Bolt_25
+  - first:
+      213: -3886505890542454455
+    second: Dark-Bolt_26
+  - first:
+      213: 3124047758486579557
+    second: Dark-Bolt_27
+  - first:
+      213: 6932038882445853244
+    second: Dark-Bolt_28
+  - first:
+      213: 5134421217602988509
+    second: Dark-Bolt_29
+  - first:
+      213: -217363893219113798
+    second: Dark-Bolt_30
+  - first:
+      213: 2157848075365317252
+    second: Dark-Bolt_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dark-Bolt_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a2e64a241936d8c0800000000000000
+      internalID: -3974926862336466272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e258a35ed64818b0800000000000000
+      internalID: -5181313450589531419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa80326c0c552670800000000000000
+      internalID: 8513311878870502062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c7d738cc1a51b00800000000000000
+      internalID: 798722408679570523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4778f0b235fd3d60800000000000000
+      internalID: 7871717321779738445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50fffd6b28264cdd0800000000000000
+      internalID: -2466738382338785531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546d3f8f8e7617eb0800000000000000
+      internalID: -4723880283828136379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9baeda4fb1a9730a0800000000000000
+      internalID: -6901878459062162759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03eabd48a0179fd00800000000000000
+      internalID: 1006960281686617648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221c096201487c6a0800000000000000
+      internalID: -6429024738146729694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark-Bolt_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0b707338a99c290800000000000000
+      internalID: -7869588985498586957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 70a8f3c1110f6164bab690314ea1d0fd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dark-Bolt_0: -3974926862336466272
+      Dark-Bolt_1: -5181313450589531419
+      Dark-Bolt_10: -7869588985498586957
+      Dark-Bolt_2: 8513311878870502062
+      Dark-Bolt_3: 798722408679570523
+      Dark-Bolt_4: 7871717321779738445
+      Dark-Bolt_5: -2466738382338785531
+      Dark-Bolt_6: -4723880283828136379
+      Dark-Bolt_7: -6901878459062162759
+      Dark-Bolt_8: 1006960281686617648
+      Dark-Bolt_9: -6429024738146729694
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
