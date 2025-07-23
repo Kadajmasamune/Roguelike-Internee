@@ -1,15 +1,13 @@
 using UnityEngine;
 using Common;
+using MagicSpells;
 using System.Collections.Generic;
 using UnityEditor.Animations;
-using System;
-using UnityEditor;
 using System.Collections;
 using UnityEngine.UI;
-using System.Reflection;
-using UnityEngine.InputSystem;
 using Unity.Mathematics;
-using UnityEngine.SocialPlatforms;
+using UnityEngine.Rendering.Universal;
+using TMPro;
 
 public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHasBooleans
 {
@@ -51,15 +49,36 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private float heavyAttackDuration;
     private float heavyAttackTimer;
 
-    [Header("Magic")]
-    [SerializeField] GameObject DarkBolt;
-    [SerializeField] GameObject Bolt;
+    [SerializeField] GameObject pfDarkBolt;
+    [SerializeField] GameObject pfBolt;
     [SerializeField] Canvas MagicPanel;
-    [SerializeField] Button DarkBoltBtn;
     [SerializeField] Button BoltBtn;
-    private float castingDuration;
-    private float castingTimer;
-    private bool waitingForSpellSelection = false;
+    [SerializeField] Button DarkBoltBtn;
+    [SerializeField] Light2D light2D;
+
+    [SerializeField] TextMeshProUGUI HealthFloatObj;
+    private Health CurrentHealth;
+    [SerializeField] GameObject HealthBar;
+
+    [SerializeField] TextMeshProUGUI ManaFloat;
+    private float CurrentMana;
+    [SerializeField] GameObject ManaBar;
+
+
+    struct CastingSlowMoColor
+    {
+        public int R;
+        public int G;
+        public int B;
+        public int Alpha;
+    }
+
+    public float castingDuration;
+    public float castingTimer;
+    public bool waitingForSpellSelection;
+
+
+    CastingSlowMoColor castingSlowMoColor;
 
     [Header("State Booleans")]
     public bool IsRolling { get; private set; }
@@ -69,9 +88,28 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     public bool IsCasting { get; private set; }
     public bool IsHeavyAttacking { get; private set; }
 
+    SFXManager sFXManager;
+    SpellBook magic;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        castingSlowMoColor = new CastingSlowMoColor();
+        CurrentHealth = GetComponent<Health>();
+        castingSlowMoColor.R = 150;
+        castingSlowMoColor.G = 141;
+        castingSlowMoColor.B = 255;
+
+        float width = HealthBar.gameObject.GetComponent<RectTransform>().rect.width;
+        Mathf.Ceil(width);
+        CurrentHealth.health = width;
+        HealthFloatObj.text = $"{CurrentHealth.health.ToString("F0")}" + "HP";
+
+        float mWidth = ManaBar.gameObject.GetComponent<RectTransform>().rect.width;
+        CurrentMana = mWidth;
+        Mathf.Ceil(CurrentMana);
+        ManaFloat.text = $"{CurrentMana.ToString("F0")}" + "MP";
+
 
         rollDuration = rollingClip.length;
         runAttackDuration = runAttackClip.length;
@@ -82,18 +120,27 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         {
             MagicPanel.gameObject.SetActive(false);
         }
+        magic = new SpellBook();
 
         DarkBoltBtn.onClick.AddListener(OnDarkBoltCast);
         BoltBtn.onClick.AddListener(OnBoltCast);
-
         animHashGenerator.GenerateAnimHash(AnimationClipHashes, playerAnimatorController);
+
+        sFXManager = FindFirstObjectByType<SFXManager>();
     }
 
     private void Update()
     {
         HandleInput();
         IsLockedOn = Input.GetKey(KeyCode.LeftShift);
+        UpdateHealthBar();
     }
+
+
+
+
+
+
 
     private void HandleInput()
     {
@@ -116,6 +163,10 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
             StartCasting();
         }
     }
+
+
+
+
 
     private void FixedUpdate()
     {
@@ -157,6 +208,11 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         CurrentDirection = movementData.GetDirectionFromInput(rollDirection.x, rollDirection.y);
     }
 
+
+
+
+
+
     private void StartHeavyAttack()
     {
         IsHeavyAttacking = true;
@@ -173,6 +229,11 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         MoveCharacter(movementInput, moveSpeed + attackSpeedBoost);
         CurrentDirection = lockedHeavyAttackDirection;
     }
+
+
+
+
+
 
     private void StartRunAttack()
     {
@@ -191,11 +252,17 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         CurrentDirection = lockedAttackDirection;
     }
 
+
+
+
+
+
     private void StartCasting()
     {
         IsCasting = true;
         castingTimer = castingDuration;
         waitingForSpellSelection = false;
+        // light2D.color = new Color(castingSlowMoColor.R , castingSlowMoColor.G , castingSlowMoColor.B , 255);
     }
 
     private void UpdateCasting()
@@ -208,6 +275,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
             {
                 waitingForSpellSelection = true;
                 Time.timeScale = 0.0f;
+                sFXManager.PlaySFX(sFXManager.Open);
                 MagicPanel.gameObject.SetActive(true);
                 return;
             }
@@ -222,15 +290,17 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void OnBoltCast()
     {
-        StartCoroutine(WaitForClickAndCast(Bolt));
+        sFXManager.PlaySFX(sFXManager.Select);
+        StartCoroutine(WaitForClickAndCast(pfBolt, magic.Bolt.Cost, sFXManager.BoltSFX));
     }
 
     private void OnDarkBoltCast()
     {
-        StartCoroutine(WaitForClickAndCast(DarkBolt));
+        sFXManager.PlaySFX(sFXManager.Select);
+        StartCoroutine(WaitForClickAndCast(pfDarkBolt, magic.DarkBolt.Cost, sFXManager.DarkBoltSFX));
     }
 
-    private IEnumerator WaitForClickAndCast(GameObject spellPrefab)
+    private IEnumerator WaitForClickAndCast(GameObject spellPrefab, int SpellManaCost, AudioClip SpellPfSFX)
     {
         Debug.Log("Waiting for target click...");
 
@@ -239,10 +309,24 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         clickPos.z = 0f;
 
-        if (spellPrefab != null)
+        if (spellPrefab != null && CurrentMana > 0f && CurrentMana >= SpellManaCost)
         {
+            CurrentMana -= SpellManaCost;
+
+            RectTransform manaRect = ManaBar.GetComponent<RectTransform>();
+            manaRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CurrentMana);
+
+            ManaFloat.text = $"{CurrentMana.ToString("F0")}MP";
+
             GameObject spell = Instantiate(spellPrefab, clickPos, quaternion.identity);
-            Destroy(spell, 1f); 
+            sFXManager.PlaySFX(SpellPfSFX);
+            Destroy(spell, 0.8f);
+        }
+        else
+        {
+            sFXManager.PlaySFX(sFXManager.Denied);
+            Debug.Log("Not enough Mana!");
+            yield return null;
         }
 
         EndCasting();
@@ -253,8 +337,18 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         MagicPanel.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
         IsCasting = false;
+        light2D.color = Color.white;
         waitingForSpellSelection = false;
     }
+
+
+
+
+
+
+
+
+
 
     private void UpdateMovement()
     {
@@ -281,7 +375,15 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         rb.MovePosition(newPosition);
         CurrentVelocity = direction * speed;
     }
+
+
+    public void UpdateHealthBar()
+    {
+        CurrentHealth.health = Mathf.Max(0, CurrentHealth.health);
+
+        RectTransform healthRect = HealthBar.GetComponent<RectTransform>();
+        healthRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CurrentHealth.health);
+
+        HealthFloatObj.text = $"{CurrentHealth.health.ToString("F0")}HP";
+    }
 }
-
-
-

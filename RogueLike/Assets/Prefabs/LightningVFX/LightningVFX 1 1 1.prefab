@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109273481401171486}
   - component: {fileID: 4217919884062358872}
+  - component: {fileID: 1030782637244821737}
   m_Layer: 0
   m_Name: LightningHitbox
   m_TagString: Untagged
@@ -78,6 +79,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.36, y: 0.48}
   m_EdgeRadius: 0
+--- !u!114 &1030782637244821737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3045255967558818664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ee2539a25232446bcee1d8fe012b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 25
+  damageAmount: 50
+  curveAmount: 0.3
 --- !u!1 &3299082654676554037
 GameObject:
   m_ObjectHideFlags: 0

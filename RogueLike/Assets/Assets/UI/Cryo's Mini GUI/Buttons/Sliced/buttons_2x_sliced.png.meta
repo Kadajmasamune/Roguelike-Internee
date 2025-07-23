@@ -1,97 +1,115 @@
 fileFormatVersion: 2
-guid: f759727ec1c27e741a59409490e34f1b
+guid: f2ba521a256e7d244acf5b25bd2b111a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2549147473088262600
-    second: Attack_01_Body_000_0
+      213: -7420511017754474108
+    second: buttons_2x_sliced_0
   - first:
-      213: -2648248603514200620
-    second: Attack_01_Body_000_1
+      213: 252452085854432383
+    second: buttons_2x_sliced_1
   - first:
-      213: 5030484102778198710
-    second: Attack_01_Body_000_2
+      213: -1006147829528180101
+    second: buttons_2x_sliced_2
   - first:
-      213: 1723671116451937905
-    second: Attack_01_Body_000_3
+      213: -3379950685304888861
+    second: buttons_2x_sliced_3
   - first:
-      213: 3801697110909334278
-    second: Attack_01_Body_000_4
+      213: 7358226911124249434
+    second: buttons_2x_sliced_4
   - first:
-      213: -8164783013142045761
-    second: Attack_01_Body_000_5
+      213: 9136271883257880485
+    second: buttons_2x_sliced_5
   - first:
-      213: 2235069188673352624
-    second: Attack_01_Body_000_6
+      213: 660285411644792223
+    second: buttons_2x_sliced_6
   - first:
-      213: 379319483744309696
-    second: Attack_01_Body_000_7
+      213: 495576540769890917
+    second: buttons_2x_sliced_7
   - first:
-      213: 5638381825285968191
-    second: Attack_01_Body_000_8
+      213: 1552205050785037159
+    second: buttons_2x_sliced_8
   - first:
-      213: 2212110589113573170
-    second: Attack_01_Body_000_9
+      213: -3783582486791207166
+    second: buttons_2x_sliced_9
   - first:
-      213: -2829963827206676915
-    second: Attack_01_Body_000_10
+      213: 2822030393291656827
+    second: buttons_2x_sliced_10
   - first:
-      213: -1823967626483847154
-    second: Attack_01_Body_000_11
+      213: 6948002673468354368
+    second: buttons_2x_sliced_11
   - first:
-      213: 1426645407415068668
-    second: Attack_01_Body_000_12
+      213: -1181286684162774912
+    second: buttons_2x_sliced_12
   - first:
-      213: -8300855081759209965
-    second: Attack_01_Body_000_13
+      213: 8606806816053443378
+    second: buttons_2x_sliced_13
   - first:
-      213: -9166379953721289074
-    second: Attack_01_Body_000_14
+      213: -8122881974952480778
+    second: buttons_2x_sliced_14
   - first:
-      213: 1008822509286615930
-    second: Attack_01_Body_000_15
+      213: -8613242165693360968
+    second: buttons_2x_sliced_15
   - first:
-      213: -1647065760643762846
-    second: Attack_01_Body_000_16
+      213: 472585411900426206
+    second: buttons_2x_sliced_16
   - first:
-      213: 5886623769374438088
-    second: Attack_01_Body_000_17
+      213: 2513713939715292178
+    second: buttons_2x_sliced_17
   - first:
-      213: 2385670343345658486
-    second: Attack_01_Body_000_18
+      213: 9084155722595452953
+    second: buttons_2x_sliced_18
   - first:
-      213: 5853497764201880630
-    second: Attack_01_Body_000_19
+      213: -3371095351506724276
+    second: buttons_2x_sliced_19
   - first:
-      213: 5770575926514829239
-    second: Attack_01_Body_000_20
+      213: 6518292643945008602
+    second: buttons_2x_sliced_20
   - first:
-      213: -4760072193541564591
-    second: Attack_01_Body_000_21
+      213: 461747312548340392
+    second: buttons_2x_sliced_21
   - first:
-      213: -5340258458488575118
-    second: Attack_01_Body_000_22
+      213: 2028301682668807502
+    second: buttons_2x_sliced_22
   - first:
-      213: -2073118008410118902
-    second: Attack_01_Body_000_23
+      213: 1813579529478245501
+    second: buttons_2x_sliced_23
   - first:
-      213: -7172672951669509117
-    second: Attack_01_Body_000_24
+      213: 2776195255989819685
+    second: buttons_2x_sliced_24
   - first:
-      213: -1856923048098659573
-    second: Attack_01_Body_000_25
+      213: -4877043301849206978
+    second: buttons_2x_sliced_25
   - first:
-      213: -5244981588102397432
-    second: Attack_01_Body_000_26
+      213: 794383118301035558
+    second: buttons_2x_sliced_26
   - first:
-      213: -1343780324921156140
-    second: Attack_01_Body_000_27
+      213: 2872626890705483828
+    second: buttons_2x_sliced_27
   - first:
-      213: 6243083486655081085
-    second: Attack_01_Body_000_28
+      213: -1147763327658298230
+    second: buttons_2x_sliced_28
   - first:
-      213: -5326754609255521079
-    second: Attack_01_Body_000_29
+      213: 7506972409924045543
+    second: buttons_2x_sliced_29
+  - first:
+      213: 9089795675243692134
+    second: buttons_2x_sliced_30
+  - first:
+      213: -8084553106567072328
+    second: buttons_2x_sliced_31
+  - first:
+      213: 8912029767208673936
+    second: buttons_2x_sliced_32
+  - first:
+      213: 1909801674669986378
+    second: buttons_2x_sliced_33
+  - first:
+      213: 4377793463834922728
+    second: buttons_2x_sliced_34
+  - first:
+      213: -2549212388305483104
+    second: buttons_2x_sliced_35
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,7 +142,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -159,10 +177,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -188,7 +206,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -200,13 +218,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack_01_Body_000_0
+      name: buttons_2x_sliced_0
       rect:
         serializedVersion: 2
-        x: 104
-        y: 1381
-        width: 123
-        height: 123
+        x: 1
+        y: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c1b28dee14606320800000000000000
-      internalID: 2549147473088262600
+      spriteID: 4894fde7b8c050990800000000000000
+      internalID: -7420511017754474108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_1
+      name: buttons_2x_sliced_1
       rect:
         serializedVersion: 2
-        x: 420
-        y: 1381
-        width: 127
-        height: 121
+        x: 17
+        y: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4dd9c961de78f3bd0800000000000000
-      internalID: -2648248603514200620
+      spriteID: f7ce824a5d3e08300800000000000000
+      internalID: 252452085854432383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_2
+      name: buttons_2x_sliced_2
       rect:
         serializedVersion: 2
-        x: 744
-        y: 1380
-        width: 124
-        height: 130
+        x: 33
+        y: 15
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ba185a83aedfc540800000000000000
-      internalID: 5030484102778198710
+      spriteID: b7a417d31e17902f0800000000000000
+      internalID: -1006147829528180101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_3
+      name: buttons_2x_sliced_3
       rect:
         serializedVersion: 2
-        x: 1087
-        y: 1378
-        width: 107
-        height: 139
+        x: 49
+        y: 15
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17ef7bd7fb5bbe710800000000000000
-      internalID: 1723671116451937905
+      spriteID: 3e1601c62c00811d0800000000000000
+      internalID: -3379950685304888861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_4
+      name: buttons_2x_sliced_4
       rect:
         serializedVersion: 2
-        x: 1419
-        y: 1368
-        width: 114
-        height: 148
+        x: 65
+        y: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 603316f416752c430800000000000000
-      internalID: 3801697110909334278
+      spriteID: a5bd74ed36cad1660800000000000000
+      internalID: 7358226911124249434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_5
+      name: buttons_2x_sliced_5
       rect:
         serializedVersion: 2
-        x: 1701
-        y: 1373
-        width: 162
-        height: 139
+        x: 81
+        y: 15
+        width: 18
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,20 +343,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbb5681cb1dd0be80800000000000000
-      internalID: -8164783013142045761
+      spriteID: 5af99fc2fde8ace70800000000000000
+      internalID: 9136271883257880485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_6
+      name: buttons_2x_sliced_6
       rect:
         serializedVersion: 2
-        x: 121
-        y: 1050
-        width: 137
-        height: 150
+        x: 99
+        y: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +365,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b3bb4fc59f840f10800000000000000
-      internalID: 2235069188673352624
+      spriteID: f9dd573651ec92900800000000000000
+      internalID: 660285411644792223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_7
+      name: buttons_2x_sliced_7
       rect:
         serializedVersion: 2
-        x: 440
-        y: 1035
-        width: 106
-        height: 158
+        x: 115
+        y: 15
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,20 +387,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c1d6fc8f0d934500800000000000000
-      internalID: 379319483744309696
+      spriteID: 5623b97fc34a0e600800000000000000
+      internalID: 495576540769890917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_8
+      name: buttons_2x_sliced_8
       rect:
         serializedVersion: 2
-        x: 738
-        y: 1044
-        width: 110
-        height: 170
+        x: 131
+        y: 15
+        width: 18
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,20 +409,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f31503c856e8f3e40800000000000000
-      internalID: 5638381825285968191
+      spriteID: 76bfb9e054a8a8510800000000000000
+      internalID: 1552205050785037159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_9
+      name: buttons_2x_sliced_9
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 1057
-        width: 95
-        height: 153
+        x: 149
+        y: 15
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,20 +431,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23f9efb4cdef2be10800000000000000
-      internalID: 2212110589113573170
+      spriteID: 207cb6846c30e7bc0800000000000000
+      internalID: -3783582486791207166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_10
+      name: buttons_2x_sliced_10
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 1064
-        width: 222
-        height: 140
+        x: 167
+        y: 15
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,20 +453,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4e142894e2f9b8d0800000000000000
-      internalID: -2829963827206676915
+      spriteID: b7e4181e0bdd92720800000000000000
+      internalID: 2822030393291656827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_11
+      name: buttons_2x_sliced_11
       rect:
         serializedVersion: 2
-        x: 1668
-        y: 1042
-        width: 193
-        height: 167
+        x: 183
+        y: 15
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -457,20 +475,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e003e958b17ffa6e0800000000000000
-      internalID: -1823967626483847154
+      spriteID: 04fab829e934c6060800000000000000
+      internalID: 6948002673468354368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_12
+      name: buttons_2x_sliced_12
       rect:
         serializedVersion: 2
-        x: 62
-        y: 709
-        width: 162
-        height: 182
+        x: 199
+        y: 15
+        width: 6
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -479,20 +497,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf7ea6970767cc310800000000000000
-      internalID: 1426645407415068668
+      spriteID: 088249cf40a3b9fe0800000000000000
+      internalID: -1181286684162774912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_13
+      name: buttons_2x_sliced_13
       rect:
         serializedVersion: 2
-        x: 396
-        y: 720
-        width: 150
-        height: 168
+        x: 207
+        y: 15
+        width: 6
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -501,20 +519,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3160fbf68407dcc80800000000000000
-      internalID: -8300855081759209965
+      spriteID: 23bb649c235817770800000000000000
+      internalID: 8606806816053443378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_14
+      name: buttons_2x_sliced_14
       rect:
         serializedVersion: 2
-        x: 747
-        y: 737
-        width: 141
-        height: 146
+        x: 215
+        y: 15
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,20 +541,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e865e266ff97ac080800000000000000
-      internalID: -9166379953721289074
+      spriteID: 6ffa88271e9b54f80800000000000000
+      internalID: -8122881974952480778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_15
+      name: buttons_2x_sliced_15
       rect:
         serializedVersion: 2
-        x: 1073
-        y: 735
-        width: 139
-        height: 143
+        x: 231
+        y: 27
+        width: 14
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -545,20 +563,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7b627b2abe000e00800000000000000
-      internalID: 1008822509286615930
+      spriteID: 8b45e6d92ed977880800000000000000
+      internalID: -8613242165693360968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_16
+      name: buttons_2x_sliced_16
       rect:
         serializedVersion: 2
-        x: 1388
-        y: 733
-        width: 139
-        height: 141
+        x: 231
+        y: 21
+        width: 14
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -567,20 +585,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 265be1fca627429e0800000000000000
-      internalID: -1647065760643762846
+      spriteID: ed74b52ade5fe8600800000000000000
+      internalID: 472585411900426206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_17
+      name: buttons_2x_sliced_17
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 732
-        width: 138
-        height: 138
+        x: 247
+        y: 15
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -589,20 +607,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c23feb212d71b150800000000000000
-      internalID: 5886623769374438088
+      spriteID: 21c7dab828182e220800000000000000
+      internalID: 2513713939715292178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_18
+      name: buttons_2x_sliced_18
       rect:
         serializedVersion: 2
-        x: 102
-        y: 409
-        width: 143
-        height: 139
+        x: 1
+        y: 0
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -611,20 +629,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67a5d46998a9b1120800000000000000
-      internalID: 2385670343345658486
+      spriteID: 91842a1ff77611e70800000000000000
+      internalID: 9084155722595452953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_19
+      name: buttons_2x_sliced_19
       rect:
         serializedVersion: 2
-        x: 422
-        y: 408
-        width: 141
-        height: 137
+        x: 17
+        y: 0
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -633,20 +651,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63cdbc0143dcb3150800000000000000
-      internalID: 5853497764201880630
+      spriteID: c4a987d73a67731d0800000000000000
+      internalID: -3371095351506724276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_20
+      name: buttons_2x_sliced_20
       rect:
         serializedVersion: 2
-        x: 743
-        y: 409
-        width: 134
-        height: 133
+        x: 33
+        y: 0
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -655,20 +673,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b746593b34351050800000000000000
-      internalID: 5770575926514829239
+      spriteID: add4260df90a57a50800000000000000
+      internalID: 6518292643945008602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_21
+      name: buttons_2x_sliced_21
       rect:
         serializedVersion: 2
-        x: 1065
-        y: 411
-        width: 126
-        height: 131
+        x: 49
+        y: 0
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -677,20 +695,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1579db65f83d0fdb0800000000000000
-      internalID: -4760072193541564591
+      spriteID: 8a26f6cfbb4786600800000000000000
+      internalID: 461747312548340392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_22
+      name: buttons_2x_sliced_22
       rect:
         serializedVersion: 2
-        x: 1388
-        y: 414
-        width: 129
-        height: 127
+        x: 65
+        y: 0
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,20 +717,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27b6305d93793e5b0800000000000000
-      internalID: -5340258458488575118
+      spriteID: e452dcc42a9f52c10800000000000000
+      internalID: 2028301682668807502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_23
+      name: buttons_2x_sliced_23
       rect:
         serializedVersion: 2
-        x: 1710
-        y: 417
-        width: 129
-        height: 125
+        x: 81
+        y: 0
+        width: 18
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -721,20 +739,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a05ef3bb72eca33e0800000000000000
-      internalID: -2073118008410118902
+      spriteID: d7c887a29f02b2910800000000000000
+      internalID: 1813579529478245501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_24
+      name: buttons_2x_sliced_24
       rect:
         serializedVersion: 2
-        x: 108
-        y: 100
-        width: 127
-        height: 123
+        x: 99
+        y: 0
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -743,20 +761,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 304bfa1f3fb857c90800000000000000
-      internalID: -7172672951669509117
+      spriteID: 529d56c50e6078620800000000000000
+      internalID: 2776195255989819685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_25
+      name: buttons_2x_sliced_25
       rect:
         serializedVersion: 2
-        x: 427
-        y: 101
-        width: 125
-        height: 122
+        x: 115
+        y: 0
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -765,20 +783,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0308de7352ea36e0800000000000000
-      internalID: -1856923048098659573
+      spriteID: e3f6417e4f2415cb0800000000000000
+      internalID: -4877043301849206978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_26
+      name: buttons_2x_sliced_26
       rect:
         serializedVersion: 2
-        x: 746
-        y: 101
-        width: 124
-        height: 122
+        x: 131
+        y: 0
+        width: 18
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -787,20 +805,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80241b3e8051637b0800000000000000
-      internalID: -5244981588102397432
+      spriteID: 62c76edbc37360b00800000000000000
+      internalID: 794383118301035558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_27
+      name: buttons_2x_sliced_27
       rect:
         serializedVersion: 2
-        x: 1065
-        y: 101
-        width: 124
-        height: 123
+        x: 149
+        y: 0
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -809,20 +827,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4dd5ae40aeee95de0800000000000000
-      internalID: -1343780324921156140
+      spriteID: 4383cb0ffee9dd720800000000000000
+      internalID: 2872626890705483828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_28
+      name: buttons_2x_sliced_28
       rect:
         serializedVersion: 2
-        x: 1385
-        y: 101
-        width: 123
-        height: 123
+        x: 165
+        y: 0
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -831,20 +849,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7aee259a53e3a650800000000000000
-      internalID: 6243083486655081085
+      spriteID: a84f4b8a5535210f0800000000000000
+      internalID: -1147763327658298230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_01_Body_000_29
+      name: buttons_2x_sliced_29
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 101
-        width: 123
-        height: 124
+        x: 179
+        y: 0
+        width: 8
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -853,8 +871,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c466adb7e09316b0800000000000000
-      internalID: -5326754609255521079
+      spriteID: 7ea4e2812af1e2860800000000000000
+      internalID: 7506972409924045543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_2x_sliced_30
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66048cfb101752e70800000000000000
+      internalID: 9089795675243692134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_2x_sliced_31
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5f94b88c5edcf80800000000000000
+      internalID: -8084553106567072328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_2x_sliced_32
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 15
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0922e26fad3edab70800000000000000
+      internalID: 8912029767208673936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_2x_sliced_33
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 3
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42962a218af08a10800000000000000
+      internalID: 1909801674669986378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_2x_sliced_34
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee48e7f5fb01cc30800000000000000
+      internalID: 4377793463834922728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons_2x_sliced_35
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aac602d6d06f9cd0800000000000000
+      internalID: -2549212388305483104
       vertices: []
       indices: 
       edges: []
@@ -872,37 +1022,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Attack_01_Body_000_0: 2549147473088262600
-      Attack_01_Body_000_1: -2648248603514200620
-      Attack_01_Body_000_10: -2829963827206676915
-      Attack_01_Body_000_11: -1823967626483847154
-      Attack_01_Body_000_12: 1426645407415068668
-      Attack_01_Body_000_13: -8300855081759209965
-      Attack_01_Body_000_14: -9166379953721289074
-      Attack_01_Body_000_15: 1008822509286615930
-      Attack_01_Body_000_16: -1647065760643762846
-      Attack_01_Body_000_17: 5886623769374438088
-      Attack_01_Body_000_18: 2385670343345658486
-      Attack_01_Body_000_19: 5853497764201880630
-      Attack_01_Body_000_2: 5030484102778198710
-      Attack_01_Body_000_20: 5770575926514829239
-      Attack_01_Body_000_21: -4760072193541564591
-      Attack_01_Body_000_22: -5340258458488575118
-      Attack_01_Body_000_23: -2073118008410118902
-      Attack_01_Body_000_24: -7172672951669509117
-      Attack_01_Body_000_25: -1856923048098659573
-      Attack_01_Body_000_26: -5244981588102397432
-      Attack_01_Body_000_27: -1343780324921156140
-      Attack_01_Body_000_28: 6243083486655081085
-      Attack_01_Body_000_29: -5326754609255521079
-      Attack_01_Body_000_3: 1723671116451937905
-      Attack_01_Body_000_4: 3801697110909334278
-      Attack_01_Body_000_5: -8164783013142045761
-      Attack_01_Body_000_6: 2235069188673352624
-      Attack_01_Body_000_7: 379319483744309696
-      Attack_01_Body_000_8: 5638381825285968191
-      Attack_01_Body_000_9: 2212110589113573170
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

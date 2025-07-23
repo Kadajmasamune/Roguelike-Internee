@@ -54,4 +54,5 @@ public abstract class EntityAnimationController : MonoBehaviour
             }
         }
     }
+
 }

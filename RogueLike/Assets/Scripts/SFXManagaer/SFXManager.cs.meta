@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 41ac91436a3e8da49860b8b2dc4bb754
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BoltSFX: {fileID: 8300000, guid: 1181da2130e3efa4592d31154f406fc3, type: 3}
+  - DarkBoltSFX: {fileID: 8300000, guid: d08a13461a7169b4ba0b9c88b54b0863, type: 3}
+  - Select: {fileID: 8300000, guid: 5d0f19570eaa6b54fad440010332201a, type: 3}
+  - Open: {fileID: 8300000, guid: 0330ab571dfa6b5429a35465775a50d2, type: 3}
+  - Denied: {fileID: 8300000, guid: 3376ce7d769619e4cbf7fe0944337ff1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

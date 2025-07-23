@@ -38,7 +38,6 @@ namespace Common
         bool IsHeavyAttacking { get; }
     }
 
-
     public class AnimHashGenerator
     {
         public void GenerateAnimHash(Dictionary<string, int> AnimationClipHashes, AnimatorController AnimController)
