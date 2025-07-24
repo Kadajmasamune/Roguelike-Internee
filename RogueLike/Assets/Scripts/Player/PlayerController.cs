@@ -8,13 +8,15 @@ using UnityEngine.UI;
 using Unity.Mathematics;
 using UnityEngine.Rendering.Universal;
 using TMPro;
+using Signals;
+using System;
 
 public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHasBooleans
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float rollSpeedBoost = 2f;
-    [SerializeField] private float attackSpeedBoost = 1.5f;
+    [SerializeField] private float rollSpeedBoost;
+    [SerializeField] private float attackSpeedBoost;
 
     [Header("Animation Clips")]
     [SerializeField] private AnimationClip rollingClip;
@@ -40,14 +42,20 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private Direction lockedAttackDirection;
     private Direction lockedHeavyAttackDirection;
 
+    [SerializeField] BoxCollider2D PlayerAttackHitbox;
+
+
     private float rollDuration;
     private float rollTimer;
 
     private float runAttackDuration;
     private float runAttackTimer;
+    private float[] runAttackDamage = new float[] { 32, 63 };
 
     private float heavyAttackDuration;
     private float heavyAttackTimer;
+    private float[] heavyAttackDamage = new float[] { 46, 83 };
+
 
     [SerializeField] GameObject pfDarkBolt;
     [SerializeField] GameObject pfBolt;
@@ -91,6 +99,10 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     SFXManager sFXManager;
     SpellBook magic;
 
+    PlayerAttack PlayerAttacks;
+
+    Sender<int> DamageOutput;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -99,6 +111,10 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         castingSlowMoColor.R = 150;
         castingSlowMoColor.G = 141;
         castingSlowMoColor.B = 255;
+
+
+
+        StartCoroutine(GetPlayerAtkRef());
 
         float width = HealthBar.gameObject.GetComponent<RectTransform>().rect.width;
         Mathf.Ceil(width);
@@ -127,6 +143,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         animHashGenerator.GenerateAnimHash(AnimationClipHashes, playerAnimatorController);
 
         sFXManager = FindFirstObjectByType<SFXManager>();
+        PlayerAttacks = GetComponentInChildren<PlayerAttack>();
     }
 
     private void Update()
@@ -134,12 +151,8 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         HandleInput();
         IsLockedOn = Input.GetKey(KeyCode.LeftShift);
         UpdateHealthBar();
+        UpdateHitBoxOffset(PlayerAttackHitbox);
     }
-
-
-
-
-
 
 
     private void HandleInput()
@@ -215,6 +228,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void StartHeavyAttack()
     {
+        PlayerAttackHitbox.gameObject.SetActive(true);
         IsHeavyAttacking = true;
         IsRunning = true;
         heavyAttackTimer = heavyAttackDuration;
@@ -224,13 +238,19 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private void UpdateHeavyAttack()
     {
         heavyAttackTimer -= Time.fixedDeltaTime;
-        if (heavyAttackTimer <= 0f) IsHeavyAttacking = false;
+        if (heavyAttackTimer <= 0f)
+        {
+            IsHeavyAttacking = false;
+            PlayerAttackHitbox.gameObject.SetActive(false);
+        }
 
         MoveCharacter(movementInput, moveSpeed + attackSpeedBoost);
         CurrentDirection = lockedHeavyAttackDirection;
+
+        int dmg = (int)UnityEngine.Random.Range(heavyAttackDamage[0], heavyAttackDamage[1]);
+        DamageOutput = new Sender<int>(PlayerAttacks.DamageAmount, dmg);
+        DamageOutput.TransferData();
     }
-
-
 
 
 
@@ -239,6 +259,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     {
         IsAttacking = true;
         IsRunning = true;
+        PlayerAttackHitbox.gameObject.SetActive(true);
         runAttackTimer = runAttackDuration;
         lockedAttackDirection = movementData.GetDirectionFromInput(movementInput.x, movementInput.y);
     }
@@ -246,10 +267,17 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private void UpdateRunAttack()
     {
         runAttackTimer -= Time.fixedDeltaTime;
-        if (runAttackTimer <= 0f) IsAttacking = false;
+        if (runAttackTimer <= 0f)
+        {
+            IsAttacking = false;
+            PlayerAttackHitbox.gameObject.SetActive(false);
+        }
 
         MoveCharacter(movementInput, moveSpeed + attackSpeedBoost);
         CurrentDirection = lockedAttackDirection;
+        int dmg = (int)UnityEngine.Random.Range(runAttackDamage[0], runAttackDamage[1]);
+        DamageOutput = new Sender<int>(PlayerAttacks.DamageAmount, dmg);
+        DamageOutput.TransferData();
     }
 
 
@@ -385,5 +413,53 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         healthRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CurrentHealth.health);
 
         HealthFloatObj.text = $"{CurrentHealth.health.ToString("F0")}HP";
+    }
+
+    public void UpdateHitBoxOffset(BoxCollider2D Hitbox)
+    {
+        switch (CurrentDirection)
+        {
+            case Direction.Right:
+                Hitbox.offset = new Vector2(0.36f, 0.06f);
+                break;
+
+            case Direction.BottomRight:
+                Hitbox.offset = new Vector2(0.26f, -0.12f);
+                break;
+
+            case Direction.Down:
+                Hitbox.offset = new Vector2(0.03f, -0.27f);
+                break;
+
+            case Direction.BottomLeft:
+                Hitbox.offset = new Vector2(-0.11f, -0.18f);
+                break;
+
+            case Direction.Left:
+                Hitbox.offset = new Vector2(-0.36f, 0.06f);
+                break;
+
+            case Direction.UpLeft:
+                Hitbox.offset = new Vector2(-0.16f, 0.19f);
+                break;
+
+            case Direction.Up:
+                Hitbox.offset = new Vector2(-0.04f, 0.34f);
+                break;
+
+            case Direction.UpRight:
+                Hitbox.offset = new Vector2(0.1f, 0.19f);
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    private IEnumerator GetPlayerAtkRef()
+    {
+        PlayerAttackHitbox.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        PlayerAttackHitbox.gameObject.SetActive(false);
     }
 }

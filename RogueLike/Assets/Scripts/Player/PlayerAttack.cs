@@ -1,14 +1,9 @@
 using UnityEngine;
+using Signals;
 
-//To Do: 
-// Damage Logic
-// Knockback Trajectory
-public class LightningScript : MonoBehaviour
+public class PlayerAttack : MonoBehaviour
 {
-
-    // public float knockbackForce = 25f; 
-    // private float KnockbackForceCurved = 4;
-    public int damageAmount; 
+    public Reciever<int> DamageAmount = new Reciever<int>();
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -21,10 +16,10 @@ public class LightningScript : MonoBehaviour
                 Health TargetHealth = col.GetComponent<Health>();
                 if (TargetHealth != null)
                 {
-                    TargetHealth.TakeDamage(damageAmount);
+                    TargetHealth.TakeDamage(DamageAmount.ReceivedData);
                 }
                
             }        
         }
     }
-}
+}   

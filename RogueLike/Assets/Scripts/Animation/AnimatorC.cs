@@ -19,7 +19,7 @@ public class AnimatorC : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void ChangeAnimation(Dictionary<string, int> animationDict, int targetHash, float delay = 0.0f, float crossfade = 0.05f)
+    public void ChangeAnimation(Dictionary<string, int> animationDict, int targetHash, float delay = 0.0f, float crossfade = 0.05f , float SpeedMultiplier = 1.0f)
     {
         if (currentAnimationHash == targetHash) return;
 

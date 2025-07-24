@@ -664,6 +664,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 519420032}
+  - {fileID: 992911949}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &604664138
@@ -781,7 +782,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 20
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -807,14 +808,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c168e535f77323e409c73c6a3649fad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  rollSpeedBoost: 2
-  attackSpeedBoost: 1.5
+  moveSpeed: 14
+  rollSpeedBoost: 4
+  attackSpeedBoost: 3.5
   rollingClip: {fileID: 7400000, guid: 5a52db5afb7a37749a8d80f107617fc4, type: 2}
   runAttackClip: {fileID: 7400000, guid: ea63f20d3798345499ef0c7541725f24, type: 2}
   heavyAttackClip: {fileID: 7400000, guid: 53895e940beef5d4d8e457c21e7a39dc, type: 2}
   castingClip: {fileID: 7400000, guid: 15feeeb71657413429bdfe7e89423e20, type: 2}
   playerAnimatorController: {fileID: 9100000, guid: 5a9371a806cc3224f98992eceaecd601, type: 2}
+  PlayerAttackHitbox: {fileID: 992911950}
   pfDarkBolt: {fileID: 7170592660712446625, guid: 07aa781b4ca375743a75996a1fcd559b, type: 3}
   pfBolt: {fileID: 3299082654676554037, guid: c4761b6ee13212a4d9024f1c124d003f, type: 3}
   MagicPanel: {fileID: 674260463}
@@ -917,7 +919,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 4dae865800000000
+  m_ApplyToSortingLayers: 4dae865800000000c59279088f410db5
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2022,6 +2024,97 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &992911948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 992911949}
+  - component: {fileID: 992911950}
+  - component: {fileID: 992911951}
+  m_Layer: 6
+  m_Name: AttackHitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &992911949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992911948}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 604664137}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &992911950
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992911948}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.36, y: 0.06}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.37, y: 0.3}
+  m_EdgeRadius: 0
+--- !u!114 &992911951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992911948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0849e7f49fb1185478c663a62d050d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1088459003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,7 +2126,9 @@ GameObject:
   - component: {fileID: 1088459005}
   - component: {fileID: 1088459004}
   - component: {fileID: 1088459006}
-  m_Layer: 0
+  - component: {fileID: 1088459007}
+  - component: {fileID: 1088459008}
+  m_Layer: 6
   m_Name: IceGolem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2081,8 +2176,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1257422449
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2549147473088262600, guid: f759727ec1c27e741a59409490e34f1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2156,6 +2251,48 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.23, y: 1.23}
   m_EdgeRadius: 0
+--- !u!114 &1088459007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088459003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03596e1ce9d33641b65b58ad6e390ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 300
+  TakingDamage: 0
+  Dead: 0
+--- !u!50 &1088459008
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088459003}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 20
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1173149490
 GameObject:
   m_ObjectHideFlags: 0

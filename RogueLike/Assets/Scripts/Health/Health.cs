@@ -19,14 +19,14 @@ public class Health : MonoBehaviour
         CurrentGameobject = this.gameObject;
     }
 
-    public void TakeDamage(float damageAmount)
+    public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
         TakingDamage = true;
 
         if (health > 0)
         {
-            // StartCoroutine(ResetTakingDamage(currentGameObject.HURTCLIP.length));
+            StartCoroutine(ResetTakingDamage(0.1f));
             Debug.Log("Hurt");
         }
 
