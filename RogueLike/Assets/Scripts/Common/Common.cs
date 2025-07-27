@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -11,11 +12,43 @@ namespace Common
         Down,
         Left,
         Right,
-        UpRight,
+        UpRight,    
         BottomRight,
         UpLeft,
         BottomLeft,
     }
+
+        
+    public delegate IEnumerator WaitForClickAndCast(GameObject spellPrefab, int SpellManaCost, AudioClip SpellPfSFX);
+
+    // Debug.Log("Waiting for target click...");
+
+    // yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+
+    // Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    // clickPos.z = 0f;
+
+    // if (spellPrefab != null && CurrentMana > 0f && CurrentMana >= SpellManaCost)
+    // {
+    //     CurrentMana -= SpellManaCost;
+
+    //     RectTransform manaRect = ManaBar.GetComponent<RectTransform>();
+    //     manaRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CurrentMana);
+
+    //     ManaFloat.text = $"{CurrentMana.ToString("F0")}MP";
+
+    //     GameObject spell = Instantiate(spellPrefab, clickPos, quaternion.identity);
+    //     sFXManager.PlaySFX(SpellPfSFX);
+    //     Destroy(spell, 0.8f);
+    // }
+    // else
+    // {
+    //     sFXManager.PlaySFX(sFXManager.Denied);
+    //     Debug.Log("Not enough Mana!");
+    //     yield return null;
+    // }
+
+    // EndCasting();
 
 
     public interface IHasDirection
