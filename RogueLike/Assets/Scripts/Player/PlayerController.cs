@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     [SerializeField] private AnimationClip runAttackClip;
     [SerializeField] private AnimationClip heavyAttackClip;
     [SerializeField] private AnimationClip castingClip;
+    [SerializeField] private AnimationClip AttackClip;
 
     [Header("Animation")]
     [SerializeField] private AnimatorController playerAnimatorController;
@@ -47,6 +48,35 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private float rollDuration;
     private float rollTimer;
+    public float perfectDodgeWindow = 0.2f;
+    private float LastDodgeTime = -Mathf.Infinity;
+    public bool IsInPerfectDodgeWindow => Time.time - LastDodgeTime <= perfectDodgeWindow;
+
+
+    // ------------------------------
+    // Perfect Dodge Additions
+    // ------------------------------
+    [Header("Perfect Dodge Settings")]
+    [SerializeField] private float extraIFamesAfterPerfect = 0.35f;
+    [SerializeField] private float timeScaleOnPerfect = 0.25f;
+    [SerializeField] private float timeScaleDuration = 2f;
+    [SerializeField] private float counterWindowDuration = 0.6f;
+
+    private float invulnUntil = -Mathf.Infinity;
+    private float counterUntil = -Mathf.Infinity;
+
+    public bool IsInvulnerable => Time.time < invulnUntil || IsRolling; 
+    public bool CanCounter => Time.time < counterUntil;
+
+    public event Action OnPerfectDodge;
+
+    // ------------------------------
+
+
+    private float AttackDuration;
+    private float AttackTimer;
+    private float[] AttackDamage = new float[] { 12, 31 };
+    
 
     private float runAttackDuration;
     private float runAttackTimer;
@@ -96,6 +126,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     public bool IsCasting { get; private set; }
     public bool IsHeavyAttacking { get; private set; }
 
+
     SFXManager sFXManager;
     SpellBook magic;
 
@@ -112,25 +143,23 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         castingSlowMoColor.G = 141;
         castingSlowMoColor.B = 255;
 
-
-
         StartCoroutine(GetPlayerAtkRef());
 
         float width = HealthBar.gameObject.GetComponent<RectTransform>().rect.width;
         Mathf.Ceil(width);
         CurrentHealth.health = width;
-        HealthFloatObj.text = $"{CurrentHealth.health.ToString("F0")}" + "HP";
+        HealthFloatObj.text = $"{CurrentHealth.health.ToString("F0")}HP";
 
         float mWidth = ManaBar.gameObject.GetComponent<RectTransform>().rect.width;
         CurrentMana = mWidth;
         Mathf.Ceil(CurrentMana);
-        ManaFloat.text = $"{CurrentMana.ToString("F0")}" + "MP";
-
+        ManaFloat.text = $"{CurrentMana.ToString("F0")}MP";
 
         rollDuration = rollingClip.length;
         runAttackDuration = runAttackClip.length;
         heavyAttackDuration = heavyAttackClip.length;
         castingDuration = castingClip.length;
+        AttackDuration = AttackClip.length;
 
         if (MagicPanel.isActiveAndEnabled)
         {
@@ -159,7 +188,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     {
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
-        if (Input.GetKeyDown(KeyCode.Space) && movementInput != Vector2.zero && !IsRolling)
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time - LastDodgeTime >= rollDuration && movementInput != Vector2.zero && !IsRolling)
         {
             StartRoll();
         }
@@ -171,15 +200,15 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         {
             StartRunAttack();
         }
+        else if (Input.GetMouseButtonDown(0) && movementInput == Vector2.zero && !IsRolling && !IsAttacking && IsLockedOn)
+        {
+            StartAttack();
+        }
         else if (Input.GetKeyDown(KeyCode.Q) && !IsRolling && !IsAttacking && !IsCasting)
         {
             StartCasting();
         }
     }
-
-
-
-
 
     private void FixedUpdate()
     {
@@ -199,6 +228,10 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         {
             UpdateRunAttack();
         }
+        else if (IsAttacking && IsLockedOn)
+        {
+            UpdateAttack();
+        }
         else
         {
             UpdateMovement();
@@ -207,6 +240,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void StartRoll()
     {
+        LastDodgeTime = Time.time;
         IsRolling = true;
         rollTimer = rollDuration;
         rollDirection = movementInput;
@@ -222,7 +256,29 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     }
 
 
+    private void StartAttack()
+    {
+        PlayerAttackHitbox.gameObject.SetActive(true);
+        IsAttacking = true;
+        IsLockedOn = true;
+        AttackTimer = AttackDuration;
+        float Pitch = (float)UnityEngine.Random.Range(1f, 3f);
+        sFXManager.PlaySFX(sFXManager.Attack, Pitch);
+    }
 
+    private void UpdateAttack()
+    {
+        AttackTimer -= Time.fixedDeltaTime;
+        if (AttackTimer <= 0)
+        {
+            IsAttacking = false;
+            PlayerAttackHitbox.gameObject.SetActive(false);
+        }
+
+        int dmg = (int)UnityEngine.Random.Range(AttackDamage[0], AttackDamage[1]);
+        DamageOutput = new Sender<int>(PlayerAttacks.DamageAmount, dmg);
+        DamageOutput.TransferData();
+    }
 
 
 
@@ -233,6 +289,8 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         IsRunning = true;
         heavyAttackTimer = heavyAttackDuration;
         lockedHeavyAttackDirection = movementData.GetDirectionFromInput(movementInput.x, movementInput.y);
+        float Pitch = (float)UnityEngine.Random.Range(1f, 3f);
+        sFXManager.PlaySFX(sFXManager.Kick, Pitch);
     }
 
     private void UpdateHeavyAttack()
@@ -262,6 +320,9 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         PlayerAttackHitbox.gameObject.SetActive(true);
         runAttackTimer = runAttackDuration;
         lockedAttackDirection = movementData.GetDirectionFromInput(movementInput.x, movementInput.y);
+
+        float Pitch = UnityEngine.Random.Range(1f, 3f);
+        sFXManager.PlaySFX(sFXManager.SpinAttack , Pitch);
     }
 
     private void UpdateRunAttack()
@@ -275,11 +336,13 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
         MoveCharacter(movementInput, moveSpeed + attackSpeedBoost);
         CurrentDirection = lockedAttackDirection;
+
+
+
         int dmg = (int)UnityEngine.Random.Range(runAttackDamage[0], runAttackDamage[1]);
         DamageOutput = new Sender<int>(PlayerAttacks.DamageAmount, dmg);
         DamageOutput.TransferData();
     }
-
 
 
 
@@ -303,7 +366,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
             {
                 waitingForSpellSelection = true;
                 Time.timeScale = 0.0f;
-                sFXManager.PlaySFX(sFXManager.Open);
+                sFXManager.PlaySFX(sFXManager.Open , 1 );
                 MagicPanel.gameObject.SetActive(true);
                 return;
             }
@@ -318,13 +381,13 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void OnBoltCast()
     {
-        sFXManager.PlaySFX(sFXManager.Select);
+        sFXManager.PlaySFX(sFXManager.Select , 1);
         StartCoroutine(WaitForClickAndCast(pfBolt, magic.Bolt.Cost, sFXManager.BoltSFX));
     }
 
     private void OnDarkBoltCast()
     {
-        sFXManager.PlaySFX(sFXManager.Select);
+        sFXManager.PlaySFX(sFXManager.Select , 1);
         StartCoroutine(WaitForClickAndCast(pfDarkBolt, magic.DarkBolt.Cost, sFXManager.DarkBoltSFX));
     }
 
@@ -347,12 +410,12 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
             ManaFloat.text = $"{CurrentMana.ToString("F0")}MP";
 
             GameObject spell = Instantiate(spellPrefab, clickPos, quaternion.identity);
-            sFXManager.PlaySFX(SpellPfSFX);
+            sFXManager.PlaySFX(SpellPfSFX , 1);
             Destroy(spell, 0.8f);
         }
         else
         {
-            sFXManager.PlaySFX(sFXManager.Denied);
+            sFXManager.PlaySFX(sFXManager.Denied , 1);
             Debug.Log("Not enough Mana!");
             yield return null;
         }
@@ -369,14 +432,24 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         waitingForSpellSelection = false;
     }
 
+    
+    public void TriggerPerfectDodge(Vector2 hitPoint)
+    {
+        invulnUntil = Time.time + extraIFamesAfterPerfect;
+        counterUntil = Time.time + counterWindowDuration;
+        OnPerfectDodge?.Invoke();
+        StartCoroutine(PerfectDodgeSlowMo());
+        
+    }
 
-
-
-
-
-
-
-
+    private IEnumerator PerfectDodgeSlowMo()
+    {
+        float original = Time.timeScale;
+        Time.timeScale = timeScaleOnPerfect;
+        yield return new WaitForSecondsRealtime(timeScaleDuration);
+        Time.timeScale = original;
+    }
+    // ------------------------------
 
     private void UpdateMovement()
     {

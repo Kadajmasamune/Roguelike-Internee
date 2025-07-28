@@ -173,8 +173,8 @@ MonoBehaviour:
   Player: {fileID: 604664135}
   TileSpacing: 4
   NoiseScale: 1
-  RoomWidth: 2048
-  RoomHeight: 2048
+  RoomWidth: 512
+  RoomHeight: 512
   CellSize: 16
   RoomID: 0
   fill: 0.3
@@ -402,6 +402,9 @@ MonoBehaviour:
   Select: {fileID: 8300000, guid: 5d0f19570eaa6b54fad440010332201a, type: 3}
   Open: {fileID: 8300000, guid: 0330ab571dfa6b5429a35465775a50d2, type: 3}
   Denied: {fileID: 8300000, guid: 3376ce7d769619e4cbf7fe0944337ff1, type: 3}
+  Attack: {fileID: 8300000, guid: d0dac7340ff089d4284e8baadce4f5f4, type: 3}
+  Kick: {fileID: 8300000, guid: ff1a3ec12e1339246bdd4b28681e9c58, type: 3}
+  SpinAttack: {fileID: 8300000, guid: c202d943f23bcb44ab007dc043de9c55, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,15 +811,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c168e535f77323e409c73c6a3649fad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 14
+  moveSpeed: 11
   rollSpeedBoost: 4
   attackSpeedBoost: 3.5
   rollingClip: {fileID: 7400000, guid: 5a52db5afb7a37749a8d80f107617fc4, type: 2}
   runAttackClip: {fileID: 7400000, guid: ea63f20d3798345499ef0c7541725f24, type: 2}
   heavyAttackClip: {fileID: 7400000, guid: 53895e940beef5d4d8e457c21e7a39dc, type: 2}
   castingClip: {fileID: 7400000, guid: 15feeeb71657413429bdfe7e89423e20, type: 2}
+  AttackClip: {fileID: 7400000, guid: 284c6b45c29932d46a3581ea83b3eb09, type: 2}
   playerAnimatorController: {fileID: 9100000, guid: 5a9371a806cc3224f98992eceaecd601, type: 2}
   PlayerAttackHitbox: {fileID: 992911950}
+  perfectDodgeWindow: 0.2
+  extraIFamesAfterPerfect: 0.35
+  timeScaleOnPerfect: 0.7
+  timeScaleDuration: 2
+  counterWindowDuration: 0.6
   pfDarkBolt: {fileID: 7170592660712446625, guid: 07aa781b4ca375743a75996a1fcd559b, type: 3}
   pfBolt: {fileID: 3299082654676554037, guid: c4761b6ee13212a4d9024f1c124d003f, type: 3}
   MagicPanel: {fileID: 674260463}
@@ -919,7 +928,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 4dae865800000000c59279088f410db5
+  m_ApplyToSortingLayers: 4dae865800000000c59279088f410db5334481bc
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -935,8 +944,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+    m_Center: {x: -0.00024998188, y: -0.000100016594, z: 0}
+    m_Extent: {x: 1.00045, y: 1.0009, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2302,6 +2311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1173149491}
+  - component: {fileID: 1173149492}
   m_Layer: 0
   m_Name: SlowMotionController
   m_TagString: Untagged
@@ -2324,6 +2334,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1173149492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173149490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b38706b83e570e4b81d6f131536f027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pfDarkBolt: {fileID: 7170592660712446625, guid: 07aa781b4ca375743a75996a1fcd559b, type: 3}
+  Player: {fileID: 604664135}
+  Troll: {fileID: 1218684518287455434, guid: 00ec5e44c94a4ae4b9ec77e84e78b0d4, type: 3}
 --- !u!1 &1457578212
 GameObject:
   m_ObjectHideFlags: 0

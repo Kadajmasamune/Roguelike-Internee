@@ -50,5 +50,8 @@ TagManager:
   - name: Magic
     uniqueID: 142185157
     locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 3162588211
+    locked: 0
   m_RenderingLayers:
   - Default

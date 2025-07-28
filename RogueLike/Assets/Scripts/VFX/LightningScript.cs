@@ -1,30 +1,43 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-//To Do: 
-// Damage Logic
-// Knockback Trajectory
 public class LightningScript : MonoBehaviour
 {
+    PlayerController playerController;
 
-    // public float knockbackForce = 25f; 
-    // private float KnockbackForceCurved = 4;
-    public int damageAmount; 
+    void Awake()
+    {
+        playerController = FindFirstObjectByType<PlayerController>();
+    }
+
+    public int damageAmount;
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.layer == LayerMask.NameToLayer("Hurtable"))
+        if (col.gameObject.layer != LayerMask.NameToLayer("Hurtable")) return;
+
+        if (col.TryGetComponent(out PlayerController pc))
         {
-            Rigidbody2D rb = col.attachedRigidbody;
-            if (rb != null)
+            if (pc.IsInPerfectDodgeWindow)
             {
-        
-                Health TargetHealth = col.GetComponent<Health>();
-                if (TargetHealth != null)
-                {
-                    TargetHealth.TakeDamage(damageAmount);
-                }
-               
-            }        
+                pc.TriggerPerfectDodge(col.ClosestPoint(transform.position));
+                return;
+            }
+
+            if (pc.IsInvulnerable)
+            {
+                return;
+            }
+        }
+
+        Rigidbody2D rb = col.attachedRigidbody;
+        if (rb != null)
+        {
+            Health targetHealth = col.GetComponent<Health>();
+            if (targetHealth != null)
+            {
+                targetHealth.TakeDamage(damageAmount);
+            }
         }
     }
 }

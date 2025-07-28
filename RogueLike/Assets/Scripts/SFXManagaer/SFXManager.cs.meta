@@ -9,6 +9,9 @@ MonoImporter:
   - Select: {fileID: 8300000, guid: 5d0f19570eaa6b54fad440010332201a, type: 3}
   - Open: {fileID: 8300000, guid: 0330ab571dfa6b5429a35465775a50d2, type: 3}
   - Denied: {fileID: 8300000, guid: 3376ce7d769619e4cbf7fe0944337ff1, type: 3}
+  - Attack: {fileID: 8300000, guid: d0dac7340ff089d4284e8baadce4f5f4, type: 3}
+  - Kick: {fileID: 8300000, guid: ff1a3ec12e1339246bdd4b28681e9c58, type: 3}
+  - SpinAttack: {fileID: 8300000, guid: c202d943f23bcb44ab007dc043de9c55, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
