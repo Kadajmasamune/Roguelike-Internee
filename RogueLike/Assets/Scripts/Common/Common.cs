@@ -1,7 +1,10 @@
 using System.Collections.Generic;
 using System.Collections;
-using UnityEditor.Animations;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor.Animations;
+#endif
 
 namespace Common
 {
@@ -12,13 +15,13 @@ namespace Common
         Down,
         Left,
         Right,
-        UpRight,    
+        UpRight,
         BottomRight,
         UpLeft,
         BottomLeft,
     }
 
-        
+
     public delegate IEnumerator WaitForClickAndCast(GameObject spellPrefab, int SpellManaCost, AudioClip SpellPfSFX);
 
     // Debug.Log("Waiting for target click...");

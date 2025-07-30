@@ -2,7 +2,6 @@ using UnityEngine;
 using Common;
 using MagicSpells;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using System.Collections;
 using UnityEngine.UI;
 using Unity.Mathematics;
@@ -10,6 +9,11 @@ using UnityEngine.Rendering.Universal;
 using TMPro;
 using Signals;
 using System;
+
+#if UNITY_EDITOR
+
+using UnityEditor.Animations;
+#endif
 
 public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHasBooleans
 {
@@ -45,7 +49,9 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     [SerializeField] BoxCollider2D PlayerAttackHitbox;
 
+    Time PlayerClock;
 
+    
     private float rollDuration;
     private float rollTimer;
     public float perfectDodgeWindow = 0.2f;
@@ -62,10 +68,16 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     [SerializeField] private float timeScaleDuration = 2f;
     [SerializeField] private float counterWindowDuration = 0.6f;
 
+    public Material _materialBulletTime;
+
+    public float BulletTimeTimer;
+    
+    private static int _WaveDistanceFromCenter = Shader.PropertyToID("_WaveDistanceFromCenter");
+    
     private float invulnUntil = -Mathf.Infinity;
     private float counterUntil = -Mathf.Infinity;
 
-    public bool IsInvulnerable => Time.time < invulnUntil || IsRolling; 
+    public bool IsInvulnerable => Time.time < invulnUntil || IsRolling;
     public bool CanCounter => Time.time < counterUntil;
 
     public event Action OnPerfectDodge;
@@ -76,7 +88,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private float AttackDuration;
     private float AttackTimer;
     private float[] AttackDamage = new float[] { 12, 31 };
-    
+
 
     private float runAttackDuration;
     private float runAttackTimer;
@@ -135,6 +147,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     Sender<int> DamageOutput;
 
     private void Awake()
+
     {
         rb = GetComponent<Rigidbody2D>();
         castingSlowMoColor = new CastingSlowMoColor();
@@ -169,10 +182,13 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
         DarkBoltBtn.onClick.AddListener(OnDarkBoltCast);
         BoltBtn.onClick.AddListener(OnBoltCast);
+
         animHashGenerator.GenerateAnimHash(AnimationClipHashes, playerAnimatorController);
 
         sFXManager = FindFirstObjectByType<SFXManager>();
         PlayerAttacks = GetComponentInChildren<PlayerAttack>();
+
+        _materialBulletTime = transform.GetChild(0).GetComponent<SpriteRenderer>().material;
     }
 
     private void Update()
@@ -322,7 +338,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         lockedAttackDirection = movementData.GetDirectionFromInput(movementInput.x, movementInput.y);
 
         float Pitch = UnityEngine.Random.Range(1f, 3f);
-        sFXManager.PlaySFX(sFXManager.SpinAttack , Pitch);
+        sFXManager.PlaySFX(sFXManager.SpinAttack, Pitch);
     }
 
     private void UpdateRunAttack()
@@ -366,7 +382,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
             {
                 waitingForSpellSelection = true;
                 Time.timeScale = 0.0f;
-                sFXManager.PlaySFX(sFXManager.Open , 1 );
+                sFXManager.PlaySFX(sFXManager.Open, 1);
                 MagicPanel.gameObject.SetActive(true);
                 return;
             }
@@ -381,13 +397,13 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void OnBoltCast()
     {
-        sFXManager.PlaySFX(sFXManager.Select , 1);
+        sFXManager.PlaySFX(sFXManager.Select, 1);
         StartCoroutine(WaitForClickAndCast(pfBolt, magic.Bolt.Cost, sFXManager.BoltSFX));
     }
 
     private void OnDarkBoltCast()
     {
-        sFXManager.PlaySFX(sFXManager.Select , 1);
+        sFXManager.PlaySFX(sFXManager.Select, 1);
         StartCoroutine(WaitForClickAndCast(pfDarkBolt, magic.DarkBolt.Cost, sFXManager.DarkBoltSFX));
     }
 
@@ -410,12 +426,12 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
             ManaFloat.text = $"{CurrentMana.ToString("F0")}MP";
 
             GameObject spell = Instantiate(spellPrefab, clickPos, quaternion.identity);
-            sFXManager.PlaySFX(SpellPfSFX , 1);
+            sFXManager.PlaySFX(SpellPfSFX, 1);
             Destroy(spell, 0.8f);
         }
         else
         {
-            sFXManager.PlaySFX(sFXManager.Denied , 1);
+            sFXManager.PlaySFX(sFXManager.Denied, 1);
             Debug.Log("Not enough Mana!");
             yield return null;
         }
@@ -432,23 +448,46 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         waitingForSpellSelection = false;
     }
 
-    
+
     public void TriggerPerfectDodge(Vector2 hitPoint)
     {
         invulnUntil = Time.time + extraIFamesAfterPerfect;
         counterUntil = Time.time + counterWindowDuration;
         OnPerfectDodge?.Invoke();
         StartCoroutine(PerfectDodgeSlowMo());
-        
+
     }
 
     private IEnumerator PerfectDodgeSlowMo()
     {
+        StartCoroutine(BulletTimeVFX(-0.1f , 1f));
+
         float original = Time.timeScale;
         Time.timeScale = timeScaleOnPerfect;
         yield return new WaitForSecondsRealtime(timeScaleDuration);
         Time.timeScale = original;
     }
+
+    private IEnumerator BulletTimeVFX(float start, float end)
+    {
+        _materialBulletTime.SetFloat("_WaveDistanceFromCenter", start);
+
+        float lerpedAmount = -0.1f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime <= BulletTimeTimer)
+        {
+            elapsedTime += Time.deltaTime;
+            lerpedAmount = Mathf.Lerp(start, end, (elapsedTime / BulletTimeTimer));
+            Debug.Log(lerpedAmount); 
+            _materialBulletTime.SetFloat("_WaveDistanceFromCenter", lerpedAmount);
+            yield return null;
+        }
+        lerpedAmount = -0.1f;
+        _materialBulletTime.SetFloat("_WaveDistanceFromCenter", lerpedAmount);
+    }
+
+
     // ------------------------------
 
     private void UpdateMovement()

@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations; // EDITOR-ONLY CODE, SHOULD BE IN #if UNITY_EDITOR
 using Common;
 
 #if UNITY_EDITOR
+using UnityEditor.Animations; 
 using UnityEditor;
 #endif
 
