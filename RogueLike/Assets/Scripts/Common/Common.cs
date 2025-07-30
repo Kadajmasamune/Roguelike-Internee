@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 #if UNITY_EDITOR
 using UnityEditor.Animations;
@@ -121,4 +122,5 @@ namespace Common
             };
         }
     }
+    
 }

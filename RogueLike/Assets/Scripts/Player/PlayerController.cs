@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     [SerializeField] private AnimationClip castingClip;
     [SerializeField] private AnimationClip AttackClip;
 
+
+
+    // ------------------------------------------------------------------------------------------------------------------
+    // Animatoins Additions
     [Header("Animation")]
     [SerializeField] private AnimatorController playerAnimatorController;
 
@@ -48,6 +52,10 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private Direction lockedHeavyAttackDirection;
 
     [SerializeField] BoxCollider2D PlayerAttackHitbox;
+    // ------------------------------------------------------------------------------------------------------------------
+
+
+
 
     Time PlayerClock;
 

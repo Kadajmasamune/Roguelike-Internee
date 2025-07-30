@@ -822,7 +822,7 @@ MonoBehaviour:
   AttackClip: {fileID: 7400000, guid: 284c6b45c29932d46a3581ea83b3eb09, type: 2}
   playerAnimatorController: {fileID: 9100000, guid: 5a9371a806cc3224f98992eceaecd601, type: 2}
   PlayerAttackHitbox: {fileID: 992911950}
-  perfectDodgeWindow: 0.2
+  perfectDodgeWindow: 0.89
   extraIFamesAfterPerfect: 0.35
   timeScaleOnPerfect: 0.7
   timeScaleDuration: 2
@@ -2127,6 +2127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0849e7f49fb1185478c663a62d050d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePopUpPrefab: {fileID: 8285309266962742294, guid: 7ee431f7e7866ea438be0a40bc46e088, type: 3}
 --- !u!1 &1088459003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,7 +2387,7 @@ Transform:
   m_GameObject: {fileID: 1164105164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6671, y: 10.9994, z: -8.034377}
+  m_LocalPosition: {x: -2.6671, y: 10.97, z: -8.034377}
   m_LocalScale: {x: 8.882972, y: 5.228027, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
