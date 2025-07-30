@@ -67,7 +67,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _ShockWaveStrength: 1.76
+    - _ShockWaveStrength: 0.19
     - _Size: 0.1
     - _WaveDistanceFromCenter: -0.1
     - _XSizeRatio: 1.777
