@@ -478,8 +478,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         while (elapsedTime <= BulletTimeTimer)
         {
             elapsedTime += Time.deltaTime;
-            lerpedAmount = Mathf.Lerp(start, end, (elapsedTime / BulletTimeTimer));
-            Debug.Log(lerpedAmount); 
+            lerpedAmount = Mathf.Lerp(start, end, (elapsedTime / BulletTimeTimer)); 
             _materialBulletTime.SetFloat("_WaveDistanceFromCenter", lerpedAmount);
             yield return null;
         }
