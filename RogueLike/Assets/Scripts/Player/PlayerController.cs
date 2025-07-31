@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     public event Action OnPerfectDodge;
 
+
     // ------------------------------
 
 
@@ -197,6 +198,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         PlayerAttacks = GetComponentInChildren<PlayerAttack>();
 
         _materialBulletTime = transform.GetChild(0).GetComponent<SpriteRenderer>().material;
+
     }
 
     private void Update()
@@ -468,7 +470,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private IEnumerator PerfectDodgeSlowMo()
     {
-        StartCoroutine(BulletTimeVFX(-0.1f , 1f));
+        StartCoroutine(BulletTimeVFX(-0.1f, 1f));
 
         float original = Time.timeScale;
         Time.timeScale = timeScaleOnPerfect;

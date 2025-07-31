@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ee2539a25232446bcee1d8fe012b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePopUpPrefab: {fileID: 983153613517093472, guid: 0e77a64a47e438a4eb259b2d1e1d34fc, type: 3}
   damageAmount: 50
 --- !u!1 &3299082654676554037
 GameObject:
@@ -168,7 +169,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 142185157
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -894095381526335850, guid: 93efb15e902ece848a132496bd540630, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

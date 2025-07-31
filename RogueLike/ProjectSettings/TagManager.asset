@@ -53,5 +53,8 @@ TagManager:
   - name: Magic
     uniqueID: 142185157
     locked: 0
+  - name: DamagePopUp
+    uniqueID: 211238593
+    locked: 0
   m_RenderingLayers:
   - Default

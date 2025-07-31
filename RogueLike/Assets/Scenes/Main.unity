@@ -824,7 +824,7 @@ MonoBehaviour:
   PlayerAttackHitbox: {fileID: 992911950}
   perfectDodgeWindow: 0.89
   extraIFamesAfterPerfect: 0.35
-  timeScaleOnPerfect: 0.7
+  timeScaleOnPerfect: 0.45
   timeScaleDuration: 2
   counterWindowDuration: 0.6
   _materialBulletTime: {fileID: 0}
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000004dae86588f410db5c5927908334481bc
+  m_ApplyToSortingLayers: 000000004dae86588f410db5c5927908334481bcc13e970c
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2127,7 +2127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0849e7f49fb1185478c663a62d050d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePopUpPrefab: {fileID: 8285309266962742294, guid: 7ee431f7e7866ea438be0a40bc46e088, type: 3}
+  damagePopUpPrefab: {fileID: 983153613517093472, guid: 0e77a64a47e438a4eb259b2d1e1d34fc, type: 3}
+  fadein: 0.14
 --- !u!1 &1088459003
 GameObject:
   m_ObjectHideFlags: 0
