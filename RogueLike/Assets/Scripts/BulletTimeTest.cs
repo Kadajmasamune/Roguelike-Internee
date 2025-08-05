@@ -12,7 +12,7 @@ public class BulletTimeTest : MonoBehaviour
     PlayerController playerController;
     public GameObject Troll;
     Vector3 newpos;
-
+    
     void Start()
     {
         sFXManager = FindFirstObjectByType<SFXManager>();

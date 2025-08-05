@@ -9,6 +9,8 @@ using UnityEngine.Rendering.Universal;
 using TMPro;
 using Signals;
 using System;
+using UnityEngine.Rendering;
+
 
 #if UNITY_EDITOR
 
@@ -55,10 +57,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     // ------------------------------------------------------------------------------------------------------------------
 
 
-
-
-    Time PlayerClock;
-
     
     private float rollDuration;
     private float rollTimer;
@@ -90,7 +88,9 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     public event Action OnPerfectDodge;
 
+    private BulletTimePostProcessingScript bulletTimePostProcessingScript;
 
+    
     // ------------------------------
 
 
@@ -199,7 +199,8 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
         _materialBulletTime = transform.GetChild(0).GetComponent<SpriteRenderer>().material;
 
-    }
+        bulletTimePostProcessingScript = GetComponent<BulletTimePostProcessingScript>();
+    }   
 
     private void Update()
     {
@@ -274,7 +275,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void UpdateRoll()
     {
-        rollTimer -= Time.fixedDeltaTime;
+        rollTimer -= Time.fixedUnscaledDeltaTime;
         if (rollTimer <= 0f) IsRolling = false;
 
         MoveCharacter(rollDirection, moveSpeed + rollSpeedBoost);
@@ -294,7 +295,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void UpdateAttack()
     {
-        AttackTimer -= Time.fixedDeltaTime;
+        AttackTimer -= Time.fixedUnscaledDeltaTime;
         if (AttackTimer <= 0)
         {
             IsAttacking = false;
@@ -321,7 +322,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void UpdateHeavyAttack()
     {
-        heavyAttackTimer -= Time.fixedDeltaTime;
+        heavyAttackTimer -= Time.fixedUnscaledDeltaTime;
         if (heavyAttackTimer <= 0f)
         {
             IsHeavyAttacking = false;
@@ -353,7 +354,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void UpdateRunAttack()
     {
-        runAttackTimer -= Time.fixedDeltaTime;
+        runAttackTimer -= Time.fixedUnscaledDeltaTime;
         if (runAttackTimer <= 0f)
         {
             IsAttacking = false;
@@ -386,7 +387,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     {
         if (!waitingForSpellSelection)
         {
-            castingTimer -= Time.fixedDeltaTime;
+            castingTimer -= Time.fixedUnscaledDeltaTime;
 
             if (castingTimer <= 0f)
             {
@@ -471,7 +472,8 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private IEnumerator PerfectDodgeSlowMo()
     {
         StartCoroutine(BulletTimeVFX(-0.1f, 1f));
-
+        StartCoroutine(bulletTimePostProcessingScript.StartPostProcessingEffect(0.43f , timeScaleDuration));
+        
         float original = Time.timeScale;
         Time.timeScale = timeScaleOnPerfect;
         yield return new WaitForSecondsRealtime(timeScaleDuration);
@@ -487,7 +489,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
         while (elapsedTime <= BulletTimeTimer)
         {
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime;
             lerpedAmount = Mathf.Lerp(start, end, (elapsedTime / BulletTimeTimer)); 
             _materialBulletTime.SetFloat("_WaveDistanceFromCenter", lerpedAmount);
             yield return null;
@@ -520,7 +522,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void MoveCharacter(Vector2 direction, float speed)
     {
-        Vector2 newPosition = rb.position + direction * speed * Time.fixedDeltaTime;
+        Vector2 newPosition = rb.position + direction * speed * Time.fixedUnscaledDeltaTime;
         rb.MovePosition(newPosition);
         CurrentVelocity = direction * speed;
     }
@@ -580,7 +582,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private IEnumerator GetPlayerAtkRef()
     {
         PlayerAttackHitbox.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         PlayerAttackHitbox.gameObject.SetActive(false);
     }
 }
