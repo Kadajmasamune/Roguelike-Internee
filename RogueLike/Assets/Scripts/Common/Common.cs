@@ -93,18 +93,21 @@ namespace Common
     {
         public Direction GetDirectionFromInput(float x, float y)
         {
-            if (x == 0 && y == 0) return Direction.None;
-            if (x > 0 && y == 0) return Direction.Right;
-            if (x < 0 && y == 0) return Direction.Left;
-            if (x == 0 && y > 0) return Direction.Up;
-            if (x == 0 && y < 0) return Direction.Down;
-            if (x > 0 && y > 0) return Direction.UpRight;
-            if (x < 0 && y > 0) return Direction.UpLeft;
-            if (x > 0 && y < 0) return Direction.BottomRight;
-            if (x < 0 && y < 0) return Direction.BottomLeft;
+            const float epsilon = 0.1f;
+
+            if (Mathf.Abs(x) < epsilon && Mathf.Abs(y) < epsilon) return Direction.None;
+            if (x > epsilon && Mathf.Abs(y) < epsilon) return Direction.Right;
+            if (x < -epsilon && Mathf.Abs(y) < epsilon) return Direction.Left;
+            if (Mathf.Abs(x) < epsilon && y > epsilon) return Direction.Up;
+            if (Mathf.Abs(x) < epsilon && y < -epsilon) return Direction.Down;
+            if (x > epsilon && y > epsilon) return Direction.UpRight;
+            if (x < -epsilon && y > epsilon) return Direction.UpLeft;
+            if (x > epsilon && y < -epsilon) return Direction.BottomRight;
+            if (x < -epsilon && y < -epsilon) return Direction.BottomLeft;
 
             return Direction.None;
         }
+
 
         public Vector2 DirectionToVector(Direction dir)
         {
@@ -122,5 +125,5 @@ namespace Common
             };
         }
     }
-    
+
 }

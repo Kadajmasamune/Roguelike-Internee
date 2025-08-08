@@ -10,7 +10,7 @@ public class AnimationClipRescaler : EditorWindow
     [MenuItem("Tools/Rescale .anim Clips in Folder")]
     public static void ShowWindow()
     {
-        GetWindow<AnimationClipRescaler>("Rescale .anim Clips");
+        GetWindow<AnimationClipRescaler>("Rescale .anim Clips");    
     }
 
     private void OnGUI()
