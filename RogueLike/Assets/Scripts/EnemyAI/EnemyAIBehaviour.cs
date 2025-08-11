@@ -7,6 +7,7 @@ using Pathfinding;
 public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHasVelocity
 {
     public Direction CurrentDirection { get; private set; }
+    public Direction LockedInAttackDirection;
     public Vector2 CurrentVelocity { get; private set; }
 
     public bool IsRunning { get; private set; }
@@ -24,6 +25,9 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
     [SerializeField] private float defaultSpeed = 6f;
     [SerializeField] private float ridingSpeed = 14f;
 
+    [SerializeField] private AnimationClip Attack1Clip;
+    private float AttackTimer;
+    private float AttackDuration;
 
     private EntityMovement EnemyAIMovement;
 
@@ -35,16 +39,38 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
         EnemyAIPathComponent = GetComponent<AIPath>();
         EnemyAIDestinationSetter = GetComponent<AIDestinationSetter>();
         EnemyAIMovement = new EntityMovement();
+
+        AttackDuration = Attack1Clip.length;
     }
 
     // Update is called once per frame
     void Update()
     {
+        HandleAttacks();
         UpdateMovementState();
         UpdateDirectionAndVelocity();
         Debug.Log(EnemyAIPathComponent.velocity);
     }
 
+
+    private void HandleAttacks()
+    {
+        float AttackingRange = 5f;
+
+        if (EnemyAIPathComponent.remainingDistance < AttackingRange)
+        {
+            InitiateAttack();
+        }
+    }
+
+
+    void FixedUpdate()
+    {
+        if (IsAttacking)
+        {
+            UpdateAttackState();
+        }
+    }
 
     void UpdateMovementState()
     {
@@ -86,4 +112,29 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
         }
     }
 
+
+    void InitiateAttack()
+    {
+        IsAttacking = true;
+        LockedInAttackDirection = CurrentDirection;
+
+        while (IsAttacking)
+        {
+            EnemyAIPathComponent.canMove = false;
+        }
+    }
+
+
+    void UpdateAttackState()
+    {
+        AttackTimer = AttackDuration;
+
+        AttackTimer -= Time.fixedUnscaledDeltaTime;
+        if (AttackTimer <= 0)
+        {
+            IsAttacking = false;
+        }
+
+        Vector3 AttackingTargetPos = EnemyAIDestinationSetter.target.transform.position;
+    }
 }
