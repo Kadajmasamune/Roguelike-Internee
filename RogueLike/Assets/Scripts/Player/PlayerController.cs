@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private float rollTimer;
     public float perfectDodgeWindow = 0.2f;
     private float LastDodgeTime = -Mathf.Infinity;
-    public bool IsInPerfectDodgeWindow => Time.time - LastDodgeTime <= perfectDodgeWindow;
+    public bool IsInPerfectDodgeWindow => Time.unscaledTime - LastDodgeTime <= perfectDodgeWindow;
 
 
     // ------------------------------
@@ -83,8 +83,8 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private float invulnUntil = -Mathf.Infinity;
     private float counterUntil = -Mathf.Infinity;
 
-    public bool IsInvulnerable => Time.time < invulnUntil || IsRolling;
-    public bool CanCounter => Time.time < counterUntil;
+    public bool IsInvulnerable => Time.unscaledTime < invulnUntil || IsRolling;
+    public bool CanCounter => Time.unscaledTime < counterUntil;
 
     public event Action OnPerfectDodge;
 
@@ -215,7 +215,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     {
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
-        if (Input.GetKeyDown(KeyCode.Space) && Time.time - LastDodgeTime >= rollDuration && movementInput != Vector2.zero && !IsRolling)
+        if (Input.GetKeyDown(KeyCode.Space) && Time.unscaledTime - LastDodgeTime >= rollDuration && movementInput != Vector2.zero && !IsRolling)
         {
             StartRoll();
         }
@@ -267,7 +267,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void StartRoll()
     {
-        LastDodgeTime = Time.time;
+        LastDodgeTime = Time.unscaledTime;
         IsRolling = true;
         rollTimer = rollDuration;
         rollDirection = movementInput;
@@ -462,8 +462,8 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     public void TriggerPerfectDodge(Vector2 hitPoint)
     {
-        invulnUntil = Time.time + extraIFamesAfterPerfect;
-        counterUntil = Time.time + counterWindowDuration;
+        invulnUntil = Time.unscaledTime + extraIFamesAfterPerfect;
+        counterUntil = Time.unscaledTime + counterWindowDuration;
         OnPerfectDodge?.Invoke();
         StartCoroutine(PerfectDodgeSlowMo());
 

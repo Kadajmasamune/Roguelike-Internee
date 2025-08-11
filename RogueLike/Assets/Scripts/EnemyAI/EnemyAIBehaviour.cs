@@ -46,10 +46,10 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
     // Update is called once per frame
     void Update()
     {
-        HandleAttacks();
+        // HandleAttacks();
         UpdateMovementState();
         UpdateDirectionAndVelocity();
-        Debug.Log(EnemyAIPathComponent.velocity);
+        // Debug.Log(EnemyAIPathComponent.velocity);
     }
 
 
@@ -66,10 +66,10 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
 
     void FixedUpdate()
     {
-        if (IsAttacking)
-        {
-            UpdateAttackState();
-        }
+        // if (IsAttacking)
+        // {
+        //     UpdateAttackState();
+        // }
     }
 
     void UpdateMovementState()

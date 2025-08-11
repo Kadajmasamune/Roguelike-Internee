@@ -418,6 +418,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -557,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowDebugText: 0
   ShowCameraFrustum: 1
-  IgnoreTimeScale: 0
+  IgnoreTimeScale: 1
   WorldUpOverride: {fileID: 0}
   ChannelMask: -1
   UpdateMethod: 2
@@ -575,6 +576,18 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3470f1c0cba71648a8541f05b1e7e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &528254701
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e2b7cf9baa2c41a87ac8483b7fa43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IgnoreTimeScale: 1
 --- !u!212 &604664140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -858,7 +872,7 @@ MonoBehaviour:
   PlayerAttackHitbox: {fileID: 992911950}
   perfectDodgeWindow: 0.89
   extraIFamesAfterPerfect: 0.35
-  timeScaleOnPerfect: 0.68
+  timeScaleOnPerfect: 0.2
   timeScaleDuration: 5
   counterWindowDuration: 0.6
   _materialBulletTime: {fileID: 0}
@@ -2737,7 +2751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAoIextJI/5agIAACEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjIE6gt9YhpIckTGknF1+EtMYaZMmjjwDJ8N+7km3s0BNi377Ve7srfxKhbA3MabMygj9rDuT7iIQz+TbqwSc40p1WG/EBXc6b4K4MSTTm/KZOaIxPAs3qCpwR7IfayZCcYNArUWhTLfkOMm2dxXBBpQWEjHaBrTD0OSJH/BkvAuWEp+l9OH3gaZGMznhkoByYQersZpami/u7lrC4mc+Su/u0ZY3TyPKKSVrVwIOFnrxIO9Y0pik012YEI0xLKWyrjLhTHZ1ntLYefWECFxSdRjkhvwSxK11QPSS/FoUF17bB0NODMNiwpir5qZsuVtTuG13vVPrYtKioKfn8HzqeRLgwunrqbp0k4QZXCrb/TU+MWjdo8jD88FW2Vwcq93Qr4a0E9aJXRnvFEXTGB6q3MH3o/16MZSWwfR9vpF4Ffd13u5tpN9Hg4Ry9HzMpqm2Abm6bwEbq2O24CGBwLr9QcFwT25bAaFDx18IfuhvuUws8CmMdQq1LFeRttTchlSxjz4Ib7zJtFMRwK7oGRaU7rbGMux7gFTa49gp5pOHltJe3WPcgrigx3OcnyRW01ofLsGypD89gy1fvpFDQiw7AC/Yp00o1+zXsSUfbeFNQNqDtvOBfV4ts5wlNOZtCccsZnbFxwhnMF8l8ztPbuzSZkLh7QqFPKteN0LY9ODXVF1e4Z90HZbQytI67zg09rMRHpQctF6rQG2YA1GtT4SIcDF6Cb5IvucAGbcA5oeK8yWdOpGZ74PmlUB6dLo/O0LyvkpNavGsXIjnJ4hckJyF82eW1gXcBh3D5hXcm539QSwMEFAAACAgAACgh7C3NWJxtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKShUGiaUqyUWqaSUpyonGyrkFKcqqFpYGFRYqpiZmpgaFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAACgh7G0kj/lqAgAAIQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAACgh7C3NWJxtAAAAeAAAAAkAJAAAAAAAAAAAAAAAtwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABvAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAoIeyTjdKAawIAACAFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjIE6gt9YhpIckTGknF1+EtMYaZMmjjwDJ8N+7km3s0BPi7b7Ve7srfxKhbA3MabMygj9rDuT7iIQz+Tbqg09wpDutNuIDupw3wV0ZkmjM+U2d0IhPAs3qCpwR7IfayZCcIOiVKLSplnwHmbbOIlxQaQFDRrvAVgh9jsgRf8aLQDnhaXofTh94WiSjMx4ZKAdmkDq7maXp4v6uJSxu5rPk7j5tWeM0srxiklY18GChJy/SjjWNaQrNtRnBCNNSCtsqI+5UR+cZra1HX5jABUWnUU7IL0HsShdUD8mvRWHBtW0w9PQgDDasqUp+6qaLFbX7Rtc7lT42LSpqSj7/Fx1PYrgwunrqbp0k4QZXCrb/TU+MWjdo8hB++CrbqwOVe7qV8FaCetEro73iGHTGB6q3MH3o/16MZSWwfY83Uq9AX/fd7mbaTTR4OEfvx0yKahtCN7cNsJE6djsuAhicyy8UHNfEtiUQDSr+WvhDd8N9agOPwliHodalCvK22puQSpaxZ8GNd5k2CiLciq5BUelOayzjrgd4FRtcexV5pOHltJe3se5BXFEi3OcnyVVorQ+XYdlSH57Blq/eSaGgFx0CL9inTCvV7NewJx1t401B2YC284J/XS2ynSc05WwKxS1ndMbGCWcwXyTzOU9v79JkQuLuCYU+qVw3Qtv24NRUX1zhnnUflNHK0DruOjf0sBIflR60XKhCb5gBUK9NhYtwMHgJvkm+5AIbtAHnhIrzJp85kZrtgeeXQnl0ujw6Q/O+Sk5q8a5dQHKSxS9ITgJ82eW1gXcBh3B5V+xMzv8AUEsDBBQAAAgIAAAoIewtzVicbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSkoVBomlKslFqmklKcqJxsq5BSnKqhaWBhUWKqYmZqYGhUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAoIeyTjdKAawIAACAFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAoIewtzVicbQAAAHgAAAAJACQAAAAAAAAAAAAAALgCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAcAMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -2777,7 +2791,7 @@ MonoBehaviour:
     seed: 0
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
-  showGraphs: 1
+  showGraphs: 0
 --- !u!114 &1409556258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2804,6 +2818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e2b7cf9baa2c41a87ac8483b7fa43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IgnoreTimeScale: 0
 --- !u!114 &1409556260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2816,10 +2831,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31fb2e25df4705478a8097165aed721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LockedInAttackDirection: 0
   EnemyAIPathComponent: {fileID: 0}
   EnemyAIDestinationSetter: {fileID: 0}
   defaultSpeed: 6
   ridingSpeed: 14
+  Attack1Clip: {fileID: 0}
 --- !u!1 &1450704325
 GameObject:
   m_ObjectHideFlags: 0

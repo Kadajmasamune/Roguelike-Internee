@@ -2,24 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Common;
+using Unity.VisualScripting;
+
 
 #if UNITY_EDITOR
-using UnityEditor.Animations; 
+using UnityEditor.Animations;
 using UnityEditor;
 #endif
+
+//Fix jitter during Timescale in Player Animations;
+
+
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ PLEASE FIX
+
+
+
 
 [RequireComponent(typeof(Animator))]
 public class AnimatorC : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField] private bool IgnoreTimeScale = false;
+    
+
     private int currentAnimationHash = -1;
+
+    float SpeedMultiplier = 1.0f;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
+        if (IgnoreTimeScale)
+        {
+            animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+            animator.speed = SpeedMultiplier;
+        }
+        else
+        {
+            animator.updateMode = default;
+            animator.speed = default;
+        }
     }
 
-    public void ChangeAnimation(Dictionary<string, int> animationDict, int targetHash, float delay = 0.0f, float crossfade = 0.05f , float SpeedMultiplier = 1.0f)
+    public void ChangeAnimation(Dictionary<string, int> animatoinDict, int targetHash, float delay = 0.0f, float crossfade = 0.05f)
     {
         if (currentAnimationHash == targetHash) return;
 
@@ -34,16 +61,19 @@ public class AnimatorC : MonoBehaviour
 
         IEnumerator WaitAndPlay()
         {
-            yield return new WaitForSeconds(delay - crossfade);
+            yield return new WaitForSecondsRealtime(Mathf.Max(0f, delay - crossfade));
             Play();
         }
 
         void Play()
         {
+
             animator.CrossFadeInFixedTime(targetHash, crossfade);
             currentAnimationHash = targetHash;
         }
     }
+
+
 
 #if UNITY_EDITOR
     public AnimatorController CreateAnimatorController(string assetPath)
