@@ -872,7 +872,7 @@ MonoBehaviour:
   PlayerAttackHitbox: {fileID: 992911950}
   perfectDodgeWindow: 0.89
   extraIFamesAfterPerfect: 0.35
-  timeScaleOnPerfect: 0.2
+  timeScaleOnPerfect: 0.58
   timeScaleDuration: 5
   counterWindowDuration: 0.6
   _materialBulletTime: {fileID: 0}

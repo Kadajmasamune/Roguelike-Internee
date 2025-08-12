@@ -39,11 +39,6 @@ public class AnimatorC : MonoBehaviour
             animator.updateMode = AnimatorUpdateMode.UnscaledTime;
             animator.speed = SpeedMultiplier;
         }
-        else
-        {
-            animator.updateMode = default;
-            animator.speed = default;
-        }
     }
 
     public void ChangeAnimation(Dictionary<string, int> animatoinDict, int targetHash, float delay = 0.0f, float crossfade = 0.05f)

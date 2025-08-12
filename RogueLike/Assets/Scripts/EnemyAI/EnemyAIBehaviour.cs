@@ -49,7 +49,8 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
         // HandleAttacks();
         UpdateMovementState();
         UpdateDirectionAndVelocity();
-        // Debug.Log(EnemyAIPathComponent.velocity);
+
+        Debug.Log(CurrentDirection);
     }
 
 
