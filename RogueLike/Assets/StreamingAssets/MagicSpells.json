@@ -1,0 +1,4 @@
+{
+    "Bolt": { "Dmg": 50, "Cost": 25 },
+    "DarkBolt": { "Dmg": 75, "Cost": 50 }
+}

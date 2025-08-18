@@ -1,6 +1,5 @@
 using UnityEngine;
 using Common;
-using MagicSpells;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
@@ -149,7 +148,9 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
 
     SFXManager sFXManager;
-    SpellBook magic;
+
+
+    MagicManager magic;
 
     PlayerAttack PlayerAttacks;
 
@@ -187,7 +188,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         {
             MagicPanel.gameObject.SetActive(false);
         }
-        magic = new SpellBook();
+        magic = FindFirstObjectByType<MagicManager>();
 
         DarkBoltBtn.onClick.AddListener(OnDarkBoltCast);
         BoltBtn.onClick.AddListener(OnBoltCast);
@@ -200,7 +201,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         _materialBulletTime = transform.GetChild(0).GetComponent<SpriteRenderer>().material;
 
         bulletTimePostProcessingScript = GetComponent<BulletTimePostProcessingScript>();
-    }   
+    }
 
     private void Update()
     {
@@ -208,6 +209,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         IsLockedOn = Input.GetKey(KeyCode.LeftShift);
         UpdateHealthBar();
         UpdateHitBoxOffset(PlayerAttackHitbox);
+
     }
 
 
@@ -409,13 +411,13 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private void OnBoltCast()
     {
         sFXManager.PlaySFX(sFXManager.Select, 1);
-        StartCoroutine(WaitForClickAndCast(pfBolt, magic.Bolt.Cost, sFXManager.BoltSFX));
+        StartCoroutine(WaitForClickAndCast(pfBolt, magic.bolt.Cost, sFXManager.BoltSFX));
     }
 
     private void OnDarkBoltCast()
     {
         sFXManager.PlaySFX(sFXManager.Select, 1);
-        StartCoroutine(WaitForClickAndCast(pfDarkBolt, magic.DarkBolt.Cost, sFXManager.DarkBoltSFX));
+        StartCoroutine(WaitForClickAndCast(pfDarkBolt, magic.darkBolt.Cost, sFXManager.DarkBoltSFX));
     }
 
     private IEnumerator WaitForClickAndCast(GameObject spellPrefab, int SpellManaCost, AudioClip SpellPfSFX)

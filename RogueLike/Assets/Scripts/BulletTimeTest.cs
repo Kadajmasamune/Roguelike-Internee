@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletTimeTest : MonoBehaviour
 {
 
-    MagicSpells.SpellBook magicSpells;
+
     public GameObject pfDarkBolt;
     public GameObject Player;
     SFXManager sFXManager;

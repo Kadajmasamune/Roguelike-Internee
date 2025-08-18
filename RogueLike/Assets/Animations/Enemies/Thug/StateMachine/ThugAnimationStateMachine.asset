@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: ThugAnimationStateMachine
   m_EditorClassIdentifier: 
   states:
+  - {fileID: 11400000, guid: 8adf2578a585c3045ae7f01cf17571ec, type: 2}
+  - {fileID: 11400000, guid: 6b54d704d1ff9f241b68bc9e4f6efab7, type: 2}
+  - {fileID: 11400000, guid: 323cd001c279f6540a83982c1ece1aac, type: 2}
+  - {fileID: 11400000, guid: 695e9274f9e4be6488c9830fb9b547ff, type: 2}
+  - {fileID: 11400000, guid: 1f3e86584d1af374db2e07ac5815367c, type: 2}
+  - {fileID: 11400000, guid: ce2d9303cb21d4742b46cfadfc7b485d, type: 2}
+  - {fileID: 11400000, guid: ca0bd59f1d78f1d43975ec624beaf56c, type: 2}
+  - {fileID: 11400000, guid: 2b0882df58d8765439ed7203f26b954a, type: 2}
   - {fileID: 11400000, guid: ac88a09a1f9f2a44d95522023fec2d54, type: 2}
   - {fileID: 11400000, guid: 28655340622b1e94cb0a219ba58837c9, type: 2}
   - {fileID: 11400000, guid: 8c34717f77861664db591190ddafd1d1, type: 2}

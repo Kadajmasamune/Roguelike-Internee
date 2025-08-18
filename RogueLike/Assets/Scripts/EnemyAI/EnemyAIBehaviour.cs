@@ -1,8 +1,9 @@
 using UnityEngine;
 using Common;
 using Pathfinding;
-
-
+using Unity.Collections;
+using Unity.Mathematics;
+using System.Collections;
 
 public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHasVelocity
 {
@@ -17,10 +18,12 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
     public bool IsCasting { get; private set; }
     public bool IsHeavyAttacking { get; private set; }
 
+    public bool IsShooter = false;
+    public bool IsFighter = false;
+    public bool IsAssassin = false;
+
     [SerializeField] private AIPath EnemyAIPathComponent;
     [SerializeField] private AIDestinationSetter EnemyAIDestinationSetter;
-
-
 
     [SerializeField] private float defaultSpeed = 6f;
     [SerializeField] private float ridingSpeed = 14f;
@@ -30,48 +33,81 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
     private float AttackDuration;
 
     private EntityMovement EnemyAIMovement;
+    private Seeker seeker;
 
+    private Vector3? firstPathNode = null;
 
+    private bool IsInAttackingRange => EnemyAIPathComponent.remainingDistance <= 5f;
+    private Transform playerTarget;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private GameObject _pfBullet; //Bullet Prefab
+    [SerializeField] private Vector2 _velocityBullet;
+
     void Start()
     {
         EnemyAIPathComponent = GetComponent<AIPath>();
         EnemyAIDestinationSetter = GetComponent<AIDestinationSetter>();
         EnemyAIMovement = new EntityMovement();
 
-        AttackDuration = Attack1Clip.length;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // HandleAttacks();
-        UpdateMovementState();
-        UpdateDirectionAndVelocity();
-
-        Debug.Log(CurrentDirection);
-    }
-
-
-    private void HandleAttacks()
-    {
-        float AttackingRange = 5f;
-
-        if (EnemyAIPathComponent.remainingDistance < AttackingRange)
+        seeker = GetComponent<Seeker>();
+        if (seeker != null)
         {
-            InitiateAttack();
+            seeker.pathCallback += OnPathCalculated;
+        }
+
+        playerTarget = EnemyAIDestinationSetter.target;
+        AttackDuration = Attack1Clip.length;
+
+        if (_pfBullet == null)
+        {
+            Debug.LogError("Bullet Object Missing");
         }
     }
 
+    void OnDestroy()
+    {
+        if (seeker != null)
+        {
+            seeker.pathCallback -= OnPathCalculated;
+        }
+    }
+
+    private void OnPathCalculated(Path p)
+    {
+        if (!p.error && p.vectorPath != null && p.vectorPath.Count > 1)
+        {
+            firstPathNode = p.vectorPath[1];
+        }
+        else
+        {
+            firstPathNode = null;
+        }
+    }
+
+    void Update()
+    {
+        UpdateMovementState();
+
+        if (IsInAttackingRange)
+        {
+            HandleAttackFacing();
+        }
+        else
+        {
+            UpdateDirectionAndVelocity();
+        }
+
+        HandleAttacks();
+    }
 
     void FixedUpdate()
     {
-        // if (IsAttacking)
-        // {
-        //     UpdateAttackState();
-        // }
+        if (IsAttacking)
+        {
+            UpdateAttackState();
+        }
     }
+
 
     void UpdateMovementState()
     {
@@ -94,48 +130,121 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
 
     void UpdateDirectionAndVelocity()
     {
-        Vector2 velocity = EnemyAIPathComponent.desiredVelocity;
+        CurrentVelocity = EnemyAIPathComponent.velocity;
 
-        if (velocity.sqrMagnitude > 0.01f)
+        if (CurrentVelocity.sqrMagnitude > 0.001f)
         {
-            CurrentVelocity = velocity;
-
-            Direction newDirection = EnemyAIMovement.GetDirectionFromInput(velocity.x, velocity.y);
-            if (newDirection != Direction.None && newDirection != CurrentDirection)
-            {
+            Direction newDirection = EnemyAIMovement.GetDirectionFromInput(CurrentVelocity.x, CurrentVelocity.y);
+            if (newDirection != Direction.None)
                 CurrentDirection = newDirection;
-            }
         }
         else
         {
-            CurrentVelocity = Vector2.zero;
-            CurrentDirection = Direction.None;
+            if (firstPathNode.HasValue)
+            {
+                Vector2 toNode = (Vector2)firstPathNode.Value - (Vector2)transform.position;
+                if (toNode.sqrMagnitude > 0.001f)
+                {
+                    Direction newDirection = EnemyAIMovement.GetDirectionFromInput(toNode.x, toNode.y);
+                    if (newDirection != Direction.None)
+                        CurrentDirection = newDirection;
+                }
+                else
+                {
+                    CurrentDirection = Direction.None;
+                }
+            }
+            else
+            {
+                CurrentDirection = Direction.None;
+            }
         }
     }
 
+    private bool hasFiredBullet = false;
 
     void InitiateAttack()
     {
         IsAttacking = true;
-        LockedInAttackDirection = CurrentDirection;
-
-        while (IsAttacking)
-        {
-            EnemyAIPathComponent.canMove = false;
-        }
+        IsLockedOn = true;
+        EnemyAIPathComponent.canMove = false;
+        AttackTimer = AttackDuration;
+        hasFiredBullet = false; // reset for new attack
     }
 
+
+    void HandleAttacks()
+    {
+        if (IsInAttackingRange && !IsAttacking)
+        {
+            InitiateAttack();
+        }
+    }
 
     void UpdateAttackState()
     {
-        AttackTimer = AttackDuration;
-
         AttackTimer -= Time.fixedUnscaledDeltaTime;
+
+        // Fire once when attack starts
+        if (!hasFiredBullet)
+        {
+            StartCoroutine(FireBullet());
+            hasFiredBullet = true;
+        }
+
         if (AttackTimer <= 0)
         {
             IsAttacking = false;
+            IsLockedOn = false;
+            EnemyAIPathComponent.canMove = true;
+        }
+    }
+
+    IEnumerator FireBullet()
+    {
+        if (_pfBullet == null || playerTarget == null) yield return null;
+
+        int bulletCount = 4;
+        float bulletSpacing = 0.3f;
+
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            Quaternion bulletRotation = EnemyAIMovement.GetRotation(CurrentDirection);
+            Vector2 bulletVelocity = EnemyAIMovement.DirectionToVector(CurrentDirection) * 20f;
+            Vector3 spawnPos = transform.position + (Vector3)(EnemyAIMovement.DirectionToVector(CurrentDirection) * 0.5f);
+            GameObject bullet = Instantiate(_pfBullet, spawnPos, bulletRotation);
+
+            Physics2D.IgnoreCollision(
+                bullet.GetComponent<Collider2D>(),
+                GetComponent<Collider2D>()
+            );
+
+            Thug_Bullet bulletScript = bullet.GetComponent<Thug_Bullet>();
+            if (bulletScript != null)
+            {
+                bulletScript.Init(bulletVelocity);
+            }
+
+            yield return new WaitForSeconds(bulletSpacing);
         }
 
-        Vector3 AttackingTargetPos = EnemyAIDestinationSetter.target.transform.position;
     }
+
+    void HandleAttackFacing()
+    {
+        if (playerTarget != null)
+        {
+            Vector2 toPlayer = (Vector2)playerTarget.position - (Vector2)transform.position;
+            if (toPlayer.sqrMagnitude > 0.001f)
+            {
+                Direction newDirection = EnemyAIMovement.GetDirectionFromInput(toPlayer.x, toPlayer.y);
+                if (newDirection != Direction.None)
+                {
+                    CurrentDirection = newDirection;
+                }
+            }
+        }
+    }
+
 }

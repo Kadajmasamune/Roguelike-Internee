@@ -2,6 +2,12 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
+using Unity.VisualScripting;
+using UnityEngine.UIElements;
+
+
+
 
 #if UNITY_EDITOR
 using UnityEditor.Animations;
@@ -108,6 +114,22 @@ namespace Common
             return Direction.None;
         }
 
+
+        public Quaternion GetRotation(Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.Up: return Quaternion.Euler(0, 0, -90).normalized;
+                case Direction.Right: return Quaternion.Euler(0, 0, -180).normalized;
+                case Direction.Down: return Quaternion.Euler(0, 0, 90).normalized;
+                case Direction.Left: return Quaternion.Euler(0, 0, 180).normalized;
+                case Direction.UpRight: return Quaternion.Euler(0, 0, -135).normalized;
+                case Direction.UpLeft: return Quaternion.Euler(0, 0, -45).normalized;
+                case Direction.BottomRight: return Quaternion.Euler(0, 0, -225).normalized;
+                case Direction.BottomLeft: return Quaternion.Euler(0, 0, 50).normalized;
+                default: return Quaternion.identity;
+            }
+        }
 
         public Vector2 DirectionToVector(Direction dir)
         {

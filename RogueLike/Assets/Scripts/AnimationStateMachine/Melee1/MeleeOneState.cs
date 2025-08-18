@@ -8,7 +8,7 @@ public class MeleeOneState : AnimState
 
     public override bool ShouldEnter(IHasDirection entity, Vector2 velocity, IHasBooleans flags)
     {
-        if (flags.IsRolling || flags.IsHeavyAttacking || flags.IsCasting ) return false;
+        if (flags.IsRolling || flags.IsHeavyAttacking || flags.IsCasting) return false;
 
         return entity.CurrentDirection == providedDirection && flags.IsAttacking && flags.IsLockedOn;
     }

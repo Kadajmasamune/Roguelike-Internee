@@ -244,14 +244,13 @@ public class ProceduralGeneration : MonoBehaviour
         //Generates a new Map and connects it with the already Existing one.
 
         int[,] newMap = new int[Width, Height];
-
-
     }
 
 
 
     void PrintMapToConsole(int[,] Map)
     {
+    
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
         for (int y = Height - 1; y >= 0; y--) // Print top to bottom
