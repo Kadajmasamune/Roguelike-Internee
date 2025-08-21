@@ -3,6 +3,5 @@ using UnityEngine;
 
 public unsafe class ObjectManager : MonoBehaviour
 {
-    [SerializeField] public List<GameObject>* _gameObjectsPrefabs;
-
+    [SerializeField] public List<GameObject> _gameObjectsPrefabs = new List<GameObject>(200);
 }

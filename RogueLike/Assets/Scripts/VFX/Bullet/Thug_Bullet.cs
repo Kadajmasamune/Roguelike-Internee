@@ -4,24 +4,37 @@ using UnityEngine;
 public class Thug_Bullet : MonoBehaviour
 {
     private Vector2 velocity;
+    private GameObject prefabKey;
     private Rigidbody2D rb;
 
     float bulletlifetime = 2f;
 
+    private ObjectPooler _objectPooler;
 
-    public void Init(Vector2 velocity)
+    public void Init(Vector2 velocity , GameObject prefabkey)
     {
         this.velocity = velocity;
+        this.prefabKey = prefabkey;
+        StopAllCoroutines();
+        StartCoroutine(destroyObj(bulletlifetime));
     }
 
     PlayerController playerController;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerController = FindFirstObjectByType<PlayerController>();
         fadeOut = fadein;
+        playerController = FindFirstObjectByType<PlayerController>();
+        _objectPooler = FindFirstObjectByType<ObjectPooler>();
+    }
 
-        Destroy(gameObject, bulletlifetime);
+    IEnumerator destroyObj(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        _objectPooler.ReturnObject(prefabKey, gameObject);
+
     }
 
     void FixedUpdate()
@@ -64,11 +77,11 @@ public class Thug_Bullet : MonoBehaviour
                 if (popupClone.TryGetComponent(out DamagePopUp popupScript))
                 {
                     popupScript.Setup(damageAmount, fadein, fadeOut);
+                    _objectPooler.ReturnObject(prefabKey, gameObject);
                 }
             }
         }
 
-        // Destroy bullet no matter what it hits
-        Destroy(gameObject);
+
     }
 }

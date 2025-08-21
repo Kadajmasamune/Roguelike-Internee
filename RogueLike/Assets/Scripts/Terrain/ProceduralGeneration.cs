@@ -3,7 +3,7 @@ using System.IO;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-
+using Pathfinding;
 //FIXXXXX
 //Fix Out of Rooms Bug
 public class ProceduralGeneration : MonoBehaviour
@@ -17,7 +17,7 @@ public class ProceduralGeneration : MonoBehaviour
     [SerializeField] Tile Pillar;
     [SerializeField] Grid MapGrid;
     [SerializeField] GameObject Player;
-
+    [SerializeField] GameObject Enemy;
 
     [SerializeField] int TileSpacing = 2;
 
@@ -48,6 +48,7 @@ public class ProceduralGeneration : MonoBehaviour
     private int terrainExtensionCount = 0;
     private int[,] lastMap;
 
+    public int enemyCount;
     void Start()
     {
         Width = RoomWidth / CellSize + (RoomWidth % CellSize > 0 ? 1 : 0);
@@ -76,7 +77,10 @@ public class ProceduralGeneration : MonoBehaviour
         ConnectRooms();
         DrawMapWithRoomEdges(Map);
         PrintMapToConsole(Map);
-        SpawnPlayerOnPlacedTile();
+        SpawnPlayerOnPlacedTile(false);
+        SpawnPlayerOnPlacedTile(true);
+
+
     }
 
 
@@ -250,7 +254,7 @@ public class ProceduralGeneration : MonoBehaviour
 
     void PrintMapToConsole(int[,] Map)
     {
-    
+
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
         for (int y = Height - 1; y >= 0; y--) // Print top to bottom
@@ -574,8 +578,12 @@ public class ProceduralGeneration : MonoBehaviour
         }
     }
 
-    private void SpawnPlayerOnPlacedTile()
+    private void SpawnPlayerOnPlacedTile(bool Isplayer)
     {
+
+        //Fix Pathfinder Scanner ;
+
+        
         List<Vector3Int> placedTiles = new List<Vector3Int>();
 
         BoundsInt bounds = TileMap.cellBounds;
@@ -592,8 +600,33 @@ public class ProceduralGeneration : MonoBehaviour
             Vector3Int spawnCell = placedTiles[UnityEngine.Random.Range(0, placedTiles.Count)];
             Vector3 worldPos = TileMap.CellToWorld(spawnCell) + TileMap.layoutGrid.cellSize / 2f;
 
-            Player.transform.position = worldPos;
+            if (Isplayer)
+            {
+                Player.transform.position = worldPos;
+            }
+            else
+            {
+                GameObject enemyParent = GameObject.Find("Enemies");
+                if (enemyParent == null)
+                {
+                    enemyParent = new GameObject("Enemies");
+                }
 
+                for (int i = 0; i < enemyCount; i++)
+                {
+                    Vector3Int SpawnCell = placedTiles[UnityEngine.Random.Range(0, placedTiles.Count)];
+                    Vector3 WorldPos = TileMap.CellToWorld(SpawnCell) + TileMap.layoutGrid.cellSize / 2f;
+
+                    GameObject enemy = Instantiate(Enemy, WorldPos, quaternion.identity);
+                    enemy.transform.SetParent(enemyParent.transform);
+                }
+            }
+
+            GraphUpdateObject guo = new GraphUpdateObject(new Bounds(
+            new Vector3(worldPos.x, worldPos.y, 0),
+            new Vector3(5, 5, 5)
+            ));
+            AstarPath.active.UpdateGraphs(guo);
             Debug.Log($"Spawned player at tile: {spawnCell}, world position: {worldPos}");
         }
         else
@@ -602,12 +635,6 @@ public class ProceduralGeneration : MonoBehaviour
         }
     }
 
-
-
-    private void SpawnEnemies()
-    {
-
-    }
 
 
 

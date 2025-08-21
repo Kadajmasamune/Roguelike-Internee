@@ -56,29 +56,24 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     // ------------------------------------------------------------------------------------------------------------------
 
 
-    
+
     private float rollDuration;
     private float rollTimer;
     public float perfectDodgeWindow = 0.2f;
     private float LastDodgeTime = -Mathf.Infinity;
     public bool IsInPerfectDodgeWindow => Time.unscaledTime - LastDodgeTime <= perfectDodgeWindow;
 
-
-    // ------------------------------
-    // Perfect Dodge Additions
-    // ------------------------------
     [Header("Perfect Dodge Settings")]
     [SerializeField] private float extraIFamesAfterPerfect = 0.35f;
     [SerializeField] private float timeScaleOnPerfect = 0.25f;
-    [SerializeField] private float timeScaleDuration = 2f;
+    [SerializeField] private float timeScaleDuration;
     [SerializeField] private float counterWindowDuration = 0.6f;
 
     public Material _materialBulletTime;
-
     public float BulletTimeTimer;
-    
+
     private static int _WaveDistanceFromCenter = Shader.PropertyToID("_WaveDistanceFromCenter");
-    
+
     private float invulnUntil = -Mathf.Infinity;
     private float counterUntil = -Mathf.Infinity;
 
@@ -89,14 +84,9 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private BulletTimePostProcessingScript bulletTimePostProcessingScript;
 
-    
-    // ------------------------------
-
-
     private float AttackDuration;
     private float AttackTimer;
     private float[] AttackDamage = new float[] { 12, 31 };
-
 
     private float runAttackDuration;
     private float runAttackTimer;
@@ -105,7 +95,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private float heavyAttackDuration;
     private float heavyAttackTimer;
     private float[] heavyAttackDamage = new float[] { 46, 83 };
-
 
     [SerializeField] GameObject pfDarkBolt;
     [SerializeField] GameObject pfBolt;
@@ -122,7 +111,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private float CurrentMana;
     [SerializeField] GameObject ManaBar;
 
-
     struct CastingSlowMoColor
     {
         public int R;
@@ -135,7 +123,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     public float castingTimer;
     public bool waitingForSpellSelection;
 
-
     CastingSlowMoColor castingSlowMoColor;
 
     [Header("State Booleans")]
@@ -146,20 +133,18 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     public bool IsCasting { get; private set; }
     public bool IsHeavyAttacking { get; private set; }
 
-
     SFXManager sFXManager;
-
-
     MagicManager magic;
-
     PlayerAttack PlayerAttacks;
-
     Sender<int> DamageOutput;
 
-    private void Awake()
+    private float targetTimeScale = 1f;
 
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+
         castingSlowMoColor = new CastingSlowMoColor();
         CurrentHealth = GetComponent<Health>();
         castingSlowMoColor.R = 150;
@@ -205,13 +190,15 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void Update()
     {
+
+        Time.timeScale = Mathf.Lerp(Time.timeScale, targetTimeScale, Time.unscaledDeltaTime * 5f);
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;
+
         HandleInput();
         IsLockedOn = Input.GetKey(KeyCode.LeftShift);
         UpdateHealthBar();
         UpdateHitBoxOffset(PlayerAttackHitbox);
-
     }
-
 
     private void HandleInput()
     {
@@ -277,13 +264,12 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void UpdateRoll()
     {
-        rollTimer -= Time.fixedUnscaledDeltaTime;
+        rollTimer -= Time.fixedDeltaTime;
         if (rollTimer <= 0f) IsRolling = false;
 
         MoveCharacter(rollDirection, moveSpeed + rollSpeedBoost);
         CurrentDirection = movementData.GetDirectionFromInput(rollDirection.x, rollDirection.y);
     }
-
 
     private void StartAttack()
     {
@@ -297,7 +283,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void UpdateAttack()
     {
-        AttackTimer -= Time.fixedUnscaledDeltaTime;
+        AttackTimer -= Time.fixedDeltaTime;
         if (AttackTimer <= 0)
         {
             IsAttacking = false;
@@ -308,8 +294,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         DamageOutput = new Sender<int>(PlayerAttacks.DamageAmount, dmg);
         DamageOutput.TransferData();
     }
-
-
 
     private void StartHeavyAttack()
     {
@@ -324,7 +308,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void UpdateHeavyAttack()
     {
-        heavyAttackTimer -= Time.fixedUnscaledDeltaTime;
+        heavyAttackTimer -= Time.fixedDeltaTime;
         if (heavyAttackTimer <= 0f)
         {
             IsHeavyAttacking = false;
@@ -338,9 +322,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         DamageOutput = new Sender<int>(PlayerAttacks.DamageAmount, dmg);
         DamageOutput.TransferData();
     }
-
-
-
 
     private void StartRunAttack()
     {
@@ -356,7 +337,7 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private void UpdateRunAttack()
     {
-        runAttackTimer -= Time.fixedUnscaledDeltaTime;
+        runAttackTimer -= Time.fixedDeltaTime;
         if (runAttackTimer <= 0f)
         {
             IsAttacking = false;
@@ -366,35 +347,28 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         MoveCharacter(movementInput, moveSpeed + attackSpeedBoost);
         CurrentDirection = lockedAttackDirection;
 
-
-
         int dmg = (int)UnityEngine.Random.Range(runAttackDamage[0], runAttackDamage[1]);
         DamageOutput = new Sender<int>(PlayerAttacks.DamageAmount, dmg);
         DamageOutput.TransferData();
     }
-
-
-
-
 
     private void StartCasting()
     {
         IsCasting = true;
         castingTimer = castingDuration;
         waitingForSpellSelection = false;
-        // light2D.color = new Color(castingSlowMoColor.R , castingSlowMoColor.G , castingSlowMoColor.B , 255);
     }
 
     private void UpdateCasting()
     {
         if (!waitingForSpellSelection)
         {
-            castingTimer -= Time.fixedUnscaledDeltaTime;
+            castingTimer -= Time.fixedDeltaTime;
 
             if (castingTimer <= 0f)
             {
                 waitingForSpellSelection = true;
-                Time.timeScale = 0.0f;
+                targetTimeScale = 0.0f;
                 sFXManager.PlaySFX(sFXManager.Open, 1);
                 MagicPanel.gameObject.SetActive(true);
                 return;
@@ -422,8 +396,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
 
     private IEnumerator WaitForClickAndCast(GameObject spellPrefab, int SpellManaCost, AudioClip SpellPfSFX)
     {
-        Debug.Log("Waiting for target click...");
-
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
 
         Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -445,7 +417,6 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         else
         {
             sFXManager.PlaySFX(sFXManager.Denied, 1);
-            Debug.Log("Not enough Mana!");
             yield return null;
         }
 
@@ -455,12 +426,11 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
     private void EndCasting()
     {
         MagicPanel.gameObject.SetActive(false);
-        Time.timeScale = 1.0f;
+        targetTimeScale = 1f;
         IsCasting = false;
         light2D.color = Color.white;
         waitingForSpellSelection = false;
     }
-
 
     public void TriggerPerfectDodge(Vector2 hitPoint)
     {
@@ -468,18 +438,16 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         counterUntil = Time.unscaledTime + counterWindowDuration;
         OnPerfectDodge?.Invoke();
         StartCoroutine(PerfectDodgeSlowMo());
-
     }
 
     private IEnumerator PerfectDodgeSlowMo()
     {
         StartCoroutine(BulletTimeVFX(-0.1f, 1f));
-        StartCoroutine(bulletTimePostProcessingScript.StartPostProcessingEffect(0.43f , timeScaleDuration));
-        
-        float original = Time.timeScale;
-        Time.timeScale = timeScaleOnPerfect;
+        StartCoroutine(bulletTimePostProcessingScript.StartPostProcessingEffect(0.43f, timeScaleDuration));
+
+        targetTimeScale = timeScaleOnPerfect;
         yield return new WaitForSecondsRealtime(timeScaleDuration);
-        Time.timeScale = original;
+        targetTimeScale = 1f;
     }
 
     private IEnumerator BulletTimeVFX(float start, float end)
@@ -492,16 +460,12 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         while (elapsedTime <= BulletTimeTimer)
         {
             elapsedTime += Time.unscaledDeltaTime;
-            lerpedAmount = Mathf.Lerp(start, end, (elapsedTime / BulletTimeTimer)); 
+            lerpedAmount = Mathf.Lerp(start, end, (elapsedTime / BulletTimeTimer));
             _materialBulletTime.SetFloat("_WaveDistanceFromCenter", lerpedAmount);
             yield return null;
         }
-        lerpedAmount = -0.1f;
-        _materialBulletTime.SetFloat("_WaveDistanceFromCenter", lerpedAmount);
+        _materialBulletTime.SetFloat("_WaveDistanceFromCenter", -0.1f);
     }
-
-
-    // ------------------------------
 
     private void UpdateMovement()
     {
@@ -522,13 +486,16 @@ public class PlayerController : MonoBehaviour, IHasDirection, IHasVelocity, IHas
         IsRunning = true;
     }
 
-    private void MoveCharacter(Vector2 direction, float speed)
+    private void MoveCharacter(Vector2 direction, float speed, bool ignoreBulletTime = true)
     {
-        Vector2 newPosition = rb.position + direction * speed * Time.fixedUnscaledDeltaTime;
-        rb.MovePosition(newPosition);
-        CurrentVelocity = direction * speed;
-    }
+        float effectiveSpeed = ignoreBulletTime
+            ? speed / Mathf.Max(Time.timeScale, 0.0001f)   // unaffected by slowdown
+            : speed;                                       // respect slowdown
 
+        Vector2 newPosition = rb.position + direction * effectiveSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(newPosition);
+        CurrentVelocity = direction * effectiveSpeed;
+    }
 
     public void UpdateHealthBar()
     {

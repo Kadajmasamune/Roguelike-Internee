@@ -43,6 +43,8 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
     [SerializeField] private GameObject _pfBullet; //Bullet Prefab
     [SerializeField] private Vector2 _velocityBullet;
 
+    private ObjectPooler _objectPooler;
+
     void Start()
     {
         EnemyAIPathComponent = GetComponent<AIPath>();
@@ -62,6 +64,8 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
         {
             Debug.LogError("Bullet Object Missing");
         }
+
+        _objectPooler = FindFirstObjectByType<ObjectPooler>();
     }
 
     void OnDestroy()
@@ -205,7 +209,7 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
         if (_pfBullet == null || playerTarget == null) yield return null;
 
         int bulletCount = 4;
-        float bulletSpacing = 0.3f;
+        float bulletSpacing = 0.5f;
 
 
         for (int i = 0; i < bulletCount; i++)
@@ -213,8 +217,10 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
             Quaternion bulletRotation = EnemyAIMovement.GetRotation(CurrentDirection);
             Vector2 bulletVelocity = EnemyAIMovement.DirectionToVector(CurrentDirection) * 20f;
             Vector3 spawnPos = transform.position + (Vector3)(EnemyAIMovement.DirectionToVector(CurrentDirection) * 0.5f);
-            GameObject bullet = Instantiate(_pfBullet, spawnPos, bulletRotation);
-
+            GameObject bullet = _objectPooler.GetObject(_pfBullet);
+            bullet.transform.rotation = bulletRotation;
+            bullet.transform.position = spawnPos;
+        
             Physics2D.IgnoreCollision(
                 bullet.GetComponent<Collider2D>(),
                 GetComponent<Collider2D>()
@@ -223,7 +229,7 @@ public class EnemyAIBehaviour : MonoBehaviour, IHasBooleans, IHasDirection, IHas
             Thug_Bullet bulletScript = bullet.GetComponent<Thug_Bullet>();
             if (bulletScript != null)
             {
-                bulletScript.Init(bulletVelocity);
+                bulletScript.Init(bulletVelocity , _pfBullet);
             }
 
             yield return new WaitForSeconds(bulletSpacing);
